@@ -94,6 +94,48 @@ ScriptedImporter:
     spritePosition: {x: 0, y: 0}
   mosaicSpriteImportData: []
   rigSpriteImportData:
+  - name: Curtain
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1469
+      y: 7161
+      width: 249
+      height: 690
+    spriteID: 11cd5116367dcf148b25c13e30da6d3d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1467, y: 7160}
+    spritePosition: {x: 4696, y: 1379}
+  - name: Box1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4852
+      y: 5112
+      width: 1193
+      height: 45
+    spriteID: f0f2a521ada3ea6418e9d30923987223
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4850, y: 5111}
+    spritePosition: {x: 968, y: 1911}
   - name: Lock
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -101,8 +143,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 875
-      y: 7973
+      x: 1469
+      y: 8083
       width: 62
       height: 62
     spriteID: 4380fa269af266149bc3b6489ad7a9d1
@@ -113,7 +155,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 875, y: 7973}
+    uvTransform: {x: 1469, y: 8083}
     spritePosition: {x: 3608, y: 888}
   - name: Foreground1
     originalName: 
@@ -165,7 +207,7 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 1469
-      y: 7161
+      y: 7859
       width: 537
       height: 216
     spriteID: 102608aa22d4d7a49ad038d09ad3530f
@@ -176,7 +218,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 1469, y: 7161}
+    uvTransform: {x: 1469, y: 7859}
     spritePosition: {x: 397, y: 810}
   - name: Ground2
     originalName: 
@@ -359,13 +401,33 @@ ScriptedImporter:
   resliceFromLayer: 0
   mosaicPSDLayers: []
   rigPSDLayers:
+  - name: Curtain
+    spriteName: Curtain
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 11cd5116367dcf148b25c13e30da6d3d
+    layerID: 50
+    mosaicPosition: {x: 1469, y: 7161}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Box1
+    spriteName: Box1
+    isGroup: 0
+    parentIndex: -1
+    spriteID: f0f2a521ada3ea6418e9d30923987223
+    layerID: 36
+    mosaicPosition: {x: 4852, y: 5112}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
   - name: Lock
     spriteName: Lock
     isGroup: 0
     parentIndex: -1
     spriteID: 4380fa269af266149bc3b6489ad7a9d1
     layerID: 31
-    mosaicPosition: {x: 875, y: 7973}
+    mosaicPosition: {x: 1469, y: 8083}
     flatten: 0
     isImported: 1
     isVisible: 1
@@ -395,7 +457,7 @@ ScriptedImporter:
     parentIndex: -1
     spriteID: 102608aa22d4d7a49ad038d09ad3530f
     layerID: 33
-    mosaicPosition: {x: 1469, y: 7161}
+    mosaicPosition: {x: 1469, y: 7859}
     flatten: 0
     isImported: 1
     isVisible: 1
