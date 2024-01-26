@@ -8,4 +8,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: df7af043820d01b4bb9c1502311d8737
+  - enabled: 1
+    path: Assets/Scenes/Controls.unity
+    guid: f731b53d9dcb8e14db1a98f2001a82bf
+  - enabled: 1
+    path: Assets/Scenes/Jester Level.unity
+    guid: c1c1e55f8d638ba4c8fc1f0e08122473
   m_configObjects: {}
