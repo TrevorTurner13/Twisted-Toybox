@@ -93,6 +93,10 @@ public class ElevatorController : MonoBehaviour
             currentState = ElevatorState.MovingToStart;
             delayTimer = 0f; 
         }
+        else if (collision.CompareTag("Player"))
+        {
+            collision.transform.SetParent(null);
+        }
 
     }
 
