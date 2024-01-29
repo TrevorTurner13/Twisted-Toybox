@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -14,6 +15,8 @@ public class PlayerMovement : MonoBehaviour
     private float speed = 3f;
     private float jumpingPower = 6f;
     private bool isFacingRight = true;
+    private bool interactRange = false;
+    public ButtonController currentInteractable;
 
     // Update is called once per frame
     void Update()
@@ -84,5 +87,35 @@ public class PlayerMovement : MonoBehaviour
     {
         horizontal = context.ReadValue<Vector2>().x;
         
+    }
+
+    public void Interact(InputAction.CallbackContext context)
+    {
+        if (context.performed && currentInteractable != null)
+        {
+            print("Hey");
+            currentInteractable.Interact();
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Interactable"))
+        {
+           interactRange = true;
+            if (collision.GetComponent<ButtonController>() != null)
+            {
+                ButtonController button = collision.GetComponent<ButtonController>();
+                currentInteractable = button;
+            }           
+        }
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Interactable"))
+        {
+            interactRange = false;
+            currentInteractable = null;
+        }
     }
 }

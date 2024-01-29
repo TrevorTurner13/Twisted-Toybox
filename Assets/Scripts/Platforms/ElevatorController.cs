@@ -68,6 +68,7 @@ public class ElevatorController : MonoBehaviour
     {
         if (collision.CompareTag("Player") && currentState == ElevatorState.AtStart)
         {
+            collision.transform.SetParent(transform);
             currentState = ElevatorState.MovingToDestination;
             delayTimer = 0f; // Reset delay timer for the next state
         }
@@ -82,13 +83,13 @@ public class ElevatorController : MonoBehaviour
     {
         if (collision.CompareTag("Player") && currentState == ElevatorState.MovingToStart)
         {
-          
+            collision.transform.SetParent(null);
             currentState = ElevatorState.MovingToStart;
             delayTimer = 0f; 
         }
         if (collision.CompareTag("Player") && currentState == ElevatorState.MovingToDestination)  //If player pxits elevator while it is moving the elevator will always go back to the starting position
         {
-           
+            collision.transform.SetParent(null);
             currentState = ElevatorState.MovingToStart;
             delayTimer = 0f; 
         }
@@ -98,6 +99,18 @@ public class ElevatorController : MonoBehaviour
     private void MoveElevator(Vector3 target)
     {
         transform.position = Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime);
+    }
+
+    public void ActivateElevator(string target) //In OnPressed in the button input either Start or Destination depending on desired location
+    {
+        if (target == "Start")
+        {
+            currentState = ElevatorState.MovingToStart;
+        }
+        else if (target == "Destination")
+        {
+            currentState = ElevatorState.MovingToDestination;
+        }
     }
 }
 
