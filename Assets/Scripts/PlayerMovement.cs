@@ -15,7 +15,6 @@ public class PlayerMovement : MonoBehaviour
     private float speed = 3f;
     private float jumpingPower = 6f;
     private bool isFacingRight = true;
-    private bool interactRange = false;
     public ButtonController currentInteractable;
 
     // Update is called once per frame
@@ -101,7 +100,6 @@ public class PlayerMovement : MonoBehaviour
     {
         if (collision.CompareTag("Interactable"))
         {
-           interactRange = true;
             if (collision.GetComponent<ButtonController>() != null)
             {
                 ButtonController button = collision.GetComponent<ButtonController>();
@@ -113,7 +111,6 @@ public class PlayerMovement : MonoBehaviour
     {
         if (collision.CompareTag("Interactable"))
         {
-            interactRange = false;
             currentInteractable = null;
         }
     }
