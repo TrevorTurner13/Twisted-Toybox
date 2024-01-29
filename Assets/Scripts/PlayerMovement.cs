@@ -56,17 +56,17 @@ public class PlayerMovement : MonoBehaviour
 
     public void Jump(InputAction.CallbackContext context)
     {
-        if(context.performed && IsGrounded())
+        if (context.performed && IsGrounded())
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
 
-            
+
         }
-        if(context.canceled && rb.velocity.y > 0f)
+        if (context.canceled && rb.velocity.y > 0f)
         {
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
         }
-        
+
     }
 
     private bool IsGrounded()
@@ -86,14 +86,13 @@ public class PlayerMovement : MonoBehaviour
     public void Move(InputAction.CallbackContext context)
     {
         horizontal = context.ReadValue<Vector2>().x;
-        
+
     }
 
     public void Interact(InputAction.CallbackContext context)
     {
         if (context.performed && currentInteractable != null)
         {
-            print("Hey");
             currentInteractable.Interact();
         }
     }
