@@ -10,7 +10,6 @@ public class CrumblingFloorController : MonoBehaviour
 
     private float breakTimer;
     private float regenTimer;
-    private bool playerOnPlatform = false;
     private SpriteRenderer renderer;
     private BoxCollider2D collider;
 
@@ -38,7 +37,7 @@ public class CrumblingFloorController : MonoBehaviour
         switch (currentState)
         {
             case CrumblingState.PlatformFixed:
-                renderer.enabled = true;
+                renderer.enabled = true; //Re-Renders patform and enables the collision
                 collider.enabled = true; 
                 break;
 
@@ -51,7 +50,7 @@ public class CrumblingFloorController : MonoBehaviour
                 break;
 
             case CrumblingState.PlatformBroken:                
-                renderer.enabled = false;
+                renderer.enabled = false;  //Hides platform and disables the collision
                 collider.enabled = false;
                 currentState = CrumblingState.PlatformRegenerating;
                 break;
@@ -82,9 +81,9 @@ public class CrumblingFloorController : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             breakTimer = 0f;
-            regenTimer = 0f;
-
-            if (currentState == CrumblingState.PlatformBroken)
+            regenTimer = 0f;    //If the player leaves collider before platform breaks, just reset both timers
+                                                                                
+            if (currentState == CrumblingState.PlatformBroken)  //If player exits the collider due to the platform breaking, the platform begins to regen 
             {
                 currentState = CrumblingState.PlatformRegenerating;
             }
