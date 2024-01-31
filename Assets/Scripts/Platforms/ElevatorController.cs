@@ -74,6 +74,7 @@ public class ElevatorController : MonoBehaviour
         }
         if (collision.CompareTag("Player") && currentState == ElevatorState.AtDestination)
         {
+            collision.transform.SetParent(transform);
             currentState = ElevatorState.MovingToStart;
             delayTimer = 0f; // Reset delay timer for the next state
         }
