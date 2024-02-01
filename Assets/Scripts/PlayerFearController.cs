@@ -2,6 +2,7 @@ using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerFearController : MonoBehaviour
 {
@@ -15,6 +16,9 @@ public class PlayerFearController : MonoBehaviour
     public float minOrthoSize = 3; // Minimum field of view
     public float maxOrthoSize = 9f; // Maximum field of view (less zoomed)
     public CinemachineVirtualCamera virtualCamera;
+
+    public Image fearOverlay;
+    public Image secondFearOverlay;
 
     private enum FearState
     {
@@ -61,11 +65,13 @@ public class PlayerFearController : MonoBehaviour
                 currentFear = 100;               
                 break;
         }
-
+        //Change camera zoom depending on fear level
         float newOrthoSize = Mathf.Lerp(maxOrthoSize, minOrthoSize, currentFear / maxFear);
         virtualCamera.m_Lens.OrthographicSize = newOrthoSize;
-       
-            
+
+        //Change transparency of fearoverlay depending on fear level
+        AdjustFearOverlay(fearOverlay);
+        AdjustFearOverlay(secondFearOverlay);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -81,6 +87,16 @@ public class PlayerFearController : MonoBehaviour
        if (collision.CompareTag("LightSource"))
         {
             currentState = FearState.gainingFear;
+        }
+    }
+    
+    private void AdjustFearOverlay(Image layer)
+    {
+        if (layer != null)
+        {
+            Color overlayColor = layer.color;
+            overlayColor.a = Mathf.Lerp(0f, 1f, currentFear / maxFear);
+            layer.color = overlayColor;
         }
     }
 }
