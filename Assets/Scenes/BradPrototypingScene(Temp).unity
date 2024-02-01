@@ -141,7 +141,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &4441478
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15433,70 +15433,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 136667688413934964, guid: 0c96f50e99eb5134195a9c394358c375, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.9915107
-      objectReference: {fileID: 0}
-    - target: {fileID: 136667688413934964, guid: 0c96f50e99eb5134195a9c394358c375, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0.1300253
-      objectReference: {fileID: 0}
     - target: {fileID: 1989042390848744278, guid: 0c96f50e99eb5134195a9c394358c375, type: 3}
       propertyPath: m_Name
       value: ThePuppet
       objectReference: {fileID: 0}
-    - target: {fileID: 1989042390848744278, guid: 0c96f50e99eb5134195a9c394358c375, type: 3}
-      propertyPath: m_TagString
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 2094714644864487585, guid: 0c96f50e99eb5134195a9c394358c375, type: 3}
-      propertyPath: m_SortingOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2416269949050641695, guid: 0c96f50e99eb5134195a9c394358c375, type: 3}
-      propertyPath: m_LinearDrag
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2599460458922120906, guid: 0c96f50e99eb5134195a9c394358c375, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.57131845
-      objectReference: {fileID: 0}
-    - target: {fileID: 2599460458922120906, guid: 0c96f50e99eb5134195a9c394358c375, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.8207285
-      objectReference: {fileID: 0}
-    - target: {fileID: 4397641966637026052, guid: 0c96f50e99eb5134195a9c394358c375, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.0659239
-      objectReference: {fileID: 0}
-    - target: {fileID: 5266035659744904704, guid: 0c96f50e99eb5134195a9c394358c375, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.10972992
-      objectReference: {fileID: 0}
-    - target: {fileID: 7283562986076746026, guid: 0c96f50e99eb5134195a9c394358c375, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.73771155
-      objectReference: {fileID: 0}
-    - target: {fileID: 7283562986076746026, guid: 0c96f50e99eb5134195a9c394358c375, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.67511606
-      objectReference: {fileID: 0}
-    - target: {fileID: 7339758656974512361, guid: 0c96f50e99eb5134195a9c394358c375, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: -0.057074692
-      objectReference: {fileID: 0}
-    - target: {fileID: 7339758656974512361, guid: 0c96f50e99eb5134195a9c394358c375, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.9983699
-      objectReference: {fileID: 0}
-    - target: {fileID: 7409646244512612956, guid: 0c96f50e99eb5134195a9c394358c375, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.563579
-      objectReference: {fileID: 0}
-    - target: {fileID: 7409646244512612956, guid: 0c96f50e99eb5134195a9c394358c375, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.8260622
-      objectReference: {fileID: 0}
+    - target: {fileID: 3355154605360767644, guid: 0c96f50e99eb5134195a9c394358c375, type: 3}
+      propertyPath: fearOverlay
+      value: 
+      objectReference: {fileID: 1361223150}
+    - target: {fileID: 3355154605360767644, guid: 0c96f50e99eb5134195a9c394358c375, type: 3}
+      propertyPath: secondFearOverlay
+      value: 
+      objectReference: {fileID: 565418047}
     - target: {fileID: 7945162125857851844, guid: 0c96f50e99eb5134195a9c394358c375, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -15537,29 +15485,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8562984594845690091, guid: 0c96f50e99eb5134195a9c394358c375, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.9892203
-      objectReference: {fileID: 0}
-    - target: {fileID: 8562984594845690091, guid: 0c96f50e99eb5134195a9c394358c375, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0.14643504
-      objectReference: {fileID: 0}
     - target: {fileID: 8958216952082620269, guid: 0c96f50e99eb5134195a9c394358c375, type: 3}
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1135134722}
-    - target: {fileID: 8958216952082620269, guid: 0c96f50e99eb5134195a9c394358c375, type: 3}
-      propertyPath: m_InstanceId
-      value: -62892
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1989042390848744278, guid: 0c96f50e99eb5134195a9c394358c375, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1595402758}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c96f50e99eb5134195a9c394358c375, type: 3}
 --- !u!43 &1135134722
 Mesh:
@@ -15801,29 +15734,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1361223148}
   m_CullTransparentMesh: 1
---- !u!1 &1595402757 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1989042390848744278, guid: 0c96f50e99eb5134195a9c394358c375, type: 3}
-  m_PrefabInstance: {fileID: 1122424062}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1595402758
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1595402757}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2be621695cefc1c43b7a1433d490eea0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fearGainRate: 3.33
-  fearLossRate: 33.3
-  minOrthoSize: 3
-  maxOrthoSize: 9
-  virtualCamera: {fileID: 0}
-  fearOverlay: {fileID: 1361223150}
 --- !u!1 &2042569929
 GameObject:
   m_ObjectHideFlags: 0
