@@ -38,6 +38,8 @@ public class PlayerMovement : MonoBehaviour
     {
         rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
 
+        
+
         if (!isFacingRight && horizontal > 0)
         {
             Flip();
@@ -131,6 +133,7 @@ public class PlayerMovement : MonoBehaviour
                 {
                     Destroy(currentGrabPoint.gameObject.GetComponent<FixedJoint2D>());
                     currentGrabPoint = null;
+                    
                 }
                 currentRope.Grabbed = false;
                 speed = 6f;

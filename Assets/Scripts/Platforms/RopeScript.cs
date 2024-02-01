@@ -20,7 +20,7 @@ public class RopeScript : MonoBehaviour
         {
             connectPoint = _handler.FindNearestRopePoint(player.handPos);
             player.transform.SetParent(connectPoint);
-            player.handPos.position = connectPoint.position;
+            player.transform.position = connectPoint.position;
             connectPoint.gameObject.AddComponent<FixedJoint2D>();
             connectPoint.gameObject.GetComponent<FixedJoint2D>().connectedBody = player.GetComponent<Rigidbody2D>();
             player.Speed = player.SwingSpeed;
