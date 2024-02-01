@@ -17,6 +17,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private Transform currentGrabPoint = null;
 
+
+
     private float horizontal;
     private float speed = 3f;
     private float swingSpeed = 10f;
@@ -27,23 +29,20 @@ public class PlayerMovement : MonoBehaviour
     public float SwingSpeed { get { return swingSpeed; } }
     public float DefaultSpeed { get { return defaultSpeed; } }
     public float DefaultGravityScale { get { return defaultGravityScale; } }
-    public float SwingGravityScale {  get { return swingGravityScale; } }
+    public float SwingGravityScale { get { return swingGravityScale; } }
     private float jumpingPower = 6f;
     private bool isFacingRight = true;
     private bool isGrabbing = false;
 
-    public bool IsGrabbing {  get { return isGrabbing; } }
-    
-    void Start()
-    {
-       
-    }
+    public bool IsGrabbing { get { return isGrabbing; } }
+
+
     // Update is called once per frame
     void Update()
     {
         rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
 
-        
+
 
         if (!isFacingRight && horizontal > 0)
         {
@@ -53,7 +52,7 @@ public class PlayerMovement : MonoBehaviour
         {
             Flip();
         }
-        if(IsGrounded())
+        if (IsGrounded())
         {
             animator.SetBool("isGrounded", true);
             speed = defaultSpeed;
@@ -62,7 +61,7 @@ public class PlayerMovement : MonoBehaviour
         {
             animator.SetBool("isGrounded", false);
         }
-        if(rb.velocity.x != 0)
+        if (rb.velocity.x != 0)
         {
             animator.SetBool("isWalking", true);
         }
@@ -74,7 +73,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        
+
     }
 
     public void Jump(InputAction.CallbackContext context)
@@ -94,7 +93,7 @@ public class PlayerMovement : MonoBehaviour
 
     private bool IsGrounded()
     {
-        
+
         return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
     }
 
@@ -126,7 +125,6 @@ public class PlayerMovement : MonoBehaviour
         {
             isGrabbing = true;
             Debug.Log("Grabbed");
-            
         }
         if (context.canceled)
         {
@@ -139,6 +137,7 @@ public class PlayerMovement : MonoBehaviour
                 {
                     Destroy(currentGrabPoint.gameObject.GetComponent<FixedJoint2D>());
                     currentGrabPoint = null;
+
                 }
                 currentRope.Grabbed = false;
                 speed = 6f;
@@ -159,7 +158,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 ButtonController button = collision.GetComponent<ButtonController>();
                 currentInteractable = button;
-            }            
+            }
         }
         if (collision.CompareTag("Rope") && isGrabbing)
         {
@@ -179,6 +178,6 @@ public class PlayerMovement : MonoBehaviour
             currentInteractable = null;
         }
     }
-    
-    
+
+
 }

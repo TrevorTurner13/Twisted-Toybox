@@ -6,7 +6,7 @@ using UnityEngine.EventSystems;
 
 public class RopeScript : MonoBehaviour
 {
-    [SerializeField] 
+    [SerializeField]
     private RopeHandler _handler;
 
     [SerializeField]
@@ -14,7 +14,7 @@ public class RopeScript : MonoBehaviour
 
     private Transform connectPoint;
 
-    
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -30,5 +30,5 @@ public class RopeScript : MonoBehaviour
             _handler.Grabbed = true;
         }
     }
-   
+
 }
