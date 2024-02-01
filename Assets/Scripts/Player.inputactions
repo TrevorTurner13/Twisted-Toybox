@@ -33,12 +33,12 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "NewInteract",
+                    "name": "Grab",
                     "type": "Button",
-                    "id": "f81b76db-3bb1-4a79-acdc-4a27790c49e8",
+                    "id": "0ae7c609-8a44-4026-b292-535b253b6738",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "",
+                    "interactions": "Hold(duration=0.2,pressPoint=0.1)",
                     "initialStateCheck": false
                 }
             ],
@@ -210,12 +210,12 @@
                 },
                 {
                     "name": "",
-                    "id": "adbe3435-96b2-49ac-b1e1-c05b66aa36eb",
-                    "path": "<Keyboard>/f",
+                    "id": "e6d6a1bb-cca5-4252-a2bc-2fb31f37ec2a",
+                    "path": "<Keyboard>/leftShift",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard&Mouse",
-                    "action": "NewInteract",
+                    "action": "Grab",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

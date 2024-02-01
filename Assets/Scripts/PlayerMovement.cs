@@ -10,12 +10,28 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Animator animator;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
+    [SerializeField]
+    public ButtonController currentInteractable;
+    [SerializeField]
+    private RopeHandler currentRope = null;
+    [SerializeField]
+    private Transform currentGrabPoint = null;
+    
+    public Transform handPos;
 
     private float horizontal;
     private float speed = 3f;
+    private float swingSpeed = 10f;
+    private float defaultSpeed = 3f;
+    public float Speed { get { return speed; } set { speed = value; } }
+    public float SwingSpeed { get { return swingSpeed; } }
+    public float DefaultSpeed { get { return defaultSpeed; } }
     private float jumpingPower = 6f;
     private bool isFacingRight = true;
-    public ButtonController currentInteractable;
+    private bool isGrabbing = false;
+
+    public bool IsGrabbing {  get { return isGrabbing; } }
+   
 
     // Update is called once per frame
     void Update()
@@ -33,6 +49,7 @@ public class PlayerMovement : MonoBehaviour
         if(IsGrounded())
         {
             animator.SetBool("isGrounded", true);
+            speed = defaultSpeed;
         }
         else
         {
@@ -96,6 +113,35 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    public void Grab(InputAction.CallbackContext context)
+    {
+       if(context.performed)
+        {
+            isGrabbing = true;
+            Debug.Log("Grabbed");
+        }
+       if(context.canceled)
+        {
+            Debug.Log("NoGrab");
+            isGrabbing = false;
+            if (currentRope != null)
+            {
+                
+                if (currentGrabPoint != null)
+                {
+                    Destroy(currentGrabPoint.gameObject.GetComponent<FixedJoint2D>());
+                    currentGrabPoint = null;
+                }
+                currentRope.Grabbed = false;
+                speed = 6f;
+                currentRope = null;
+                transform.parent = null;
+                animator.SetBool("isSwinging", false);
+            }
+        }
+       
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Interactable"))
@@ -104,7 +150,17 @@ public class PlayerMovement : MonoBehaviour
             {
                 ButtonController button = collision.GetComponent<ButtonController>();
                 currentInteractable = button;
-            }           
+            }            
+        }
+        if (collision.CompareTag("Rope") && isGrabbing)
+        {
+            if (collision.GetComponentInParent<RopeHandler>() != null)
+            {
+                currentRope = collision.GetComponentInParent<RopeHandler>();
+                currentGrabPoint = currentRope.FindNearestRopePoint(transform);
+                animator.SetBool("isSwinging", true);
+
+            }
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
@@ -114,4 +170,6 @@ public class PlayerMovement : MonoBehaviour
             currentInteractable = null;
         }
     }
+    
+    
 }

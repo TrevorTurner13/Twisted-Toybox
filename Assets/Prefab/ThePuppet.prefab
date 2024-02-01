@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3365710261766019947}
   m_Layer: 0
   m_Name: Thumb_R
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 2599460458922120906}
   m_Layer: 0
   m_Name: Forearm_R
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -74,7 +74,7 @@ GameObject:
   - component: {fileID: 8047003193155039915}
   m_Layer: 0
   m_Name: bone_26
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -106,7 +106,7 @@ GameObject:
   - component: {fileID: 9184559489514107223}
   m_Layer: 0
   m_Name: Leg_R_LimbSolver2D
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -170,7 +170,7 @@ GameObject:
   - component: {fileID: 1563309772105073372}
   m_Layer: 0
   m_Name: Leg_R_LimbSolver2D_Target
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -202,7 +202,7 @@ GameObject:
   - component: {fileID: 7663495355690479339}
   m_Layer: 0
   m_Name: Arm_L_LimbSolver2D
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -266,7 +266,7 @@ GameObject:
   - component: {fileID: 7608350509171299530}
   m_Layer: 0
   m_Name: bone_24
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -297,7 +297,7 @@ GameObject:
   - component: {fileID: 5266035659744904704}
   m_Layer: 0
   m_Name: Arm_L
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -318,6 +318,65 @@ Transform:
   - {fileID: 7409646244512612956}
   m_Father: {fileID: 6741557691441356339}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1910915358762303998
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4512747925348819584}
+  - component: {fileID: 2742148201380488716}
+  m_Layer: 0
+  m_Name: GrabPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4512747925348819584
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1910915358762303998}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3810780046989447251}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &2742148201380488716
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1910915358762303998}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1989042390848744278
 GameObject:
   m_ObjectHideFlags: 0
@@ -335,7 +394,7 @@ GameObject:
   - component: {fileID: 8958216952082620269}
   m_Layer: 0
   m_Name: ThePuppet
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -556,9 +615,21 @@ MonoBehaviour:
     m_ActionId: 5913a485-061f-4d8f-b41e-6f144cb1bf6d
     m_ActionName: Player/Interact[/Keyboard/e]
   - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: f81b76db-3bb1-4a79-acdc-4a27790c49e8
-    m_ActionName: Player/NewInteract[/Keyboard/f]
+      m_Calls:
+      - m_Target: {fileID: 8231213039145593797}
+        m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
+        m_MethodName: Grab
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 0ae7c609-8a44-4026-b292-535b253b6738
+    m_ActionName: Player/Grab[/Keyboard/leftShift]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -583,6 +654,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   currentInteractable: {fileID: 0}
+  currentRope: {fileID: 0}
+  currentGrabPoint: {fileID: 0}
 --- !u!114 &8958216952082620269
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -609,7 +682,7 @@ MonoBehaviour:
   - {x: 0.1485939, y: -0.61062574, z: 0}
   m_ShapePathHash: 0
   m_Mesh: {fileID: 0}
-  m_InstanceId: 33332
+  m_InstanceId: 67398
   m_LocalBounds:
     m_Center: {x: -0.028808594, y: 0.30421877, z: 0}
     m_Extent: {x: 0.1774025, y: 0.9148445, z: 0}
@@ -625,7 +698,7 @@ GameObject:
   - component: {fileID: 2505380970872337339}
   m_Layer: 0
   m_Name: Leg_L_LimbSolver2D
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -689,7 +762,7 @@ GameObject:
   - component: {fileID: 8814832194167975657}
   m_Layer: 0
   m_Name: GroundCheck
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -720,7 +793,7 @@ GameObject:
   - component: {fileID: 3810780046989447251}
   m_Layer: 0
   m_Name: Hand_R
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -742,6 +815,7 @@ Transform:
   - {fileID: 74387523645992006}
   - {fileID: 2378791434608259413}
   - {fileID: 1906334527857323038}
+  - {fileID: 4512747925348819584}
   m_Father: {fileID: 2599460458922120906}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -0.228}
 --- !u!1 &2452624455412694278
@@ -755,7 +829,7 @@ GameObject:
   - component: {fileID: 2106551655741788710}
   m_Layer: 0
   m_Name: Leg_L_LimbSolver2D_Target
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -786,7 +860,7 @@ GameObject:
   - component: {fileID: 5513979664628980407}
   m_Layer: 0
   m_Name: bone_15
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -817,7 +891,7 @@ GameObject:
   - component: {fileID: 74387523645992006}
   m_Layer: 0
   m_Name: Index_r
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -849,7 +923,7 @@ GameObject:
   - component: {fileID: 5658002397906667345}
   m_Layer: 0
   m_Name: Head
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -882,7 +956,7 @@ GameObject:
   - component: {fileID: 6741557691441356339}
   m_Layer: 0
   m_Name: HIp
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -918,7 +992,7 @@ GameObject:
   - component: {fileID: 136667688413934964}
   m_Layer: 0
   m_Name: Calf_R
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1033,7 +1107,7 @@ GameObject:
   - component: {fileID: 141702066961559872}
   m_Layer: 0
   m_Name: cm
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1076,7 +1150,7 @@ GameObject:
   - component: {fileID: 771989856898567748}
   m_Layer: 0
   m_Name: Eye_Left
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1108,7 +1182,7 @@ GameObject:
   - component: {fileID: 3576319895768020489}
   m_Layer: 0
   m_Name: bone_16
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1139,7 +1213,7 @@ GameObject:
   - component: {fileID: 8472666351312470388}
   m_Layer: 0
   m_Name: Arm_R_LimbSolver2D_Target
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1170,7 +1244,7 @@ GameObject:
   - component: {fileID: 146647043533660719}
   m_Layer: 0
   m_Name: Foot_L
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1201,7 +1275,7 @@ GameObject:
   - component: {fileID: 7409646244512612956}
   m_Layer: 0
   m_Name: Forearm_L
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1233,7 +1307,7 @@ GameObject:
   - component: {fileID: 7283562986076746026}
   m_Layer: 0
   m_Name: Arm_R
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1265,7 +1339,7 @@ GameObject:
   - component: {fileID: 7046561815530029805}
   m_Layer: 0
   m_Name: Pinky_L
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1297,7 +1371,7 @@ GameObject:
   - component: {fileID: 8271819014995685942}
   m_Layer: 0
   m_Name: Hand_L
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1332,7 +1406,7 @@ GameObject:
   - component: {fileID: 7230544605190030632}
   m_Layer: 0
   m_Name: Index_L
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1364,7 +1438,7 @@ GameObject:
   - component: {fileID: 5918772534422742747}
   m_Layer: 0
   m_Name: Arm_L_LimbSolver2D_Target
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1395,7 +1469,7 @@ GameObject:
   - component: {fileID: 67967472660967173}
   m_Layer: 0
   m_Name: Middle_L
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1427,7 +1501,7 @@ GameObject:
   - component: {fileID: 8562984594845690091}
   m_Layer: 0
   m_Name: Calf_L
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1459,7 +1533,7 @@ GameObject:
   - component: {fileID: 774679584957040534}
   m_Layer: 0
   m_Name: Thumb_L
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1490,8 +1564,8 @@ GameObject:
   - component: {fileID: 8397057873525757246}
   - component: {fileID: 4659934717344516498}
   m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
+  m_Name: CollisionDetector
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1557,7 +1631,7 @@ GameObject:
   - component: {fileID: 7339758656974512361}
   m_Layer: 0
   m_Name: Leg_R
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1590,7 +1664,7 @@ GameObject:
   - component: {fileID: 897912963947891597}
   m_Layer: 0
   m_Name: Arm_R_LimbSolver2D
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1654,7 +1728,7 @@ GameObject:
   - component: {fileID: 6166260138749885587}
   m_Layer: 0
   m_Name: bone_25
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1767,7 +1841,7 @@ GameObject:
   - component: {fileID: 3275296037150263572}
   m_Layer: 0
   m_Name: Eye_R
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1799,7 +1873,7 @@ GameObject:
   - component: {fileID: 4700316771886786677}
   m_Layer: 0
   m_Name: Foot_R
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1830,7 +1904,7 @@ GameObject:
   - component: {fileID: 6576822316601002018}
   m_Layer: 0
   m_Name: bone_17
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1861,7 +1935,7 @@ GameObject:
   - component: {fileID: 4397641966637026052}
   m_Layer: 0
   m_Name: Left_L
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1893,7 +1967,7 @@ GameObject:
   - component: {fileID: 1906334527857323038}
   m_Layer: 0
   m_Name: Pinky_R
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1928,7 +2002,7 @@ GameObject:
   - component: {fileID: 1144143824667240506}
   m_Layer: 0
   m_Name: ThePuppet_TPose
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2092,7 +2166,7 @@ GameObject:
   - component: {fileID: 2378791434608259413}
   m_Layer: 0
   m_Name: Middle_R
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
