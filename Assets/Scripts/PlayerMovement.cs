@@ -16,8 +16,6 @@ public class PlayerMovement : MonoBehaviour
     private RopeHandler currentRope = null;
     [SerializeField]
     private Transform currentGrabPoint = null;
-    
-    public Transform handPos;
 
     private float horizontal;
     private float speed = 3f;
@@ -35,8 +33,11 @@ public class PlayerMovement : MonoBehaviour
     private bool isGrabbing = false;
 
     public bool IsGrabbing {  get { return isGrabbing; } }
-   
-
+    
+    void Start()
+    {
+       
+    }
     // Update is called once per frame
     void Update()
     {
@@ -121,23 +122,23 @@ public class PlayerMovement : MonoBehaviour
 
     public void Grab(InputAction.CallbackContext context)
     {
-       if(context.performed)
+        if (context.performed)
         {
             isGrabbing = true;
             Debug.Log("Grabbed");
+            
         }
-       if(context.canceled)
+        if (context.canceled)
         {
             Debug.Log("NoGrab");
             isGrabbing = false;
             if (currentRope != null)
             {
-                
+
                 if (currentGrabPoint != null)
                 {
                     Destroy(currentGrabPoint.gameObject.GetComponent<FixedJoint2D>());
                     currentGrabPoint = null;
-                    
                 }
                 currentRope.Grabbed = false;
                 speed = 6f;
@@ -147,7 +148,7 @@ public class PlayerMovement : MonoBehaviour
                 animator.SetBool("isSwinging", false);
             }
         }
-       
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

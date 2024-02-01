@@ -14,6 +14,8 @@ public class RopeScript : MonoBehaviour
 
     private Transform connectPoint;
 
+    
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (!_handler.Grabbed && collision.CompareTag("Player") && player.IsGrabbing)
