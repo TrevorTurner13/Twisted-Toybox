@@ -23,9 +23,13 @@ public class PlayerMovement : MonoBehaviour
     private float speed = 3f;
     private float swingSpeed = 10f;
     private float defaultSpeed = 3f;
+    private float defaultGravityScale = 1f;
+    private float swingGravityScale = 3f;
     public float Speed { get { return speed; } set { speed = value; } }
     public float SwingSpeed { get { return swingSpeed; } }
     public float DefaultSpeed { get { return defaultSpeed; } }
+    public float DefaultGravityScale { get { return defaultGravityScale; } }
+    public float SwingGravityScale {  get { return swingGravityScale; } }
     private float jumpingPower = 6f;
     private bool isFacingRight = true;
     private bool isGrabbing = false;
@@ -137,6 +141,7 @@ public class PlayerMovement : MonoBehaviour
                 }
                 currentRope.Grabbed = false;
                 speed = 6f;
+                GetComponent<Rigidbody2D>().gravityScale = defaultGravityScale;
                 currentRope = null;
                 transform.parent = null;
                 animator.SetBool("isSwinging", false);
