@@ -7,6 +7,7 @@ using UnityEngine.InputSystem;
 public class PlayerMovement : MonoBehaviour
 {
 
+
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Animator animator;
     [SerializeField] private Transform groundCheck;
@@ -176,7 +177,20 @@ public class PlayerMovement : MonoBehaviour
             PauseManager.instance.PauseGame();
             isPaused = true;
         }
+
     }
+
+    //public void Unpause(InputAction.CallbackContext context)
+    //{
+    //    if (isPaused && Input.GetKeyDown(KeyCode.Escape))
+    //    {
+    //        if (context.performed)
+    //        {
+    //            PauseManager.instance.UnpauseGame();
+    //            isPaused = false;
+    //        }
+    //    }
+    //}
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

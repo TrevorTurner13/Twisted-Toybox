@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PauseManager : MonoBehaviour
 {
-    public PlayerInputs inputActions;
     public static PauseManager instance;
 
     [SerializeField] private GameObject PauseMenu;
@@ -30,8 +29,15 @@ public class PauseManager : MonoBehaviour
 
     public void UnpauseGame()
     {
+
         IsPaused = false;
         Time.timeScale = 1f;
         PauseMenu.SetActive(false);
+
+    }
+
+    public void Quit()
+    {
+        Application.Quit();
     }
 }
