@@ -34,7 +34,7 @@ public class PushPullBlockController : MonoBehaviour
         switch (currentState)
         {
             case BlockState.inInteractRange:
-                if (player.IsGrabbing == true)
+                if (player.IsGrabbing == true && player.IsGrounded())
                 {
                     currentState= BlockState.interacted;
                 }
