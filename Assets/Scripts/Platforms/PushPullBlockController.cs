@@ -43,7 +43,7 @@ public class PushPullBlockController : MonoBehaviour
             case BlockState.interacted:
                 player.IsPushing = true;
                 hinge.connectedBody = player.GetComponent<Rigidbody2D>();
-                if (player.IsGrabbing == false)
+                if (player.IsGrabbing == false || player.IsGrounded()==false)
                 {
                     currentState = BlockState.notInteracted;
                 }
