@@ -36,6 +36,9 @@ public class PlayerMovement : MonoBehaviour
     private bool isFacingRight = true;
     private bool isGrabbing = false;
 
+    private bool isPushing = false;
+    public bool IsPushing { get { return isPushing; } set { isPushing = value; } }
+
     private bool isPaused = false;
     public bool IsGrabbing {  get { return isGrabbing; } }
 
@@ -119,10 +122,13 @@ public class PlayerMovement : MonoBehaviour
 
     private void Flip()
     {
-        isFacingRight = !isFacingRight;
-        Vector3 localScale = transform.localScale;
-        localScale.x *= -1f;
-        transform.localScale = localScale;
+        if (isPushing == false)
+        {
+            isFacingRight = !isFacingRight;
+            Vector3 localScale = transform.localScale;
+            localScale.x *= -1f;
+            transform.localScale = localScale;
+        }
     }
 
     public void Move(InputAction.CallbackContext context)
@@ -150,6 +156,7 @@ public class PlayerMovement : MonoBehaviour
         {
             Debug.Log("NoGrab");
             isGrabbing = false;
+            
             if (currentRope != null)
             {
                 
