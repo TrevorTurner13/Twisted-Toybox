@@ -234,7 +234,6 @@ public class PlayerMovement : MonoBehaviour
                 currentRope = collision.GetComponentInParent<RopeHandler>();
                 currentGrabPoint = currentRope.FindNearestRopePoint(transform);
                 animator.SetBool("isSwinging", true);
-
             }
         }
     }
