@@ -43,7 +43,7 @@ public class PlayerMovement : MonoBehaviour
     public bool IsGrabbing {  get { return isGrabbing; } }
 
     public bool isDead = false;
-
+    public bool isDying = false;
 
 
     private void Start()
@@ -54,20 +54,9 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!isDead)
+        if (!isDying)
         {
             rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
-
-
-
-            if (!isFacingRight && horizontal > 0)
-            {
-                Flip();
-            }
-            else if (isFacingRight && horizontal < 0)
-            {
-                Flip();
-            }
 
             if (!isPaused)
             {
@@ -98,9 +87,13 @@ public class PlayerMovement : MonoBehaviour
                 animator.SetBool("isWalking", false);
             }
         }
-        else
+        else if (isDead)
         {
             animator.SetBool("isDead", true);
+        }
+        else if (isDying)
+        {
+            animator.SetBool("isDying", true);
         }
     }
 
@@ -111,7 +104,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void Jump(InputAction.CallbackContext context)
     {
-        if (!isDead)
+        if (!isDying)
         {
             if (context.performed && IsGrounded())
             {
@@ -135,7 +128,7 @@ public class PlayerMovement : MonoBehaviour
     }
 
     private void Flip()
-    {if (!isDead)
+    {if (!isDying)
         {
             if (isPushing == false)
             {
@@ -149,7 +142,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void Move(InputAction.CallbackContext context)
     {
-        if (!isDead)
+        if (!isDying)
         {
             horizontal = context.ReadValue<Vector2>().x;
         }
@@ -157,7 +150,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void Interact(InputAction.CallbackContext context)
     {
-        if (!isDead)
+        if (!isDying)
         {
             if (context.performed && currentInteractable != null)
             {
@@ -169,7 +162,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void Grab(InputAction.CallbackContext context)
     {
-        if (!isDead)
+        if (!isDying)
         {
             if (context.performed)
             {
@@ -210,6 +203,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
     }
+   
 
     //public void Unpause(InputAction.CallbackContext context)
     //{
@@ -254,9 +248,11 @@ public class PlayerMovement : MonoBehaviour
     
     public void KillPlayer()
     {
+        isDying = true; 
+    }
+    public void DyingToDeadTransition()
+    {
         isDead = true;
-       
     }
 
-    
 }
