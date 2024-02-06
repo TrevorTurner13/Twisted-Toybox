@@ -69,7 +69,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 8192
+    maxTextureSize: 16384
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -131,10 +131,24 @@ TextureImporter:
         width: 1088
         height: 1088
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -421, y: 41}
+        - {x: -430, y: 90}
+        - {x: -435, y: 140}
+        - {x: -446, y: 178}
+        - {x: -465, y: 219}
+        - {x: -500, y: 265}
+        - {x: -544, y: 276}
+        - {x: -544, y: -544}
+        - {x: -396, y: -544}
+        - {x: -392, y: -433}
+        - {x: -347, y: -397}
+        - {x: -319, y: -261}
+        - {x: -384, y: -96}
+        - {x: -410, y: -35}
       tessellationDetail: 0
       bones: []
       spriteID: 54077f4279444a44bbb9bd4a23ef97d6
@@ -152,10 +166,25 @@ TextureImporter:
         width: 1088
         height: 1088
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 493, y: 265}
+        - {x: 449, y: 187}
+        - {x: 440, y: 125}
+        - {x: 432, y: 29}
+        - {x: 438, y: -43}
+        - {x: 410, y: -105}
+        - {x: 393, y: -214}
+        - {x: 329, y: -275}
+        - {x: 341, y: -336}
+        - {x: 301, y: -448}
+        - {x: 296, y: -544}
+        - {x: 544, y: -544}
+        - {x: 544, y: 277}
+        - {x: 544, y: 277}
+        - {x: 544, y: 275}
       tessellationDetail: 0
       bones: []
       spriteID: a6c11028647cec344b1d154b7060e6ed
@@ -173,10 +202,23 @@ TextureImporter:
         width: 1088
         height: 1088
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 544, y: -148}
+        - {x: 503, y: -143}
+        - {x: 435, y: -151}
+        - {x: 366, y: -195}
+        - {x: 237, y: -204}
+        - {x: 80, y: -178}
+        - {x: 40, y: -180}
+        - {x: -105, y: -173}
+        - {x: -210, y: -184}
+        - {x: -462, y: -163}
+        - {x: -544, y: -151}
+        - {x: -544, y: -544}
+        - {x: 544, y: -544}
       tessellationDetail: 0
       bones: []
       spriteID: 06f97679cbf020640b0ce5b5eea2d3e7
@@ -194,10 +236,20 @@ TextureImporter:
         width: 1088
         height: 1088
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 337, y: -200}
+        - {x: 218, y: -226}
+        - {x: -35, y: -231}
+        - {x: -246, y: -213}
+        - {x: -380, y: -160}
+        - {x: -544, y: -162}
+        - {x: -544, y: -544}
+        - {x: 544, y: -544}
+        - {x: 544, y: -144}
+        - {x: 459, y: -169}
       tessellationDetail: 0
       bones: []
       spriteID: 91f3ed8145f4e704ebb2f3db9797fcc4
@@ -215,10 +267,25 @@ TextureImporter:
         width: 1088
         height: 1088
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -243, y: -262}
+        - {x: -354, y: -246}
+        - {x: -477, y: -169}
+        - {x: -544, y: -156}
+        - {x: -544, y: -544}
+        - {x: 544, y: -544}
+        - {x: 541, y: -154}
+        - {x: 484, y: -180}
+        - {x: 434, y: -208}
+        - {x: 381, y: -257}
+        - {x: 281, y: -294}
+        - {x: 184, y: -302}
+        - {x: -6, y: -271}
+        - {x: -54, y: -295}
+        - {x: -183, y: -259}
       tessellationDetail: 0
       bones: []
       spriteID: 7e055a2dafe50274aa9437c597fa6009
@@ -236,10 +303,30 @@ TextureImporter:
         width: 1088
         height: 1088
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 249, y: -65}
+        - {x: 198, y: -62}
+        - {x: 162, y: -99}
+        - {x: 182, y: -134}
+        - {x: 273, y: -222}
+        - {x: 339, y: -459}
+        - {x: 148, y: -506}
+        - {x: -185, y: -503}
+        - {x: -231, y: -398}
+        - {x: -251, y: -296}
+        - {x: -177, y: -111}
+        - {x: -206, y: -81}
+        - {x: -260, y: -81}
+        - {x: -437, y: -134}
+        - {x: -544, y: -164}
+        - {x: -544, y: -544}
+        - {x: 544, y: -544}
+        - {x: 544, y: -153}
+        - {x: 428, y: -130}
+        - {x: 300, y: -89}
       tessellationDetail: 0
       bones: []
       spriteID: bb82db6edff73854fa6f0b8d9fe5bff2
@@ -257,10 +344,23 @@ TextureImporter:
         width: 1088
         height: 1088
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 544, y: -154}
+        - {x: 520, y: -213}
+        - {x: 518, y: -357}
+        - {x: 521, y: -524}
+        - {x: -8, y: -527}
+        - {x: -458, y: -522}
+        - {x: -494, y: -426}
+        - {x: -520, y: -299}
+        - {x: -544, y: -152}
+        - {x: -544, y: -544}
+        - {x: 544, y: -544}
+        - {x: 544, y: -154}
+        - {x: 544, y: -153}
       tessellationDetail: 0
       bones: []
       spriteID: 4acd44e98aada3348acf94832c3809b9
@@ -278,10 +378,26 @@ TextureImporter:
         width: 1088
         height: 1088
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 481, y: -346}
+        - {x: 432, y: -312}
+        - {x: 390, y: -307}
+        - {x: 311, y: -266}
+        - {x: 171, y: -251}
+        - {x: 56, y: -246}
+        - {x: -1, y: -227}
+        - {x: -61, y: -222}
+        - {x: -146, y: -196}
+        - {x: -230, y: -197}
+        - {x: -332, y: -172}
+        - {x: -454, y: -171}
+        - {x: -544, y: -162}
+        - {x: -544, y: -544}
+        - {x: 544, y: -544}
+        - {x: 544, y: -351}
       tessellationDetail: 0
       bones: []
       spriteID: ef252eae606558e419b890336d40a585
@@ -299,7 +415,7 @@ TextureImporter:
         width: 1088
         height: 1088
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -315,15 +431,25 @@ TextureImporter:
       name: JackInTheBox_Tiles_9
       rect:
         serializedVersion: 2
-        x: 9792
-        y: 5440
+        x: 0
+        y: 4352
         width: 1088
         height: 1088
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -544, y: 544}
+        - {x: -544, y: -544}
+        - {x: -394, y: -544}
+        - {x: -357, y: -343}
+        - {x: -293, y: -179}
+        - {x: -316, y: -71}
+        - {x: -370, y: 87}
+        - {x: -350, y: 238}
+        - {x: -372, y: 376}
+        - {x: -390, y: 544}
       tessellationDetail: 0
       bones: []
       spriteID: 143bb0a648e57ad4bba2dce332b51bca
@@ -336,15 +462,26 @@ TextureImporter:
       name: JackInTheBox_Tiles_10
       rect:
         serializedVersion: 2
-        x: 0
+        x: 1088
         y: 4352
         width: 1088
         height: 1088
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 261, y: 544}
+        - {x: 276, y: 481}
+        - {x: 280, y: 393}
+        - {x: 330, y: 273}
+        - {x: 271, y: 72}
+        - {x: 193, y: -113}
+        - {x: 190, y: -199}
+        - {x: 249, y: -323}
+        - {x: 274, y: -544}
+        - {x: 544, y: -544}
+        - {x: 544, y: 544}
       tessellationDetail: 0
       bones: []
       spriteID: e6ff43b15fe81ab46b5fc3b59ef6f6cc
@@ -357,15 +494,30 @@ TextureImporter:
       name: JackInTheBox_Tiles_11
       rect:
         serializedVersion: 2
-        x: 1088
+        x: 2176
         y: 4352
         width: 1088
         height: 1088
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 544, y: -360}
+        - {x: 437, y: -369}
+        - {x: 342, y: -363}
+        - {x: 265, y: -383}
+        - {x: 162, y: -389}
+        - {x: 33, y: -394}
+        - {x: -74, y: -369}
+        - {x: -138, y: -343}
+        - {x: -224, y: -353}
+        - {x: -304, y: -391}
+        - {x: -377, y: -387}
+        - {x: -469, y: -365}
+        - {x: -544, y: -357}
+        - {x: -544, y: -544}
+        - {x: 544, y: -544}
       tessellationDetail: 0
       bones: []
       spriteID: 7d1ffd4f9bd60e84997789610c57dcc4
@@ -378,15 +530,30 @@ TextureImporter:
       name: JackInTheBox_Tiles_12
       rect:
         serializedVersion: 2
-        x: 2176
+        x: 3264
         y: 4352
         width: 1088
         height: 1088
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 468, y: -374}
+        - {x: 399, y: -389}
+        - {x: 315, y: -415}
+        - {x: 249, y: -419}
+        - {x: 172, y: -427}
+        - {x: 66, y: -425}
+        - {x: -47, y: -432}
+        - {x: -167, y: -427}
+        - {x: -254, y: -415}
+        - {x: -340, y: -367}
+        - {x: -419, y: -372}
+        - {x: -544, y: -360}
+        - {x: -544, y: -544}
+        - {x: 544, y: -544}
+        - {x: 544, y: -353}
       tessellationDetail: 0
       bones: []
       spriteID: 92134efd594d4d240b082f96e8a7ab60
@@ -399,15 +566,32 @@ TextureImporter:
       name: JackInTheBox_Tiles_13
       rect:
         serializedVersion: 2
-        x: 3264
+        x: 4352
         y: 4352
         width: 1088
         height: 1088
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 233, y: -468}
+        - {x: 161, y: -475}
+        - {x: 62, y: -460}
+        - {x: -47, y: -454}
+        - {x: -122, y: -417}
+        - {x: -195, y: -385}
+        - {x: -264, y: -367}
+        - {x: -308, y: -321}
+        - {x: -390, y: -303}
+        - {x: -457, y: -314}
+        - {x: -544, y: -361}
+        - {x: -544, y: -544}
+        - {x: 544, y: -544}
+        - {x: 544, y: -354}
+        - {x: 476, y: -378}
+        - {x: 371, y: -396}
+        - {x: 312, y: -438}
       tessellationDetail: 0
       bones: []
       spriteID: fe041e8ea7b8a284baa8b5c158aa8318
@@ -420,15 +604,37 @@ TextureImporter:
       name: JackInTheBox_Tiles_14
       rect:
         serializedVersion: 2
-        x: 4352
+        x: 5440
         y: 4352
         width: 1088
         height: 1088
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 338, y: -325}
+        - {x: 199, y: -221}
+        - {x: 144, y: -197}
+        - {x: 128, y: -247}
+        - {x: 172, y: -309}
+        - {x: 226, y: -408}
+        - {x: 211, y: -507}
+        - {x: -5, y: -523}
+        - {x: -196, y: -525}
+        - {x: -267, y: -482}
+        - {x: -278, y: -378}
+        - {x: -249, y: -313}
+        - {x: -187, y: -233}
+        - {x: -231, y: -203}
+        - {x: -298, y: -199}
+        - {x: -397, y: -265}
+        - {x: -468, y: -323}
+        - {x: -544, y: -357}
+        - {x: -544, y: -544}
+        - {x: 544, y: -544}
+        - {x: 544, y: -360}
+        - {x: 433, y: -358}
       tessellationDetail: 0
       bones: []
       spriteID: f235d3bbee973474eb8fe6e7d885e69e
@@ -441,15 +647,28 @@ TextureImporter:
       name: JackInTheBox_Tiles_15
       rect:
         serializedVersion: 2
-        x: 5440
+        x: 6528
         y: 4352
         width: 1088
         height: 1088
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 544, y: -352}
+        - {x: 533, y: -381}
+        - {x: 519, y: -523}
+        - {x: 367, y: -520}
+        - {x: 167, y: -528}
+        - {x: -47, y: -523}
+        - {x: -257, y: -529}
+        - {x: -456, y: -525}
+        - {x: -497, y: -481}
+        - {x: -514, y: -382}
+        - {x: -544, y: -365}
+        - {x: -544, y: -544}
+        - {x: 544, y: -544}
       tessellationDetail: 0
       bones: []
       spriteID: 143cba3dd78d56347a09dd978d11eeb0
@@ -462,15 +681,28 @@ TextureImporter:
       name: JackInTheBox_Tiles_16
       rect:
         serializedVersion: 2
-        x: 6528
+        x: 7616
         y: 4352
         width: 1088
         height: 1088
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -127, y: -257}
+        - {x: -271, y: -270}
+        - {x: -338, y: -306}
+        - {x: -416, y: -346}
+        - {x: -544, y: -365}
+        - {x: -544, y: -544}
+        - {x: 544, y: -544}
+        - {x: 544, y: -147}
+        - {x: 460, y: -171}
+        - {x: 354, y: -174}
+        - {x: 248, y: -193}
+        - {x: 104, y: -203}
+        - {x: 18, y: -247}
       tessellationDetail: 0
       bones: []
       spriteID: 256fc32fb29c7064bb6ad659857c7a0a
@@ -483,15 +715,32 @@ TextureImporter:
       name: JackInTheBox_Tiles_17
       rect:
         serializedVersion: 2
-        x: 7616
+        x: 8704
         y: 4352
         width: 1088
         height: 1088
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 544, y: -433}
+        - {x: 395, y: -429}
+        - {x: 70, y: -422}
+        - {x: -205, y: -385}
+        - {x: -368, y: -228}
+        - {x: -278, y: -128}
+        - {x: -209, y: -61}
+        - {x: -184, y: -20}
+        - {x: -224, y: 16}
+        - {x: -286, y: 16}
+        - {x: -336, y: -11}
+        - {x: -383, y: -44}
+        - {x: -426, y: -51}
+        - {x: -477, y: -110}
+        - {x: -544, y: -148}
+        - {x: -544, y: -544}
+        - {x: 544, y: -544}
       tessellationDetail: 0
       bones: []
       spriteID: 1761ac3326b69bb4891e296b850cfb08
@@ -504,15 +753,30 @@ TextureImporter:
       name: JackInTheBox_Tiles_18
       rect:
         serializedVersion: 2
-        x: 8704
+        x: 9792
         y: 4352
         width: 1088
         height: 1088
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 334, y: -110}
+        - {x: 232, y: -38}
+        - {x: 174, y: 5}
+        - {x: 129, y: -2}
+        - {x: 123, y: -40}
+        - {x: 213, y: -118}
+        - {x: 287, y: -288}
+        - {x: 87, y: -409}
+        - {x: -245, y: -445}
+        - {x: -544, y: -436}
+        - {x: -544, y: -544}
+        - {x: 544, y: -544}
+        - {x: 544, y: -153}
+        - {x: 485, y: -129}
+        - {x: 409, y: -146}
       tessellationDetail: 0
       bones: []
       spriteID: 09314256d6d6f334589033d5eed381c3
@@ -525,15 +789,26 @@ TextureImporter:
       name: JackInTheBox_Tiles_19
       rect:
         serializedVersion: 2
-        x: 9792
-        y: 4352
+        x: 0
+        y: 3264
         width: 1088
         height: 1088
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -544, y: 544}
+        - {x: -544, y: -544}
+        - {x: -401, y: -544}
+        - {x: -391, y: -432}
+        - {x: -310, y: -315}
+        - {x: -258, y: -225}
+        - {x: -373, y: -63}
+        - {x: -403, y: 12}
+        - {x: -363, y: 139}
+        - {x: -391, y: 291}
+        - {x: -396, y: 544}
       tessellationDetail: 0
       bones: []
       spriteID: 2cdd1eeae6a17b344b0b3fd47f70beba
@@ -546,15 +821,29 @@ TextureImporter:
       name: JackInTheBox_Tiles_20
       rect:
         serializedVersion: 2
-        x: 0
+        x: 1088
         y: 3264
         width: 1088
         height: 1088
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 263, y: 544}
+        - {x: 271, y: 461}
+        - {x: 253, y: 410}
+        - {x: 301, y: 250}
+        - {x: 325, y: 138}
+        - {x: 367, y: 81}
+        - {x: 358, y: 18}
+        - {x: 308, y: -75}
+        - {x: 323, y: -121}
+        - {x: 263, y: -241}
+        - {x: 310, y: -442}
+        - {x: 277, y: -544}
+        - {x: 544, y: -544}
+        - {x: 544, y: 544}
       tessellationDetail: 0
       bones: []
       spriteID: 2a50a3543496d0347a053eec4b206325
@@ -567,15 +856,32 @@ TextureImporter:
       name: JackInTheBox_Tiles_21
       rect:
         serializedVersion: 2
-        x: 1088
+        x: 2176
         y: 3264
         width: 1088
         height: 1088
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 282, y: -182}
+        - {x: 211, y: -204}
+        - {x: 150, y: -216}
+        - {x: 59, y: -229}
+        - {x: -3, y: -229}
+        - {x: -101, y: -236}
+        - {x: -203, y: -237}
+        - {x: -345, y: -222}
+        - {x: -396, y: -116}
+        - {x: -429, y: 43}
+        - {x: -455, y: 204}
+        - {x: -500, y: 244}
+        - {x: -544, y: 241}
+        - {x: -544, y: -544}
+        - {x: 544, y: -544}
+        - {x: 544, y: -158}
+        - {x: 360, y: -162}
       tessellationDetail: 0
       bones: []
       spriteID: 1174d3841077aaa4ebddddacc35aca92
@@ -588,15 +894,36 @@ TextureImporter:
       name: JackInTheBox_Tiles_22
       rect:
         serializedVersion: 2
-        x: 2176
+        x: 3264
         y: 3264
         width: 1088
         height: 1088
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 514, y: 262}
+        - {x: 478, y: 231}
+        - {x: 451, y: 189}
+        - {x: 427, y: 116}
+        - {x: 389, y: 52}
+        - {x: 344, y: 3}
+        - {x: 276, y: -27}
+        - {x: 226, y: -72}
+        - {x: 173, y: -188}
+        - {x: 92, y: -200}
+        - {x: -4, y: -224}
+        - {x: -98, y: -225}
+        - {x: -194, y: -195}
+        - {x: -274, y: -145}
+        - {x: -335, y: -146}
+        - {x: -401, y: -153}
+        - {x: -475, y: -147}
+        - {x: -544, y: -162}
+        - {x: -544, y: -544}
+        - {x: 544, y: -544}
+        - {x: 544, y: 278}
       tessellationDetail: 0
       bones: []
       spriteID: 3ad5e4cd9ca091342a8488c28c2732fb
@@ -609,15 +936,32 @@ TextureImporter:
       name: JackInTheBox_Tiles_23
       rect:
         serializedVersion: 2
-        x: 3264
+        x: 4352
         y: 3264
         width: 1088
         height: 1088
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 43, y: 94}
+        - {x: -61, y: 142}
+        - {x: -156, y: 182}
+        - {x: -258, y: 209}
+        - {x: -364, y: 217}
+        - {x: -465, y: 247}
+        - {x: -544, y: 254}
+        - {x: -544, y: -168.92725}
+        - {x: -544, y: -544}
+        - {x: 544, y: -544}
+        - {x: 544, y: -140}
+        - {x: 435, y: -112}
+        - {x: 374, y: -71}
+        - {x: 349, y: -21}
+        - {x: 297, y: 0}
+        - {x: 231, y: 4}
+        - {x: 128, y: 37}
       tessellationDetail: 0
       bones: []
       spriteID: e2a860a3cad020f47970b48b64d149b5
@@ -630,15 +974,31 @@ TextureImporter:
       name: JackInTheBox_Tiles_24
       rect:
         serializedVersion: 2
-        x: 4352
+        x: 5440
         y: 3264
         width: 1088
         height: 1088
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 324, y: 247}
+        - {x: 233, y: 231}
+        - {x: 170, y: 215}
+        - {x: 105, y: 172}
+        - {x: 37, y: 137}
+        - {x: -72, y: 77}
+        - {x: -157, y: 14}
+        - {x: -289, y: -38}
+        - {x: -369, y: -94}
+        - {x: -425, y: -106}
+        - {x: -487, y: -142}
+        - {x: -544, y: -145}
+        - {x: -544, y: -544}
+        - {x: 544, y: -544}
+        - {x: 544, y: 271}
+        - {x: 408, y: 274}
       tessellationDetail: 0
       bones: []
       spriteID: ed42c337175f2fb4e835ec35f63a78ea
@@ -651,15 +1011,37 @@ TextureImporter:
       name: JackInTheBox_Tiles_25
       rect:
         serializedVersion: 2
-        x: 5440
+        x: 6528
         y: 3264
         width: 1088
         height: 1088
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 421, y: -310}
+        - {x: 382, y: -308}
+        - {x: 340, y: -297}
+        - {x: 302, y: -295}
+        - {x: 228, y: -288}
+        - {x: 145, y: -280}
+        - {x: 75, y: -278}
+        - {x: 2, y: -252}
+        - {x: -66, y: -188}
+        - {x: -124, y: -162}
+        - {x: -189, y: -123}
+        - {x: -274, y: -97}
+        - {x: -341, y: -51}
+        - {x: -402, y: -53}
+        - {x: -428, y: -7}
+        - {x: -452, y: 162}
+        - {x: -483, y: 245}
+        - {x: -544, y: 267}
+        - {x: -544, y: -544}
+        - {x: 544, y: -544}
+        - {x: 544, y: -358}
+        - {x: 477, y: -318}
       tessellationDetail: 0
       bones: []
       spriteID: d56362cc32d7d6342ba73af64bb56e3c
@@ -672,15 +1054,38 @@ TextureImporter:
       name: JackInTheBox_Tiles_26
       rect:
         serializedVersion: 2
-        x: 6528
+        x: 7616
         y: 3264
         width: 1088
         height: 1088
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 503, y: 265}
+        - {x: 448, y: 192}
+        - {x: 438, y: 121}
+        - {x: 421, y: 5}
+        - {x: 404, y: -86}
+        - {x: 425, y: -147}
+        - {x: 391, y: -270}
+        - {x: 326, y: -354}
+        - {x: 240, y: -356}
+        - {x: 150, y: -335}
+        - {x: 78, y: -329}
+        - {x: 12, y: -339}
+        - {x: -75, y: -369}
+        - {x: -156, y: -387}
+        - {x: -213, y: -410}
+        - {x: -286, y: -435}
+        - {x: -371, y: -409}
+        - {x: -435, y: -407}
+        - {x: -485, y: -367}
+        - {x: -544, y: -361}
+        - {x: -544, y: -544}
+        - {x: 544, y: -544}
+        - {x: 544, y: 274}
       tessellationDetail: 0
       bones: []
       spriteID: 2f5c77540b4d891488526e313e560c16
@@ -693,15 +1098,26 @@ TextureImporter:
       name: JackInTheBox_Tiles_27
       rect:
         serializedVersion: 2
-        x: 7616
+        x: 8704
         y: 3264
         width: 1088
         height: 1088
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 273, y: 544}
+        - {x: 244, y: 502}
+        - {x: 232, y: 401}
+        - {x: 274, y: 343}
+        - {x: 267, y: 302}
+        - {x: 319, y: 268}
+        - {x: 370, y: 221}
+        - {x: 445, y: 180}
+        - {x: 505, y: 116}
+        - {x: 544, y: 108}
+        - {x: 544, y: 544}
       tessellationDetail: 0
       bones: []
       spriteID: 3ed8d8e862d895844bf58bc9df228af6
@@ -714,15 +1130,32 @@ TextureImporter:
       name: JackInTheBox_Tiles_28
       rect:
         serializedVersion: 2
-        x: 8704
+        x: 9792
         y: 3264
         width: 1088
         height: 1088
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -544, y: 544}
+        - {x: -544, y: 99}
+        - {x: -399, y: 178}
+        - {x: -298, y: 154}
+        - {x: -244, y: 141}
+        - {x: -172, y: 38}
+        - {x: -118, y: -21}
+        - {x: 7, y: -67}
+        - {x: 30, y: -164}
+        - {x: 131, y: -253}
+        - {x: 272, y: -319}
+        - {x: 278, y: -384}
+        - {x: 233, y: -455}
+        - {x: 259, y: -517}
+        - {x: 292, y: -544}
+        - {x: 544, y: -544}
+        - {x: 544, y: 544}
       tessellationDetail: 0
       bones: []
       spriteID: 9c94fe9da91913449b8ae5bd404081de
@@ -735,15 +1168,36 @@ TextureImporter:
       name: JackInTheBox_Tiles_29
       rect:
         serializedVersion: 2
-        x: 9792
-        y: 3264
+        x: 0
+        y: 2176
         width: 1088
         height: 1088
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 12, y: -164}
+        - {x: -67, y: -161}
+        - {x: -109, y: -139}
+        - {x: -145, y: -120}
+        - {x: -170, y: -90}
+        - {x: -191, y: -77}
+        - {x: -211, y: -48}
+        - {x: -206, y: -6}
+        - {x: -244, y: 32}
+        - {x: -278, y: 91}
+        - {x: -302, y: 177}
+        - {x: -322, y: 221}
+        - {x: -368, y: 275}
+        - {x: -388, y: 323}
+        - {x: -404, y: 379}
+        - {x: -399, y: 544}
+        - {x: -544, y: 544}
+        - {x: -544, y: -544}
+        - {x: 544, y: -544}
+        - {x: 544, y: -167}
+        - {x: 262, y: -164}
       tessellationDetail: 0
       bones: []
       spriteID: ac348bac62cb149419f49a86102a1007
@@ -756,15 +1210,26 @@ TextureImporter:
       name: JackInTheBox_Tiles_30
       rect:
         serializedVersion: 2
-        x: 0
+        x: 1088
         y: 2176
         width: 1088
         height: 1088
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 266, y: 544}
+        - {x: 266, y: 456}
+        - {x: 299, y: 320}
+        - {x: 245, y: 190}
+        - {x: 58, y: -85}
+        - {x: -86, y: -120}
+        - {x: -337, y: -137}
+        - {x: -544, y: -155}
+        - {x: -544, y: -544}
+        - {x: 544, y: -544}
+        - {x: 544, y: 544}
       tessellationDetail: 0
       bones: []
       spriteID: 46aa903a0dec6e9418a94fdd97b0ab34
@@ -777,15 +1242,27 @@ TextureImporter:
       name: JackInTheBox_Tiles_31
       rect:
         serializedVersion: 2
-        x: 1088
+        x: 2176
         y: 2176
         width: 1088
         height: 1088
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 510, y: -521}
+        - {x: 317, y: -526}
+        - {x: -171, y: -527}
+        - {x: -489, y: -523}
+        - {x: -495, y: -385}
+        - {x: -506, y: -296}
+        - {x: -528, y: -287}
+        - {x: -534, y: -171}
+        - {x: -544, y: -144}
+        - {x: -544, y: -544}
+        - {x: 544, y: -544}
+        - {x: 544, y: -517}
       tessellationDetail: 0
       bones: []
       spriteID: f48619afaa3f2c140af88378431b4475
@@ -798,15 +1275,24 @@ TextureImporter:
       name: JackInTheBox_Tiles_32
       rect:
         serializedVersion: 2
-        x: 2176
+        x: 3264
         y: 2176
         width: 1088
         height: 1088
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 531, y: -361}
+        - {x: 533, y: -392}
+        - {x: 519, y: -487}
+        - {x: 377, y: -520}
+        - {x: -215, y: -517}
+        - {x: -544, y: -516}
+        - {x: -544, y: -544}
+        - {x: 544, y: -544}
+        - {x: 544, y: -348}
       tessellationDetail: 0
       bones: []
       spriteID: 6654908b1b1fdeb489bbb562a11dde40
@@ -819,15 +1305,24 @@ TextureImporter:
       name: JackInTheBox_Tiles_33
       rect:
         serializedVersion: 2
-        x: 3264
+        x: 4352
         y: 2176
         width: 1088
         height: 1088
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 478, y: -524}
+        - {x: 57, y: -530}
+        - {x: -264, y: -530}
+        - {x: -496, y: -519}
+        - {x: -512, y: -387}
+        - {x: -544, y: -357}
+        - {x: -544, y: -544}
+        - {x: 544, y: -544}
+        - {x: 544, y: -521}
       tessellationDetail: 0
       bones: []
       spriteID: 8c91f31db1de3bd47933b92ebf57ba9b
@@ -840,15 +1335,25 @@ TextureImporter:
       name: JackInTheBox_Tiles_34
       rect:
         serializedVersion: 2
-        x: 4352
+        x: 5440
         y: 2176
         width: 1088
         height: 1088
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 447, y: -528}
+        - {x: 270, y: -528}
+        - {x: 95, y: -532}
+        - {x: -161, y: -530}
+        - {x: -372, y: -529}
+        - {x: -505, y: -521}
+        - {x: -544, y: -498}
+        - {x: -544, y: -544}
+        - {x: 544, y: -544}
+        - {x: 544, y: -523}
       tessellationDetail: 0
       bones: []
       spriteID: b812530766bcb1743970fd563051873d
@@ -861,15 +1366,19 @@ TextureImporter:
       name: JackInTheBox_Tiles_35
       rect:
         serializedVersion: 2
-        x: 5440
+        x: 6528
         y: 2176
         width: 1088
         height: 1088
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -544, y: -526}
+        - {x: -544, y: -544}
+        - {x: 544, y: -544}
+        - {x: 544, y: -528}
       tessellationDetail: 0
       bones: []
       spriteID: 5d6950da4424191418f48fefc084df53
@@ -882,15 +1391,22 @@ TextureImporter:
       name: JackInTheBox_Tiles_36
       rect:
         serializedVersion: 2
-        x: 6528
+        x: 7616
         y: 2176
         width: 1088
         height: 1088
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 544, y: -163}
+        - {x: 519, y: -248}
+        - {x: 506, y: -394}
+        - {x: 507, y: -515}
+        - {x: -544, y: -519}
+        - {x: -544, y: -544}
+        - {x: 544, y: -544}
       tessellationDetail: 0
       bones: []
       spriteID: 277ebb58309c35c47bd735b75eb7be6b
@@ -903,15 +1419,24 @@ TextureImporter:
       name: JackInTheBox_Tiles_37
       rect:
         serializedVersion: 2
-        x: 7616
+        x: 8704
         y: 2176
         width: 1088
         height: 1088
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 289, y: 544}
+        - {x: 243, y: 496}
+        - {x: 259, y: 405}
+        - {x: 253, y: 324}
+        - {x: 314, y: 286}
+        - {x: 372, y: 280}
+        - {x: 475, y: 331}
+        - {x: 544, y: 335}
+        - {x: 544, y: 544}
       tessellationDetail: 0
       bones: []
       spriteID: 05211ea077e463143a613456df3d04ff
@@ -924,15 +1449,29 @@ TextureImporter:
       name: JackInTheBox_Tiles_38
       rect:
         serializedVersion: 2
-        x: 8704
+        x: 9792
         y: 2176
         width: 1088
         height: 1088
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -544, y: 544}
+        - {x: -544, y: -544}
+        - {x: -429, y: -544}
+        - {x: -379, y: -426}
+        - {x: -189, y: -358}
+        - {x: -156, y: -212}
+        - {x: 47, y: -94}
+        - {x: 78, y: -8}
+        - {x: 85, y: 192}
+        - {x: 237, y: 252}
+        - {x: 269, y: 324}
+        - {x: 420, y: 327}
+        - {x: 544, y: 344}
+        - {x: 544, y: 544}
       tessellationDetail: 0
       bones: []
       spriteID: b70b4953ae4793f4da4e5fc3daf07c15
@@ -945,15 +1484,21 @@ TextureImporter:
       name: JackInTheBox_Tiles_39
       rect:
         serializedVersion: 2
-        x: 9792
-        y: 2176
+        x: 0
+        y: 1088
         width: 1088
         height: 1088
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -544, y: 544}
+        - {x: -544, y: 325}
+        - {x: -347, y: 300}
+        - {x: -56, y: 281}
+        - {x: 544, y: 113}
+        - {x: 544, y: 544}
       tessellationDetail: 0
       bones: []
       spriteID: c2536c08e7caeee43b41b581629f0440
@@ -966,15 +1511,24 @@ TextureImporter:
       name: JackInTheBox_Tiles_40
       rect:
         serializedVersion: 2
-        x: 0
+        x: 1088
         y: 1088
         width: 1088
         height: 1088
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -544, y: 544}
+        - {x: -544, y: 100}
+        - {x: -415, y: 150}
+        - {x: -289, y: 157}
+        - {x: -56, y: 34}
+        - {x: 195, y: 62}
+        - {x: 356, y: 54}
+        - {x: 544, y: 101}
+        - {x: 544, y: 544}
       tessellationDetail: 0
       bones: []
       spriteID: cacaeed07d4d42a43838c8b7c8231f1e
@@ -987,15 +1541,27 @@ TextureImporter:
       name: JackInTheBox_Tiles_41
       rect:
         serializedVersion: 2
-        x: 1088
+        x: 2176
         y: 1088
         width: 1088
         height: 1088
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -544, y: 544}
+        - {x: -544, y: 106}
+        - {x: -382, y: 50}
+        - {x: -266, y: 31}
+        - {x: -50, y: -53}
+        - {x: 54, y: -72}
+        - {x: 155, y: 13}
+        - {x: 222, y: 39}
+        - {x: 330, y: 32}
+        - {x: 426, y: 88}
+        - {x: 544, y: 100}
+        - {x: 544, y: 544}
       tessellationDetail: 0
       bones: []
       spriteID: 76d610d98afa5464b97c3be8a538854b
@@ -1008,15 +1574,27 @@ TextureImporter:
       name: JackInTheBox_Tiles_42
       rect:
         serializedVersion: 2
-        x: 2176
+        x: 3264
         y: 1088
         width: 1088
         height: 1088
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -544, y: 544}
+        - {x: -544, y: 117}
+        - {x: -428, y: 76}
+        - {x: -305, y: 72}
+        - {x: -186, y: 44}
+        - {x: -57, y: -31}
+        - {x: 91, y: -58}
+        - {x: 215, y: -11}
+        - {x: 329, y: 32}
+        - {x: 483, y: 114}
+        - {x: 544, y: 111}
+        - {x: 544, y: 544}
       tessellationDetail: 0
       bones: []
       spriteID: 47ac2cf8d2c2056449b1cdb51c2fca80
@@ -1029,15 +1607,27 @@ TextureImporter:
       name: JackInTheBox_Tiles_43
       rect:
         serializedVersion: 2
-        x: 3264
+        x: 4352
         y: 1088
         width: 1088
         height: 1088
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -544, y: 544}
+        - {x: -544, y: 110}
+        - {x: -452, y: 121}
+        - {x: -320, y: 101}
+        - {x: -210, y: 137}
+        - {x: -119, y: 152}
+        - {x: 22, y: 304}
+        - {x: 181, y: 365}
+        - {x: 355, y: 360}
+        - {x: 443, y: 325}
+        - {x: 544, y: 337}
+        - {x: 544, y: 544}
       tessellationDetail: 0
       bones: []
       spriteID: 53c25dd45061c29418b5161b7b1a00a1
@@ -1050,15 +1640,31 @@ TextureImporter:
       name: JackInTheBox_Tiles_44
       rect:
         serializedVersion: 2
-        x: 4352
+        x: 5440
         y: 1088
         width: 1088
         height: 1088
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -544, y: 544}
+        - {x: -544, y: 339}
+        - {x: -449, y: 272}
+        - {x: -358, y: 229}
+        - {x: -319, y: 306}
+        - {x: -244, y: 363}
+        - {x: -161, y: 291}
+        - {x: -101, y: 288}
+        - {x: -31, y: 242}
+        - {x: 24, y: 203}
+        - {x: 107, y: 194}
+        - {x: 207, y: 141}
+        - {x: 399, y: 176}
+        - {x: 433, y: 269}
+        - {x: 544, y: 340}
+        - {x: 544, y: 544}
       tessellationDetail: 0
       bones: []
       spriteID: 79f19cec269104f4cb6521bff5132282
@@ -1071,15 +1677,28 @@ TextureImporter:
       name: JackInTheBox_Tiles_45
       rect:
         serializedVersion: 2
-        x: 5440
+        x: 6528
         y: 1088
         width: 1088
         height: 1088
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -544, y: 544}
+        - {x: -544, y: 344}
+        - {x: -442, y: 317}
+        - {x: -330, y: 372}
+        - {x: -218, y: 453}
+        - {x: -103, y: 476}
+        - {x: 44, y: 479}
+        - {x: 129, y: 420}
+        - {x: 198, y: 367}
+        - {x: 313, y: 389}
+        - {x: 424, y: 356}
+        - {x: 544, y: 349}
+        - {x: 544, y: 544}
       tessellationDetail: 0
       bones: []
       spriteID: 28b0062db043cbb4ea5b1f52eed2db32
@@ -1092,15 +1711,26 @@ TextureImporter:
       name: JackInTheBox_Tiles_46
       rect:
         serializedVersion: 2
-        x: 6528
+        x: 7616
         y: 1088
         width: 1088
         height: 1088
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -544, y: 544}
+        - {x: -544, y: 115}
+        - {x: -355, y: 90}
+        - {x: -213, y: 138}
+        - {x: -53, y: 217}
+        - {x: 72, y: 177}
+        - {x: 101, y: 88}
+        - {x: 235, y: 2}
+        - {x: 367, y: -66}
+        - {x: 544, y: -77}
+        - {x: 544, y: 544}
       tessellationDetail: 0
       bones: []
       spriteID: 0926842384769b34091ed1d26392530a
@@ -1113,15 +1743,23 @@ TextureImporter:
       name: JackInTheBox_Tiles_47
       rect:
         serializedVersion: 2
-        x: 7616
+        x: 8704
         y: 1088
         width: 1088
         height: 1088
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -395, y: 544}
+        - {x: -544, y: 544}
+        - {x: -544, y: 335}
+        - {x: -476, y: 327}
+        - {x: -389, y: 280}
+        - {x: -350, y: 324}
+        - {x: -354, y: 423}
+        - {x: -395, y: 499}
       tessellationDetail: 0
       bones: []
       spriteID: ea0d17bd26cee9b439d42662ff88f1e9
@@ -1134,15 +1772,29 @@ TextureImporter:
       name: JackInTheBox_Tiles_48
       rect:
         serializedVersion: 2
-        x: 8704
+        x: 9792
         y: 1088
         width: 1088
         height: 1088
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -544, y: 544}
+        - {x: -544, y: 374}
+        - {x: -446, y: 328}
+        - {x: -339, y: 305}
+        - {x: -169, y: 41}
+        - {x: -12, y: -35}
+        - {x: 48, y: -119}
+        - {x: 88, y: -185}
+        - {x: 232, y: -276}
+        - {x: 304, y: -366}
+        - {x: 242, y: -452}
+        - {x: 285, y: -544}
+        - {x: 544, y: -544}
+        - {x: 544, y: 544}
       tessellationDetail: 0
       bones: []
       spriteID: 0ebe3cdebd4a4eb45b40091433ef5e8b
@@ -1155,15 +1807,23 @@ TextureImporter:
       name: JackInTheBox_Tiles_49
       rect:
         serializedVersion: 2
-        x: 9792
-        y: 1088
+        x: 0
+        y: 0
         width: 1088
         height: 1088
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -544, y: 544}
+        - {x: -544, y: 336}
+        - {x: -279, y: 316}
+        - {x: -64, y: 186}
+        - {x: 47, y: 62}
+        - {x: 324, y: 6}
+        - {x: 544, y: -67}
+        - {x: 544, y: 544}
       tessellationDetail: 0
       bones: []
       spriteID: 35bb3add756ae804680004342d01c7a2
@@ -1176,15 +1836,24 @@ TextureImporter:
       name: JackInTheBox_Tiles_50
       rect:
         serializedVersion: 2
-        x: 0
+        x: 1088
         y: 0
         width: 1088
         height: 1088
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -544, y: 544}
+        - {x: -544, y: -85}
+        - {x: -330, y: 11}
+        - {x: -108, y: 148}
+        - {x: 38, y: 116}
+        - {x: 146, y: -83}
+        - {x: 375, y: -75}
+        - {x: 544, y: -90}
+        - {x: 544, y: 544}
       tessellationDetail: 0
       bones: []
       spriteID: eb3a981c65a4d49418d28e592ef2ef21
@@ -1197,15 +1866,27 @@ TextureImporter:
       name: JackInTheBox_Tiles_51
       rect:
         serializedVersion: 2
-        x: 1088
+        x: 2176
         y: 0
         width: 1088
         height: 1088
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -544, y: 544}
+        - {x: -544, y: -78}
+        - {x: -483, y: -60}
+        - {x: -393, y: -108}
+        - {x: -257, y: -169}
+        - {x: -138, y: -183}
+        - {x: -5, y: -203}
+        - {x: 168, y: -185}
+        - {x: 308, y: -141}
+        - {x: 449, y: -75}
+        - {x: 544, y: -73}
+        - {x: 544, y: 544}
       tessellationDetail: 0
       bones: []
       spriteID: 2c06d819ac7c7d94281793b5790f0f8c
@@ -1218,15 +1899,28 @@ TextureImporter:
       name: JackInTheBox_Tiles_52
       rect:
         serializedVersion: 2
-        x: 2176
+        x: 3264
         y: 0
         width: 1088
         height: 1088
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -544, y: 544}
+        - {x: -544, y: -81}
+        - {x: -416, y: -80}
+        - {x: -317, y: -104}
+        - {x: -159, y: -181}
+        - {x: 9, y: -218}
+        - {x: 138, y: -274}
+        - {x: 234, y: -264}
+        - {x: 321, y: -180}
+        - {x: 424, y: -164}
+        - {x: 500, y: -132}
+        - {x: 544, y: -60}
+        - {x: 544, y: 544}
       tessellationDetail: 0
       bones: []
       spriteID: 0d6004835bda075419122972f2ae1eda
@@ -1239,15 +1933,32 @@ TextureImporter:
       name: JackInTheBox_Tiles_53
       rect:
         serializedVersion: 2
-        x: 3264
+        x: 4352
         y: 0
         width: 1088
         height: 1088
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -496, y: 106}
+        - {x: -395, y: 124}
+        - {x: -316, y: 92}
+        - {x: -261, y: 105}
+        - {x: -126, y: 113}
+        - {x: -4, y: 84}
+        - {x: 164, y: 113}
+        - {x: 306, y: 131}
+        - {x: 393, y: 226}
+        - {x: 433, y: 299}
+        - {x: 544, y: 344}
+        - {x: 544, y: 544}
+        - {x: -544, y: 544}
+        - {x: -544, y: -69}
+        - {x: -540, y: -59}
+        - {x: -544, y: 31}
+        - {x: -533, y: 79}
       tessellationDetail: 0
       bones: []
       spriteID: 5d2c288b7a28bfe49b6d76481e39cc29
@@ -1260,15 +1971,28 @@ TextureImporter:
       name: JackInTheBox_Tiles_54
       rect:
         serializedVersion: 2
-        x: 4352
+        x: 5440
         y: 0
         width: 1088
         height: 1088
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -544, y: 544}
+        - {x: -544, y: 345}
+        - {x: -439, y: 290}
+        - {x: -354, y: 280}
+        - {x: -257, y: 208}
+        - {x: -68, y: 157}
+        - {x: 85, y: 180}
+        - {x: 178, y: 214}
+        - {x: 269, y: 312}
+        - {x: 370, y: 322}
+        - {x: 486, y: 348}
+        - {x: 544, y: 335}
+        - {x: 544, y: 544}
       tessellationDetail: 0
       bones: []
       spriteID: c9fa4cadaeb5a38449db87551f466155
@@ -1281,15 +2005,33 @@ TextureImporter:
       name: JackInTheBox_Tiles_55
       rect:
         serializedVersion: 2
-        x: 5440
+        x: 6528
         y: 0
         width: 1088
         height: 1088
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -544, y: 544}
+        - {x: -544, y: 339}
+        - {x: -502, y: 331}
+        - {x: -402, y: 406}
+        - {x: -263, y: 468}
+        - {x: -209, y: 412}
+        - {x: -206, y: 304}
+        - {x: -121, y: 227}
+        - {x: -7, y: 183}
+        - {x: 104, y: 216}
+        - {x: 181, y: 199}
+        - {x: 240, y: 300}
+        - {x: 316, y: 311}
+        - {x: 371, y: 303}
+        - {x: 453, y: 327}
+        - {x: 508, y: 342}
+        - {x: 544, y: 332}
+        - {x: 544, y: 544}
       tessellationDetail: 0
       bones: []
       spriteID: b328a4645ae2d0c47b2a56a91088f6f3
@@ -1302,15 +2044,30 @@ TextureImporter:
       name: JackInTheBox_Tiles_56
       rect:
         serializedVersion: 2
-        x: 6528
+        x: 7616
         y: 0
         width: 1088
         height: 1088
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -544, y: 544}
+        - {x: -544, y: -70}
+        - {x: -517, y: -91}
+        - {x: -455, y: -77}
+        - {x: -367, y: -103}
+        - {x: -266, y: -72}
+        - {x: -135, y: -43}
+        - {x: -32, y: -37}
+        - {x: 32, y: 25}
+        - {x: 104, y: 62}
+        - {x: 213, y: 102}
+        - {x: 337, y: 92}
+        - {x: 448, y: 157}
+        - {x: 544, y: 124}
+        - {x: 544, y: 544}
       tessellationDetail: 0
       bones: []
       spriteID: 222b5a159f87fc14e96700739c7c9b9b
@@ -1323,15 +2080,28 @@ TextureImporter:
       name: JackInTheBox_Tiles_57
       rect:
         serializedVersion: 2
-        x: 7616
+        x: 8704
         y: 0
         width: 1088
         height: 1088
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -260, y: 343}
+        - {x: -272, y: 380}
+        - {x: -377, y: 447}
+        - {x: -402, y: 517}
+        - {x: -391, y: 544}
+        - {x: -544, y: 544}
+        - {x: -544, y: 112}
+        - {x: -507, y: 111}
+        - {x: -468, y: 155}
+        - {x: -423, y: 193}
+        - {x: -378, y: 205}
+        - {x: -316, y: 268}
+        - {x: -265, y: 278}
       tessellationDetail: 0
       bones: []
       spriteID: 9c2e356e74a85ce4d96831b707f9ff56
@@ -1344,40 +2114,38 @@ TextureImporter:
       name: JackInTheBox_Tiles_58
       rect:
         serializedVersion: 2
-        x: 8704
-        y: 0
-        width: 1088
-        height: 1088
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2269a78f0367fd74c84be06ccc090774
-      internalID: 1432056570
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: JackInTheBox_Tiles_59
-      rect:
-        serializedVersion: 2
         x: 9792
         y: 0
         width: 1088
         height: 1088
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 544, y: 103}
+        - {x: 544, y: 544}
+        - {x: -544, y: 544}
+        - {x: -544, y: -544}
+        - {x: -408, y: -544}
+        - {x: -394, y: -493}
+        - {x: -326, y: -418}
+        - {x: -257, y: -358}
+        - {x: -209, y: -334}
+        - {x: -149, y: -243}
+        - {x: -83, y: -214}
+        - {x: -26, y: -150}
+        - {x: 47, y: -94}
+        - {x: 81, y: 14}
+        - {x: 96, y: 192}
+        - {x: 187, y: 266}
+        - {x: 313, y: 292}
+        - {x: 440, y: 220}
+        - {x: 487, y: 128}
       tessellationDetail: 0
       bones: []
-      spriteID: 612ca637c14914e4ebe727cc75590054
-      internalID: -500057597
+      spriteID: 2269a78f0367fd74c84be06ccc090774
+      internalID: 1432056570
       vertices: []
       indices: 
       edges: []
@@ -1448,7 +2216,6 @@ TextureImporter:
       JackInTheBox_Tiles_56: -1238882964
       JackInTheBox_Tiles_57: -1060019685
       JackInTheBox_Tiles_58: 1432056570
-      JackInTheBox_Tiles_59: -500057597
       JackInTheBox_Tiles_6: 167763670
       JackInTheBox_Tiles_7: 1310491755
       JackInTheBox_Tiles_8: 1672673921
