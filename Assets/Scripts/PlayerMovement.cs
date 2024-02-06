@@ -42,6 +42,10 @@ public class PlayerMovement : MonoBehaviour
     private bool isPaused = false;
     public bool IsGrabbing {  get { return isGrabbing; } }
 
+    public bool isDead = false;
+
+
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -50,21 +54,12 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
-
-        
-
-        if (!isFacingRight && horizontal > 0)
+        if (!isDead)
         {
-            Flip();
-        }
-        else if (isFacingRight && horizontal < 0)
-        {
-            Flip();
-        }
+            rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
 
-        if(!isPaused)
-        {
+
+
             if (!isFacingRight && horizontal > 0)
             {
                 Flip();
@@ -73,24 +68,39 @@ public class PlayerMovement : MonoBehaviour
             {
                 Flip();
             }
-        }
 
-        if(IsGrounded())
-        {
-            animator.SetBool("isGrounded", true);
-            speed = defaultSpeed;
+            if (!isPaused)
+            {
+                if (!isFacingRight && horizontal > 0)
+                {
+                    Flip();
+                }
+                else if (isFacingRight && horizontal < 0)
+                {
+                    Flip();
+                }
+            }
+            if (IsGrounded())
+            {
+                animator.SetBool("isGrounded", true);
+                speed = defaultSpeed;
+            }
+            else
+            {
+                animator.SetBool("isGrounded", false);
+            }
+            if (rb.velocity.x != 0)
+            {
+                animator.SetBool("isWalking", true);
+            }
+            else
+            {
+                animator.SetBool("isWalking", false);
+            }
         }
         else
         {
-            animator.SetBool("isGrounded", false);
-        }
-        if(rb.velocity.x != 0)
-        {
-            animator.SetBool("isWalking", true);
-        }
-        else
-        {
-            animator.SetBool("isWalking", false);
+            animator.SetBool("isDead", true);
         }
     }
 
@@ -101,15 +111,19 @@ public class PlayerMovement : MonoBehaviour
 
     public void Jump(InputAction.CallbackContext context)
     {
-        if (context.performed && IsGrounded())
+        if (!isDead)
         {
-            rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
+            if (context.performed && IsGrounded())
+            {
+                rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
 
 
-        }
-        if (context.canceled && rb.velocity.y > 0f)
-        {
-            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
+            }
+            if (context.canceled && rb.velocity.y > 0f)
+            {
+                rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
+            }
+
         }
 
     }
@@ -121,60 +135,70 @@ public class PlayerMovement : MonoBehaviour
     }
 
     private void Flip()
-    {
-        if (isPushing == false)
+    {if (!isDead)
         {
-            isFacingRight = !isFacingRight;
-            Vector3 localScale = transform.localScale;
-            localScale.x *= -1f;
-            transform.localScale = localScale;
-        }
+            if (isPushing == false)
+            {
+                isFacingRight = !isFacingRight;
+                Vector3 localScale = transform.localScale;
+                localScale.x *= -1f;
+                transform.localScale = localScale;
+            }
+        }     
     }
 
     public void Move(InputAction.CallbackContext context)
     {
-        horizontal = context.ReadValue<Vector2>().x;
-
+        if (!isDead)
+        {
+            horizontal = context.ReadValue<Vector2>().x;
+        }
     }
 
     public void Interact(InputAction.CallbackContext context)
     {
-        if (context.performed && currentInteractable != null)
+        if (!isDead)
         {
-            currentInteractable.Interact();
+            if (context.performed && currentInteractable != null)
+            {
+                currentInteractable.Interact();
+            }
         }
+        
     }
 
     public void Grab(InputAction.CallbackContext context)
     {
-       if(context.performed)
+        if (!isDead)
         {
-            isGrabbing = true;
-            Debug.Log("Grabbed");
-        }
-       if(context.canceled)
-        {
-            Debug.Log("NoGrab");
-            isGrabbing = false;
-            
-            if (currentRope != null)
+            if (context.performed)
             {
-                
-                if (currentGrabPoint != null)
-                {
-                    Destroy(currentGrabPoint.gameObject.GetComponent<FixedJoint2D>());
-                    currentGrabPoint = null;
-                    
-                }
-                currentRope.Grabbed = false;
-                speed = 6f;
-                GetComponent<Rigidbody2D>().gravityScale = defaultGravityScale;
-                currentRope = null;
-                transform.parent = null;
-                animator.SetBool("isSwinging", false);
+                isGrabbing = true;
+                Debug.Log("Grabbed");
             }
-        }
-       
+            if (context.canceled)
+            {
+                Debug.Log("NoGrab");
+                isGrabbing = false;
+
+                if (currentRope != null)
+                {
+
+                    if (currentGrabPoint != null)
+                    {
+                        Destroy(currentGrabPoint.gameObject.GetComponent<FixedJoint2D>());
+                        currentGrabPoint = null;
+
+                    }
+                    currentRope.Grabbed = false;
+                    speed = 6f;
+                    GetComponent<Rigidbody2D>().gravityScale = defaultGravityScale;
+                    currentRope = null;
+                    transform.parent = null;
+                    animator.SetBool("isSwinging", false);
+                }
+            }
+        }   
     }
 
     public void Pause(InputAction.CallbackContext context)
@@ -228,5 +252,11 @@ public class PlayerMovement : MonoBehaviour
         }
     }
     
+    public void KillPlayer()
+    {
+        isDead = true;
+       
+    }
 
+    
 }
