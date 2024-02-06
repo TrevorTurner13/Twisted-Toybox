@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -43,16 +43,16 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
+<<<<<<< Updated upstream
   spritePixelsToUnits: 100
-  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spriteGenerateFallbackPhysicsShape: 1
+=======
+  spritePixelsToUnits: 136
   alphaUsage: 1
-  alphaIsTransparency: 1
   spriteTessellationDetail: -1
   textureType: 8
   textureShape: 1
@@ -69,10 +69,17 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
+<<<<<<< Updated upstream
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
+=======
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+>>>>>>> Stashed changes
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -121,7 +128,725 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
+<<<<<<< Updated upstream
     sprites: []
+=======
+    sprites:
+    - serializedVersion: 2
+      name: JackInTheBox_NearLayerTiles_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5440
+        width: 1088
+        height: 1088
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d08cd89168ba0f44badbcc1030a608a2
+      internalID: 91028267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JackInTheBox_NearLayerTiles_1
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 5440
+        width: 1088
+        height: 1088
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a393ce508a0455948ae54225dc763747
+      internalID: -1575789761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JackInTheBox_NearLayerTiles_2
+      rect:
+        serializedVersion: 2
+        x: 2176
+        y: 5440
+        width: 1088
+        height: 1088
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42556af7be5d2d04389f37f5d25c8e13
+      internalID: -218327971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JackInTheBox_NearLayerTiles_3
+      rect:
+        serializedVersion: 2
+        x: 3264
+        y: 5440
+        width: 1088
+        height: 1088
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78fc4b508fe576243a92af92475c8b82
+      internalID: 2003354464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JackInTheBox_NearLayerTiles_4
+      rect:
+        serializedVersion: 2
+        x: 4352
+        y: 5440
+        width: 1088
+        height: 1088
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 353f9e75473f60949ac5b918ad0cce68
+      internalID: 1477002668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JackInTheBox_NearLayerTiles_5
+      rect:
+        serializedVersion: 2
+        x: 5440
+        y: 5440
+        width: 1088
+        height: 1088
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23c6588139721234185332dd976f4dd4
+      internalID: 253470733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JackInTheBox_NearLayerTiles_6
+      rect:
+        serializedVersion: 2
+        x: 6528
+        y: 5440
+        width: 1088
+        height: 1088
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c7fbbb7e38b2de4fad2b7357cdb84f9
+      internalID: -120472015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JackInTheBox_NearLayerTiles_7
+      rect:
+        serializedVersion: 2
+        x: 7616
+        y: 5440
+        width: 1088
+        height: 1088
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5eeae96147ab2e346aa5002413ee1756
+      internalID: 807601850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JackInTheBox_NearLayerTiles_8
+      rect:
+        serializedVersion: 2
+        x: 8704
+        y: 5440
+        width: 1088
+        height: 1088
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 302c4a1ba8ce0eb49a9b615c90df91d7
+      internalID: -1070632983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JackInTheBox_NearLayerTiles_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4352
+        width: 1088
+        height: 1088
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eeec1ec2508904347ae643514d5e90b3
+      internalID: 947866948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JackInTheBox_NearLayerTiles_10
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 4352
+        width: 1088
+        height: 1088
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dc1276cce203ed4494e66018168d049
+      internalID: 1795248200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JackInTheBox_NearLayerTiles_11
+      rect:
+        serializedVersion: 2
+        x: 2176
+        y: 4352
+        width: 1088
+        height: 1088
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d19772e875ec7674d9dbbca5671c40ac
+      internalID: 229649465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JackInTheBox_NearLayerTiles_12
+      rect:
+        serializedVersion: 2
+        x: 3264
+        y: 4352
+        width: 1088
+        height: 1088
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 473172cc06eb10644a948932e8996a00
+      internalID: 1725056094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JackInTheBox_NearLayerTiles_13
+      rect:
+        serializedVersion: 2
+        x: 4352
+        y: 4352
+        width: 1088
+        height: 1088
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad1431d7edc55554fbac08295ae248f2
+      internalID: -234644574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JackInTheBox_NearLayerTiles_14
+      rect:
+        serializedVersion: 2
+        x: 5440
+        y: 4352
+        width: 1088
+        height: 1088
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 717095e258142ff41ae3e474e5736ec9
+      internalID: -326384555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JackInTheBox_NearLayerTiles_15
+      rect:
+        serializedVersion: 2
+        x: 6528
+        y: 4352
+        width: 1088
+        height: 1088
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a7c1311a1ae5a64fb3604cc5e800943
+      internalID: 633875557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JackInTheBox_NearLayerTiles_16
+      rect:
+        serializedVersion: 2
+        x: 7616
+        y: 4352
+        width: 1088
+        height: 1088
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b01b21f95cbc1a4889e2bc8f4046673
+      internalID: 1769157330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JackInTheBox_NearLayerTiles_17
+      rect:
+        serializedVersion: 2
+        x: 8704
+        y: 4352
+        width: 1088
+        height: 1088
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85e54a806ea5410428d9ed71533ab700
+      internalID: -434289791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JackInTheBox_NearLayerTiles_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3264
+        width: 1088
+        height: 1088
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c546eaad33176e4196b9361b96167b2
+      internalID: 445320533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JackInTheBox_NearLayerTiles_19
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 3264
+        width: 1088
+        height: 1088
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9e372fea36014e4abf5365e78bfcf6f
+      internalID: -1668871490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JackInTheBox_NearLayerTiles_20
+      rect:
+        serializedVersion: 2
+        x: 2176
+        y: 3264
+        width: 1088
+        height: 1088
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e20ceab674024043880a9494119ddf2
+      internalID: -1282596618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JackInTheBox_NearLayerTiles_21
+      rect:
+        serializedVersion: 2
+        x: 3264
+        y: 3264
+        width: 1088
+        height: 1088
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99bdd3eb3894aae4e95310e49c49203a
+      internalID: 94795929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JackInTheBox_NearLayerTiles_22
+      rect:
+        serializedVersion: 2
+        x: 4352
+        y: 3264
+        width: 1088
+        height: 1088
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ad68c9a071bd7e469bf4620a5581478
+      internalID: 458170133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JackInTheBox_NearLayerTiles_23
+      rect:
+        serializedVersion: 2
+        x: 5440
+        y: 3264
+        width: 1088
+        height: 1088
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 259957f68f48b05449773a06c22d22cc
+      internalID: 1983346698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JackInTheBox_NearLayerTiles_24
+      rect:
+        serializedVersion: 2
+        x: 6528
+        y: 3264
+        width: 1088
+        height: 1088
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac18adbb6a84e8b4e8e0df150016fbf6
+      internalID: -1157067694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JackInTheBox_NearLayerTiles_25
+      rect:
+        serializedVersion: 2
+        x: 7616
+        y: 3264
+        width: 1088
+        height: 1088
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6203af815b8bac74e8112c9cd6c610f2
+      internalID: 752247472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JackInTheBox_NearLayerTiles_26
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2176
+        width: 1088
+        height: 1088
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c74c210061cc924ab8da417bdda9c1c
+      internalID: 1211652595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JackInTheBox_NearLayerTiles_27
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 2176
+        width: 1088
+        height: 1088
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48be17c75769a2440a017aeb73535b6b
+      internalID: 1477162686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JackInTheBox_NearLayerTiles_28
+      rect:
+        serializedVersion: 2
+        x: 2176
+        y: 2176
+        width: 1088
+        height: 1088
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c98f51ebd4522e24d9c70eb0565703b9
+      internalID: 1004964373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JackInTheBox_NearLayerTiles_29
+      rect:
+        serializedVersion: 2
+        x: 3264
+        y: 2176
+        width: 1088
+        height: 1088
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ae3e57c3a02b484586956b67b886ec8
+      internalID: -401826400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JackInTheBox_NearLayerTiles_30
+      rect:
+        serializedVersion: 2
+        x: 4352
+        y: 2176
+        width: 1088
+        height: 1088
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4352bd2eeccf3a44bb0b33e095d2798
+      internalID: -1205662635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JackInTheBox_NearLayerTiles_31
+      rect:
+        serializedVersion: 2
+        x: 5440
+        y: 2176
+        width: 1088
+        height: 1088
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: faa39cd535372fe47801fa1b2f6ea050
+      internalID: -1766763015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JackInTheBox_NearLayerTiles_32
+      rect:
+        serializedVersion: 2
+        x: 6528
+        y: 2176
+        width: 1088
+        height: 1088
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fc959cd9a0a8c64a81526bfa6ceb05e
+      internalID: -1826716940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JackInTheBox_NearLayerTiles_33
+      rect:
+        serializedVersion: 2
+        x: 7616
+        y: 2176
+        width: 1088
+        height: 1088
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b8385f79dec5274da5ed2da7ec4bac4
+      internalID: 559400579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+>>>>>>> Stashed changes
     outline: []
     physicsShape: []
     bones: []
@@ -132,7 +857,45 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+<<<<<<< Updated upstream
     nameFileIdTable: {}
+=======
+    nameFileIdTable:
+      JackInTheBox_NearLayerTiles_0: 91028267
+      JackInTheBox_NearLayerTiles_1: -1575789761
+      JackInTheBox_NearLayerTiles_10: 1795248200
+      JackInTheBox_NearLayerTiles_11: 229649465
+      JackInTheBox_NearLayerTiles_12: 1725056094
+      JackInTheBox_NearLayerTiles_13: -234644574
+      JackInTheBox_NearLayerTiles_14: -326384555
+      JackInTheBox_NearLayerTiles_15: 633875557
+      JackInTheBox_NearLayerTiles_16: 1769157330
+      JackInTheBox_NearLayerTiles_17: -434289791
+      JackInTheBox_NearLayerTiles_18: 445320533
+      JackInTheBox_NearLayerTiles_19: -1668871490
+      JackInTheBox_NearLayerTiles_2: -218327971
+      JackInTheBox_NearLayerTiles_20: -1282596618
+      JackInTheBox_NearLayerTiles_21: 94795929
+      JackInTheBox_NearLayerTiles_22: 458170133
+      JackInTheBox_NearLayerTiles_23: 1983346698
+      JackInTheBox_NearLayerTiles_24: -1157067694
+      JackInTheBox_NearLayerTiles_25: 752247472
+      JackInTheBox_NearLayerTiles_26: 1211652595
+      JackInTheBox_NearLayerTiles_27: 1477162686
+      JackInTheBox_NearLayerTiles_28: 1004964373
+      JackInTheBox_NearLayerTiles_29: -401826400
+      JackInTheBox_NearLayerTiles_3: 2003354464
+      JackInTheBox_NearLayerTiles_30: -1205662635
+      JackInTheBox_NearLayerTiles_31: -1766763015
+      JackInTheBox_NearLayerTiles_32: -1826716940
+      JackInTheBox_NearLayerTiles_33: 559400579
+      JackInTheBox_NearLayerTiles_4: 1477002668
+      JackInTheBox_NearLayerTiles_5: 253470733
+      JackInTheBox_NearLayerTiles_6: -120472015
+      JackInTheBox_NearLayerTiles_7: 807601850
+      JackInTheBox_NearLayerTiles_8: -1070632983
+      JackInTheBox_NearLayerTiles_9: 947866948
+>>>>>>> Stashed changes
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
