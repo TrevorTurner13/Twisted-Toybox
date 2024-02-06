@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 112
+  spritePixelsToUnits: 136
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -315,8 +315,8 @@ TextureImporter:
       name: JackInTheBox_Tiles_9
       rect:
         serializedVersion: 2
-        x: 0
-        y: 4352
+        x: 9792
+        y: 5440
         width: 1088
         height: 1088
       alignment: 0
@@ -336,7 +336,7 @@ TextureImporter:
       name: JackInTheBox_Tiles_10
       rect:
         serializedVersion: 2
-        x: 1088
+        x: 0
         y: 4352
         width: 1088
         height: 1088
@@ -357,7 +357,7 @@ TextureImporter:
       name: JackInTheBox_Tiles_11
       rect:
         serializedVersion: 2
-        x: 2176
+        x: 1088
         y: 4352
         width: 1088
         height: 1088
@@ -378,7 +378,7 @@ TextureImporter:
       name: JackInTheBox_Tiles_12
       rect:
         serializedVersion: 2
-        x: 3264
+        x: 2176
         y: 4352
         width: 1088
         height: 1088
@@ -399,7 +399,7 @@ TextureImporter:
       name: JackInTheBox_Tiles_13
       rect:
         serializedVersion: 2
-        x: 4352
+        x: 3264
         y: 4352
         width: 1088
         height: 1088
@@ -420,7 +420,7 @@ TextureImporter:
       name: JackInTheBox_Tiles_14
       rect:
         serializedVersion: 2
-        x: 5440
+        x: 4352
         y: 4352
         width: 1088
         height: 1088
@@ -441,7 +441,7 @@ TextureImporter:
       name: JackInTheBox_Tiles_15
       rect:
         serializedVersion: 2
-        x: 6528
+        x: 5440
         y: 4352
         width: 1088
         height: 1088
@@ -462,7 +462,7 @@ TextureImporter:
       name: JackInTheBox_Tiles_16
       rect:
         serializedVersion: 2
-        x: 7616
+        x: 6528
         y: 4352
         width: 1088
         height: 1088
@@ -483,7 +483,7 @@ TextureImporter:
       name: JackInTheBox_Tiles_17
       rect:
         serializedVersion: 2
-        x: 8704
+        x: 7616
         y: 4352
         width: 1088
         height: 1088
@@ -504,8 +504,8 @@ TextureImporter:
       name: JackInTheBox_Tiles_18
       rect:
         serializedVersion: 2
-        x: 0
-        y: 3264
+        x: 8704
+        y: 4352
         width: 1088
         height: 1088
       alignment: 0
@@ -525,8 +525,8 @@ TextureImporter:
       name: JackInTheBox_Tiles_19
       rect:
         serializedVersion: 2
-        x: 1088
-        y: 3264
+        x: 9792
+        y: 4352
         width: 1088
         height: 1088
       alignment: 0
@@ -546,7 +546,7 @@ TextureImporter:
       name: JackInTheBox_Tiles_20
       rect:
         serializedVersion: 2
-        x: 2176
+        x: 0
         y: 3264
         width: 1088
         height: 1088
@@ -567,7 +567,7 @@ TextureImporter:
       name: JackInTheBox_Tiles_21
       rect:
         serializedVersion: 2
-        x: 3264
+        x: 1088
         y: 3264
         width: 1088
         height: 1088
@@ -588,7 +588,7 @@ TextureImporter:
       name: JackInTheBox_Tiles_22
       rect:
         serializedVersion: 2
-        x: 4352
+        x: 2176
         y: 3264
         width: 1088
         height: 1088
@@ -609,7 +609,7 @@ TextureImporter:
       name: JackInTheBox_Tiles_23
       rect:
         serializedVersion: 2
-        x: 5440
+        x: 3264
         y: 3264
         width: 1088
         height: 1088
@@ -630,7 +630,7 @@ TextureImporter:
       name: JackInTheBox_Tiles_24
       rect:
         serializedVersion: 2
-        x: 6528
+        x: 4352
         y: 3264
         width: 1088
         height: 1088
@@ -651,7 +651,7 @@ TextureImporter:
       name: JackInTheBox_Tiles_25
       rect:
         serializedVersion: 2
-        x: 7616
+        x: 5440
         y: 3264
         width: 1088
         height: 1088
@@ -672,7 +672,7 @@ TextureImporter:
       name: JackInTheBox_Tiles_26
       rect:
         serializedVersion: 2
-        x: 8704
+        x: 6528
         y: 3264
         width: 1088
         height: 1088
@@ -693,8 +693,8 @@ TextureImporter:
       name: JackInTheBox_Tiles_27
       rect:
         serializedVersion: 2
-        x: 0
-        y: 2176
+        x: 7616
+        y: 3264
         width: 1088
         height: 1088
       alignment: 0
@@ -714,8 +714,8 @@ TextureImporter:
       name: JackInTheBox_Tiles_28
       rect:
         serializedVersion: 2
-        x: 1088
-        y: 2176
+        x: 8704
+        y: 3264
         width: 1088
         height: 1088
       alignment: 0
@@ -735,8 +735,8 @@ TextureImporter:
       name: JackInTheBox_Tiles_29
       rect:
         serializedVersion: 2
-        x: 2176
-        y: 2176
+        x: 9792
+        y: 3264
         width: 1088
         height: 1088
       alignment: 0
@@ -756,7 +756,7 @@ TextureImporter:
       name: JackInTheBox_Tiles_30
       rect:
         serializedVersion: 2
-        x: 3264
+        x: 0
         y: 2176
         width: 1088
         height: 1088
@@ -777,7 +777,7 @@ TextureImporter:
       name: JackInTheBox_Tiles_31
       rect:
         serializedVersion: 2
-        x: 4352
+        x: 1088
         y: 2176
         width: 1088
         height: 1088
@@ -798,7 +798,7 @@ TextureImporter:
       name: JackInTheBox_Tiles_32
       rect:
         serializedVersion: 2
-        x: 5440
+        x: 2176
         y: 2176
         width: 1088
         height: 1088
@@ -819,7 +819,7 @@ TextureImporter:
       name: JackInTheBox_Tiles_33
       rect:
         serializedVersion: 2
-        x: 6528
+        x: 3264
         y: 2176
         width: 1088
         height: 1088
@@ -840,7 +840,7 @@ TextureImporter:
       name: JackInTheBox_Tiles_34
       rect:
         serializedVersion: 2
-        x: 7616
+        x: 4352
         y: 2176
         width: 1088
         height: 1088
@@ -861,7 +861,7 @@ TextureImporter:
       name: JackInTheBox_Tiles_35
       rect:
         serializedVersion: 2
-        x: 8704
+        x: 5440
         y: 2176
         width: 1088
         height: 1088
@@ -882,8 +882,8 @@ TextureImporter:
       name: JackInTheBox_Tiles_36
       rect:
         serializedVersion: 2
-        x: 0
-        y: 1088
+        x: 6528
+        y: 2176
         width: 1088
         height: 1088
       alignment: 0
@@ -903,8 +903,8 @@ TextureImporter:
       name: JackInTheBox_Tiles_37
       rect:
         serializedVersion: 2
-        x: 1088
-        y: 1088
+        x: 7616
+        y: 2176
         width: 1088
         height: 1088
       alignment: 0
@@ -924,8 +924,8 @@ TextureImporter:
       name: JackInTheBox_Tiles_38
       rect:
         serializedVersion: 2
-        x: 2176
-        y: 1088
+        x: 8704
+        y: 2176
         width: 1088
         height: 1088
       alignment: 0
@@ -945,8 +945,8 @@ TextureImporter:
       name: JackInTheBox_Tiles_39
       rect:
         serializedVersion: 2
-        x: 3264
-        y: 1088
+        x: 9792
+        y: 2176
         width: 1088
         height: 1088
       alignment: 0
@@ -966,7 +966,7 @@ TextureImporter:
       name: JackInTheBox_Tiles_40
       rect:
         serializedVersion: 2
-        x: 4352
+        x: 0
         y: 1088
         width: 1088
         height: 1088
@@ -987,7 +987,7 @@ TextureImporter:
       name: JackInTheBox_Tiles_41
       rect:
         serializedVersion: 2
-        x: 5440
+        x: 1088
         y: 1088
         width: 1088
         height: 1088
@@ -1008,7 +1008,7 @@ TextureImporter:
       name: JackInTheBox_Tiles_42
       rect:
         serializedVersion: 2
-        x: 6528
+        x: 2176
         y: 1088
         width: 1088
         height: 1088
@@ -1029,7 +1029,7 @@ TextureImporter:
       name: JackInTheBox_Tiles_43
       rect:
         serializedVersion: 2
-        x: 7616
+        x: 3264
         y: 1088
         width: 1088
         height: 1088
@@ -1050,7 +1050,7 @@ TextureImporter:
       name: JackInTheBox_Tiles_44
       rect:
         serializedVersion: 2
-        x: 8704
+        x: 4352
         y: 1088
         width: 1088
         height: 1088
@@ -1071,8 +1071,8 @@ TextureImporter:
       name: JackInTheBox_Tiles_45
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
+        x: 5440
+        y: 1088
         width: 1088
         height: 1088
       alignment: 0
@@ -1092,8 +1092,8 @@ TextureImporter:
       name: JackInTheBox_Tiles_46
       rect:
         serializedVersion: 2
-        x: 1088
-        y: 0
+        x: 6528
+        y: 1088
         width: 1088
         height: 1088
       alignment: 0
@@ -1113,8 +1113,8 @@ TextureImporter:
       name: JackInTheBox_Tiles_47
       rect:
         serializedVersion: 2
-        x: 2176
-        y: 0
+        x: 7616
+        y: 1088
         width: 1088
         height: 1088
       alignment: 0
@@ -1134,8 +1134,8 @@ TextureImporter:
       name: JackInTheBox_Tiles_48
       rect:
         serializedVersion: 2
-        x: 3264
-        y: 0
+        x: 8704
+        y: 1088
         width: 1088
         height: 1088
       alignment: 0
@@ -1155,8 +1155,8 @@ TextureImporter:
       name: JackInTheBox_Tiles_49
       rect:
         serializedVersion: 2
-        x: 4352
-        y: 0
+        x: 9792
+        y: 1088
         width: 1088
         height: 1088
       alignment: 0
@@ -1176,7 +1176,7 @@ TextureImporter:
       name: JackInTheBox_Tiles_50
       rect:
         serializedVersion: 2
-        x: 5440
+        x: 0
         y: 0
         width: 1088
         height: 1088
@@ -1197,7 +1197,7 @@ TextureImporter:
       name: JackInTheBox_Tiles_51
       rect:
         serializedVersion: 2
-        x: 6528
+        x: 1088
         y: 0
         width: 1088
         height: 1088
@@ -1218,7 +1218,7 @@ TextureImporter:
       name: JackInTheBox_Tiles_52
       rect:
         serializedVersion: 2
-        x: 7616
+        x: 2176
         y: 0
         width: 1088
         height: 1088
@@ -1239,7 +1239,7 @@ TextureImporter:
       name: JackInTheBox_Tiles_53
       rect:
         serializedVersion: 2
-        x: 8704
+        x: 3264
         y: 0
         width: 1088
         height: 1088
@@ -1252,6 +1252,132 @@ TextureImporter:
       bones: []
       spriteID: 5d2c288b7a28bfe49b6d76481e39cc29
       internalID: -116826502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JackInTheBox_Tiles_54
+      rect:
+        serializedVersion: 2
+        x: 4352
+        y: 0
+        width: 1088
+        height: 1088
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9fa4cadaeb5a38449db87551f466155
+      internalID: 191785955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JackInTheBox_Tiles_55
+      rect:
+        serializedVersion: 2
+        x: 5440
+        y: 0
+        width: 1088
+        height: 1088
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b328a4645ae2d0c47b2a56a91088f6f3
+      internalID: -1309458720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JackInTheBox_Tiles_56
+      rect:
+        serializedVersion: 2
+        x: 6528
+        y: 0
+        width: 1088
+        height: 1088
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 222b5a159f87fc14e96700739c7c9b9b
+      internalID: -1238882964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JackInTheBox_Tiles_57
+      rect:
+        serializedVersion: 2
+        x: 7616
+        y: 0
+        width: 1088
+        height: 1088
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c2e356e74a85ce4d96831b707f9ff56
+      internalID: -1060019685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JackInTheBox_Tiles_58
+      rect:
+        serializedVersion: 2
+        x: 8704
+        y: 0
+        width: 1088
+        height: 1088
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2269a78f0367fd74c84be06ccc090774
+      internalID: 1432056570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JackInTheBox_Tiles_59
+      rect:
+        serializedVersion: 2
+        x: 9792
+        y: 0
+        width: 1088
+        height: 1088
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 612ca637c14914e4ebe727cc75590054
+      internalID: -500057597
       vertices: []
       indices: 
       edges: []
@@ -1317,6 +1443,12 @@ TextureImporter:
       JackInTheBox_Tiles_51: -40309315
       JackInTheBox_Tiles_52: -994729697
       JackInTheBox_Tiles_53: -116826502
+      JackInTheBox_Tiles_54: 191785955
+      JackInTheBox_Tiles_55: -1309458720
+      JackInTheBox_Tiles_56: -1238882964
+      JackInTheBox_Tiles_57: -1060019685
+      JackInTheBox_Tiles_58: 1432056570
+      JackInTheBox_Tiles_59: -500057597
       JackInTheBox_Tiles_6: 167763670
       JackInTheBox_Tiles_7: 1310491755
       JackInTheBox_Tiles_8: 1672673921
