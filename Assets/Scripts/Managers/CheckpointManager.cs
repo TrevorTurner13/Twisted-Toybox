@@ -10,16 +10,24 @@ public class CheckpointManager : MonoBehaviour
 
     public Vector2 LastCheckpointPosition;
 
+    private PlayerMovement player;
+
     private void Awake()
     {
-        if (instance = null)
+        if (instance == null)
         {
             instance = this;
         }
+        DontDestroyOnLoad(this);
+
+        player = FindObjectOfType<PlayerMovement>();
     }
     
-    public void SetCheckpoint(Vector2 position)
+    public void SetCheckpoint(Transform position)
     {
-        LastCheckpointPosition = position;
+        Debug.Log("Checkpoint Set");
+
+        LastCheckpointPosition = position.position;
+        
     }
 }

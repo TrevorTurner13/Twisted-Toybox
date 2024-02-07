@@ -47,17 +47,18 @@ public class PlayerMovement : MonoBehaviour
     public bool isDead = false;
     public bool isDying = false;
 
+    public Transform spawnPoint;
+   
+
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-       
-        if (CheckpointManager.instance.LastCheckpointPosition != null)
+
+        if (CheckpointManager.instance.LastCheckpointPosition!=null)
         {
             transform.position = CheckpointManager.instance.LastCheckpointPosition;
-        }
-        
-        
+        }                                                             
     }
 
     // Update is called once per frame

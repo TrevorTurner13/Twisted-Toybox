@@ -22,7 +22,9 @@ public class CheckpointController : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            CheckpointManager.instance.SetCheckpoint(respawnPoint.position);
+            Debug.Log("Checkpoint Triggered");
+           
+            CheckpointManager.instance.SetCheckpoint(respawnPoint);
         }     
     }
 }
