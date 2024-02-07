@@ -16,6 +16,7 @@ public class GameOverManager : MonoBehaviour
         {
             instance = this;
         }
+
         GameOverPanel.SetActive(false);
     }
 
