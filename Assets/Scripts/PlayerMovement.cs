@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.U2D.IK;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -19,8 +20,9 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private Transform currentGrabPoint = null;
 
-   
-    
+
+    public GameObject[] bodyParts;
+    public LimbSolver2D[] limbSolvers;
     public Transform handPos;
 
     private float horizontal;
@@ -33,7 +35,7 @@ public class PlayerMovement : MonoBehaviour
     public float SwingSpeed { get { return swingSpeed; } }
     public float DefaultSpeed { get { return defaultSpeed; } }
     public float DefaultGravityScale { get { return defaultGravityScale; } }
-    public float SwingGravityScale {  get { return swingGravityScale; } }
+    public float SwingGravityScale { get { return swingGravityScale; } }
     private float jumpingPower = 6f;
     private bool isFacingRight = true;
     private bool isGrabbing = false;
@@ -42,28 +44,31 @@ public class PlayerMovement : MonoBehaviour
     public bool IsPushing { get { return isPushing; } set { isPushing = value; } }
 
     private bool isPaused = false;
-    public bool IsGrabbing {  get { return isGrabbing; } }
+    public bool IsGrabbing { get { return isGrabbing; } }
 
     public bool isDead = false;
     public bool isDying = false;
-
-    public Transform spawnPoint;
-   
 
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-
-        if (CheckpointManager.instance.LastCheckpointPosition!=null)
-        {
-            transform.position = CheckpointManager.instance.LastCheckpointPosition;
-        }                                                             
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown("f"))
+        {
+            MakeRagdoll();
+            isDying = true;
+        }
+        if (Input.GetKeyDown("g"))
+        {
+            StopRagdoll();
+            isDying = false;
+        }
         if (!isDying)
         {
             rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
@@ -101,15 +106,56 @@ public class PlayerMovement : MonoBehaviour
         {
             animator.SetBool("isDead", true);
         }
-        else if (isDying)
+        //else if (isDying)
+        //{
+        //    animator.SetBool("isDying", true);
+        //}
+    }
+
+    private void MakeRagdoll()
+    {
+        animator.enabled = false;
+        CapsuleCollider2D collider = GetComponent<CapsuleCollider2D>();
+        collider.size = new Vector2(collider.size.x, 0.3f);
+        for (int i = 0; i < limbSolvers.Length; i++)
         {
-            animator.SetBool("isDying", true);
+            limbSolvers[i].enabled = false;
+        }
+        for (int i = 0; i < bodyParts.Length; i++)
+        {
+            bodyParts[i].GetComponent<Rigidbody2D>().isKinematic = false;
+            HingeJoint2D hinge = bodyParts[i].GetComponent<HingeJoint2D>();
+            if (hinge != null)
+            {
+                bodyParts[i].GetComponent<HingeJoint2D>().enabled = true;
+            }
+            bodyParts[i].GetComponent<Collider2D>().enabled = true;
         }
     }
 
+    private void StopRagdoll()
+    {
+        animator.enabled = true;
+        CapsuleCollider2D collider = GetComponent<CapsuleCollider2D>();
+        collider.size = new Vector2(collider.size.x, 1.8f); ;
+        for (int i = 0; i < limbSolvers.Length; i++)
+        {
+            limbSolvers[i].enabled = true;
+        }
+        for (int i = 0; i < bodyParts.Length; i++)
+        {
+            bodyParts[i].GetComponent<Rigidbody2D>().isKinematic = true;
+            HingeJoint2D hinge = bodyParts[i].GetComponent<HingeJoint2D>();
+            if (hinge != null)
+            {
+                bodyParts[i].GetComponent<HingeJoint2D>().enabled = false;
+            }
+            bodyParts[i].GetComponent<Collider2D>().enabled = false;
+        }
+    }
     private void FixedUpdate()
     {
-        
+
     }
 
     public void Jump(InputAction.CallbackContext context)
@@ -133,12 +179,13 @@ public class PlayerMovement : MonoBehaviour
 
     public bool IsGrounded()
     {
-        
+
         return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
     }
 
     private void Flip()
-    {if (!isDying)
+    {
+        if (!isDying)
         {
             if (isPushing == false)
             {
@@ -147,7 +194,7 @@ public class PlayerMovement : MonoBehaviour
                 localScale.x *= -1f;
                 transform.localScale = localScale;
             }
-        }     
+        }
     }
 
     public void Move(InputAction.CallbackContext context)
@@ -167,7 +214,7 @@ public class PlayerMovement : MonoBehaviour
                 currentInteractable.Interact();
             }
         }
-        
+
     }
 
     public void Grab(InputAction.CallbackContext context)
@@ -201,7 +248,7 @@ public class PlayerMovement : MonoBehaviour
                     animator.SetBool("isSwinging", false);
                 }
             }
-        }   
+        }
     }
 
     public void Pause(InputAction.CallbackContext context)
@@ -213,7 +260,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
     }
-   
+
 
     //public void Unpause(InputAction.CallbackContext context)
     //{
@@ -235,7 +282,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 ButtonController button = collision.GetComponent<ButtonController>();
                 currentInteractable = button;
-            }            
+            }
         }
         if (collision.CompareTag("Rope") && isGrabbing)
         {
@@ -254,15 +301,11 @@ public class PlayerMovement : MonoBehaviour
             currentInteractable = null;
         }
     }
-    
+
     public void KillPlayer()
     {
         isDying = true;
-
-        GameOverManager.instance.GameOverPanelActive();
-
     }
-
     public void DyingToDeadTransition()
     {
         isDead = true;
