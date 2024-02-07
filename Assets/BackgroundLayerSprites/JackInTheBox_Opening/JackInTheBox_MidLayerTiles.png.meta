@@ -399,7 +399,7 @@ TextureImporter:
       name: JackInTheBox_MidLayerTiles_13
       rect:
         serializedVersion: 2
-        x: 4352
+        x: 5440
         y: 4352
         width: 1088
         height: 1088
@@ -420,7 +420,7 @@ TextureImporter:
       name: JackInTheBox_MidLayerTiles_14
       rect:
         serializedVersion: 2
-        x: 5440
+        x: 6528
         y: 4352
         width: 1088
         height: 1088
@@ -441,7 +441,7 @@ TextureImporter:
       name: JackInTheBox_MidLayerTiles_15
       rect:
         serializedVersion: 2
-        x: 6528
+        x: 7616
         y: 4352
         width: 1088
         height: 1088
@@ -462,7 +462,7 @@ TextureImporter:
       name: JackInTheBox_MidLayerTiles_16
       rect:
         serializedVersion: 2
-        x: 7616
+        x: 8704
         y: 4352
         width: 1088
         height: 1088
@@ -483,8 +483,8 @@ TextureImporter:
       name: JackInTheBox_MidLayerTiles_17
       rect:
         serializedVersion: 2
-        x: 8704
-        y: 4352
+        x: 0
+        y: 3264
         width: 1088
         height: 1088
       alignment: 0
@@ -504,7 +504,7 @@ TextureImporter:
       name: JackInTheBox_MidLayerTiles_18
       rect:
         serializedVersion: 2
-        x: 0
+        x: 1088
         y: 3264
         width: 1088
         height: 1088
@@ -525,7 +525,7 @@ TextureImporter:
       name: JackInTheBox_MidLayerTiles_19
       rect:
         serializedVersion: 2
-        x: 1088
+        x: 2176
         y: 3264
         width: 1088
         height: 1088
@@ -546,7 +546,7 @@ TextureImporter:
       name: JackInTheBox_MidLayerTiles_20
       rect:
         serializedVersion: 2
-        x: 2176
+        x: 3264
         y: 3264
         width: 1088
         height: 1088
@@ -567,7 +567,7 @@ TextureImporter:
       name: JackInTheBox_MidLayerTiles_21
       rect:
         serializedVersion: 2
-        x: 3264
+        x: 4352
         y: 3264
         width: 1088
         height: 1088
@@ -588,7 +588,7 @@ TextureImporter:
       name: JackInTheBox_MidLayerTiles_22
       rect:
         serializedVersion: 2
-        x: 4352
+        x: 5440
         y: 3264
         width: 1088
         height: 1088
@@ -609,7 +609,7 @@ TextureImporter:
       name: JackInTheBox_MidLayerTiles_23
       rect:
         serializedVersion: 2
-        x: 5440
+        x: 6528
         y: 3264
         width: 1088
         height: 1088
@@ -630,8 +630,8 @@ TextureImporter:
       name: JackInTheBox_MidLayerTiles_24
       rect:
         serializedVersion: 2
-        x: 0
-        y: 2176
+        x: 7616
+        y: 3264
         width: 1088
         height: 1088
       alignment: 0
@@ -651,8 +651,8 @@ TextureImporter:
       name: JackInTheBox_MidLayerTiles_25
       rect:
         serializedVersion: 2
-        x: 1088
-        y: 2176
+        x: 8704
+        y: 3264
         width: 1088
         height: 1088
       alignment: 0
@@ -672,7 +672,7 @@ TextureImporter:
       name: JackInTheBox_MidLayerTiles_26
       rect:
         serializedVersion: 2
-        x: 2176
+        x: 0
         y: 2176
         width: 1088
         height: 1088
@@ -693,7 +693,7 @@ TextureImporter:
       name: JackInTheBox_MidLayerTiles_27
       rect:
         serializedVersion: 2
-        x: 3264
+        x: 1088
         y: 2176
         width: 1088
         height: 1088
@@ -714,8 +714,8 @@ TextureImporter:
       name: JackInTheBox_MidLayerTiles_28
       rect:
         serializedVersion: 2
-        x: 4352
-        y: 2176
+        x: 2176
+        y: 1088
         width: 1088
         height: 1088
       alignment: 0
@@ -735,8 +735,8 @@ TextureImporter:
       name: JackInTheBox_MidLayerTiles_29
       rect:
         serializedVersion: 2
-        x: 5440
-        y: 2176
+        x: 3264
+        y: 1088
         width: 1088
         height: 1088
       alignment: 0
@@ -756,8 +756,8 @@ TextureImporter:
       name: JackInTheBox_MidLayerTiles_30
       rect:
         serializedVersion: 2
-        x: 6528
-        y: 2176
+        x: 4352
+        y: 1088
         width: 1088
         height: 1088
       alignment: 0
@@ -777,8 +777,8 @@ TextureImporter:
       name: JackInTheBox_MidLayerTiles_31
       rect:
         serializedVersion: 2
-        x: 7616
-        y: 2176
+        x: 5440
+        y: 1088
         width: 1088
         height: 1088
       alignment: 0
@@ -798,8 +798,8 @@ TextureImporter:
       name: JackInTheBox_MidLayerTiles_32
       rect:
         serializedVersion: 2
-        x: 8704
-        y: 2176
+        x: 2176
+        y: 0
         width: 1088
         height: 1088
       alignment: 0
@@ -819,8 +819,8 @@ TextureImporter:
       name: JackInTheBox_MidLayerTiles_33
       rect:
         serializedVersion: 2
-        x: 2176
-        y: 1088
+        x: 3264
+        y: 0
         width: 1088
         height: 1088
       alignment: 0
@@ -840,8 +840,8 @@ TextureImporter:
       name: JackInTheBox_MidLayerTiles_34
       rect:
         serializedVersion: 2
-        x: 3264
-        y: 1088
+        x: 4352
+        y: 0
         width: 1088
         height: 1088
       alignment: 0
@@ -861,8 +861,8 @@ TextureImporter:
       name: JackInTheBox_MidLayerTiles_35
       rect:
         serializedVersion: 2
-        x: 4352
-        y: 1088
+        x: 5440
+        y: 0
         width: 1088
         height: 1088
       alignment: 0
@@ -874,90 +874,6 @@ TextureImporter:
       bones: []
       spriteID: 63a16316352c0d04794f6e66de721b90
       internalID: 596398955
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: JackInTheBox_MidLayerTiles_36
-      rect:
-        serializedVersion: 2
-        x: 5440
-        y: 1088
-        width: 1088
-        height: 1088
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b2d3b9bdd255d0345b3cc3b4e6a3c5eb
-      internalID: -590254451
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: JackInTheBox_MidLayerTiles_37
-      rect:
-        serializedVersion: 2
-        x: 6528
-        y: 1088
-        width: 1088
-        height: 1088
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fce994cccbd0d4147a93c86ca26ec3e3
-      internalID: 2083388078
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: JackInTheBox_MidLayerTiles_38
-      rect:
-        serializedVersion: 2
-        x: 7616
-        y: 1088
-        width: 1088
-        height: 1088
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 54456d0ee1d1bf94dba138b6baa64fc6
-      internalID: 1972815741
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: JackInTheBox_MidLayerTiles_39
-      rect:
-        serializedVersion: 2
-        x: 8704
-        y: 1088
-        width: 1088
-        height: 1088
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1f8ed61603d5bb543a5faaaeb2ce2812
-      internalID: 1649966761
       vertices: []
       indices: 
       edges: []
@@ -1003,10 +919,6 @@ TextureImporter:
       JackInTheBox_MidLayerTiles_33: -195536940
       JackInTheBox_MidLayerTiles_34: -477429251
       JackInTheBox_MidLayerTiles_35: 596398955
-      JackInTheBox_MidLayerTiles_36: -590254451
-      JackInTheBox_MidLayerTiles_37: 2083388078
-      JackInTheBox_MidLayerTiles_38: 1972815741
-      JackInTheBox_MidLayerTiles_39: 1649966761
       JackInTheBox_MidLayerTiles_4: -1998829568
       JackInTheBox_MidLayerTiles_5: -719548610
       JackInTheBox_MidLayerTiles_6: -1811126744
