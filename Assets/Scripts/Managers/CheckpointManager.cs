@@ -18,9 +18,15 @@ public class CheckpointManager : MonoBehaviour
         {
             instance = this;
         }
-        DontDestroyOnLoad(this);
+        else
+        {
+            Destroy(gameObject);
+        }
+
+        DontDestroyOnLoad(gameObject);
 
         player = FindObjectOfType<PlayerMovement>();
+
     }
     
     public void SetCheckpoint(Transform position)
