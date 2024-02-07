@@ -14,7 +14,7 @@ public class PushPullBlockController : MonoBehaviour
  
     }
 
-    private PlayerMovement player;
+    private PlayerMovement1 player;
     private HingeJoint2D hinge;
     private Rigidbody2D neutral;
     private bool playerInRange = false;
@@ -24,7 +24,7 @@ public class PushPullBlockController : MonoBehaviour
 
     void Start()
     {
-        player = FindObjectOfType<PlayerMovement>();
+        player = FindObjectOfType<PlayerMovement1>();
         hinge = GetComponent<HingeJoint2D>();
         neutral = hinge.connectedBody;
     }
