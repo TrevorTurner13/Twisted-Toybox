@@ -247,8 +247,12 @@ public class PlayerMovement : MonoBehaviour
     
     public void KillPlayer()
     {
-        isDying = true; 
+        isDying = true;
+
+        GameOverManager.instance.GameOverPanelActive();
+
     }
+
     public void DyingToDeadTransition()
     {
         isDead = true;
