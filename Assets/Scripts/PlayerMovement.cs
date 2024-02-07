@@ -18,6 +18,8 @@ public class PlayerMovement : MonoBehaviour
     private RopeHandler currentRope = null;
     [SerializeField]
     private Transform currentGrabPoint = null;
+
+   
     
     public Transform handPos;
 
@@ -49,6 +51,13 @@ public class PlayerMovement : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+       
+        if (CheckpointManager.instance.LastCheckpointPosition != null)
+        {
+            transform.position = CheckpointManager.instance.LastCheckpointPosition;
+        }
+        
+        
     }
 
     // Update is called once per frame

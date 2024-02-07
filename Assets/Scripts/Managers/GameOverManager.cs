@@ -44,6 +44,7 @@ public class GameOverManager : MonoBehaviour
 
 
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+
     }
 
     IEnumerator LoadMainMenuCoroutine()
