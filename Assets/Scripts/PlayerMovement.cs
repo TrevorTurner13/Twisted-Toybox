@@ -106,10 +106,10 @@ public class PlayerMovement : MonoBehaviour
         {
             animator.SetBool("isDead", true);
         }
-        //else if (isDying)
-        //{
-        //    animator.SetBool("isDying", true);
-        //}
+        else if (isDying)
+        {
+            animator.SetBool("isDying", true);
+        }
     }
 
     private void MakeRagdoll()
@@ -305,7 +305,10 @@ public class PlayerMovement : MonoBehaviour
     public void KillPlayer()
     {
         isDying = true;
+
+        GameOverManager.instance.GameOverPanelActive();
     }
+
     public void DyingToDeadTransition()
     {
         isDead = true;
