@@ -51,6 +51,9 @@ public class PlayerMovement : MonoBehaviour
     public bool IsPushing { get { return isPushing; } set { isPushing = value; } }
 
     private bool isPaused = false;
+
+    public bool IsPaused { get { return isPaused; } set { isPaused = value; } }
+
     public bool IsGrabbing { get { return isGrabbing; } }
 
     public bool isDead = false;
