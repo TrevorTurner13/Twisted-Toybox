@@ -20,6 +20,13 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private Transform currentGrabPoint = null;
 
+    private enum playerStance
+    {
+        standing,
+        crouched
+    }
+
+    private playerStance currentStance = playerStance.standing;
 
     public GameObject[] bodyParts;
     public LimbSolver2D[] limbSolvers;
@@ -49,6 +56,7 @@ public class PlayerMovement : MonoBehaviour
     public bool isDead = false;
     public bool isDying = false;
 
+    
 
     private void Start()
     {
@@ -95,11 +103,35 @@ public class PlayerMovement : MonoBehaviour
             }
             if (rb.velocity.x != 0)
             {
-                animator.SetBool("isWalking", true);
+                switch (currentStance)
+                {
+                    case playerStance.crouched:
+                        animator.SetBool("isCrouched", true);
+                        animator.SetBool("isCrawling", true);
+                        break;
+
+                    case playerStance.standing:
+                        animator.SetBool("isCrouched", false);
+                        animator.SetBool("isCrawling",false);
+                        animator.SetBool("isWalking", true);
+                        break;
+                }
             }
             else
             {
-                animator.SetBool("isWalking", false);
+                switch (currentStance)
+                {
+                    case playerStance.crouched:
+                        animator.SetBool("isCrouched",true);
+                        animator.SetBool("isCrawling", false);
+                        break;
+
+                    case playerStance.standing:                      
+                        animator.SetBool("isCrouched", false);
+                        animator.SetBool("isWalking", false);
+                        break;
+
+                }                                                                                 
             }
         }
         else if (isDead)
@@ -259,6 +291,18 @@ public class PlayerMovement : MonoBehaviour
             isPaused = true;
         }
 
+    }
+
+    public void Crouch (InputAction.CallbackContext context)
+    {
+        if (context.performed && currentStance == playerStance.standing)
+        {
+            currentStance = playerStance.crouched;
+        }
+        else if (context.performed && currentStance == playerStance.crouched)
+        {
+            currentStance = playerStance.standing;
+        }
     }
 
 
