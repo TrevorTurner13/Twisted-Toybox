@@ -36,7 +36,7 @@ public class PlayerMovement : MonoBehaviour
 
     private float horizontal;
     private float speed = 3f;
-    private float swingSpeed = 10f;
+    private float swingSpeed = 5f;
     private float defaultSpeed = 3f;
     private float defaultGravityScale = 1f;
     private float swingGravityScale = 3f;
@@ -246,7 +246,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void Move(InputAction.CallbackContext context)
     {
-        if (!isDying)
+        if (!isDying && currentRope != null)
         {
             horizontal = context.ReadValue<Vector2>().x;
         }
@@ -278,7 +278,6 @@ public class PlayerMovement : MonoBehaviour
 
                 if (currentRope != null)
                 {
-                    
                     currentRope.Grabbed = false;
                     distanceJoint2D.connectedBody = emptyRB;
                     speed = 4f;
