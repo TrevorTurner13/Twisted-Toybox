@@ -4,6 +4,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.U2D.IK;
+using TMPro;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -17,6 +18,7 @@ public class PlayerMovement : MonoBehaviour
     private RopeHandler currentRope = null;
     [SerializeField]
     private Transform currentGrabPoint = null;
+
 
     private enum playerStance
     {
@@ -339,6 +341,8 @@ public class PlayerMovement : MonoBehaviour
             {
                 ButtonController button = collision.GetComponent<ButtonController>();
                 currentInteractable = button;
+
+                button.GetComponentInChildren<TextMeshPro>().enabled = true;
             }
         }
         if (collision.CompareTag("Rope") && isGrabbing)
@@ -356,6 +360,12 @@ public class PlayerMovement : MonoBehaviour
         if (collision.CompareTag("Interactable"))
         {
             currentInteractable = null;
+
+            if (collision.GetComponent<ButtonController>() != null)
+            {
+                ButtonController button = collision.GetComponent<ButtonController>();
+                button.GetComponentInChildren<TextMeshPro>().enabled = false;
+            }
         }
     }
 

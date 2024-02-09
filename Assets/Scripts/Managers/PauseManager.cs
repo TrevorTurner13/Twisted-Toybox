@@ -33,6 +33,21 @@ public class PauseManager : MonoBehaviour
         player = FindAnyObjectByType<PlayerMovement>();
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (IsPaused)
+            {
+                UnpauseGame();
+            }
+            else
+            {
+                PauseGame();
+            }
+        }
+    }
+
     public void PauseGame()
     {
         IsPaused = true;
@@ -50,6 +65,7 @@ public class PauseManager : MonoBehaviour
         IsPaused = false;
         Time.timeScale = 1f;
         PauseMenu.SetActive(false);
+        SettingsMenu.SetActive(false);
 
         SoundFXManager.instance.PlayRandomSoundFXClip(buttonSounds, transform, 1f);
 
