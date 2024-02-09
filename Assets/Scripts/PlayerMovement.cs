@@ -246,7 +246,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void Move(InputAction.CallbackContext context)
     {
-        if (!isDying && currentRope != null)
+        if (!isDying)
         {
             horizontal = context.ReadValue<Vector2>().x;
         }
