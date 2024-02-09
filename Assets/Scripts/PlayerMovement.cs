@@ -68,6 +68,11 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         distanceJoint2D = GetComponent<DistanceJoint2D>();
+
+        if (CheckpointManager.instance.LastCheckpointPosition != null)
+        {
+            transform.position = CheckpointManager.instance.LastCheckpointPosition;
+        }
     }
 
     // Update is called once per frame
