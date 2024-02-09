@@ -7,8 +7,6 @@ using UnityEngine.U2D.IK;
 
 public class PlayerMovement : MonoBehaviour
 {
-
-
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Animator animator;
     [SerializeField] private Transform groundCheck;
@@ -141,13 +139,13 @@ public class PlayerMovement : MonoBehaviour
         {
             animator.SetBool("isDead", true);
         }
-        else if (isDying)
-        {
-            animator.SetBool("isDying", true);
-        }
+        //else if (isDying)
+        //{
+        //    animator.SetBool("isDying", true);
+        //}
     }
 
-    private void MakeRagdoll()
+    public void MakeRagdoll()
     {
         animator.enabled = false;
         CapsuleCollider2D collider = GetComponent<CapsuleCollider2D>();
@@ -165,6 +163,18 @@ public class PlayerMovement : MonoBehaviour
                 bodyParts[i].GetComponent<HingeJoint2D>().enabled = true;
             }
             bodyParts[i].GetComponent<Collider2D>().enabled = true;
+        }
+    }
+
+    public void BreakBody()
+    {
+        for (int i = 0; i < bodyParts.Length; i++)
+        {
+            HingeJoint2D hinge = bodyParts[i].GetComponent<HingeJoint2D>();
+            if (hinge != null)
+            {
+                bodyParts[i].GetComponent<HingeJoint2D>().enabled = false; ;
+            }
         }
     }
 
