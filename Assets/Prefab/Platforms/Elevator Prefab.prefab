@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2962215558495077446}
   - component: {fileID: 2727332912651723074}
-  - component: {fileID: 8395113759640607646}
   - component: {fileID: 6493684917047886454}
   m_Layer: 0
   m_Name: InteractText
@@ -58,7 +57,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  - {fileID: 6324529880066076023, guid: c25519d9b8b2ec44a9c21c0d45f2ceae, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -80,14 +79,6 @@ MeshRenderer:
   m_SortingLayer: 6
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!222 &8395113759640607646
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 509010223679462287}
-  m_CullTransparentMesh: 1
 --- !u!114 &6493684917047886454
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -110,8 +101,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Interact - E
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c25519d9b8b2ec44a9c21c0d45f2ceae, type: 2}
+  m_sharedMaterial: {fileID: 6324529880066076023, guid: c25519d9b8b2ec44a9c21c0d45f2ceae, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -135,8 +126,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 5
-  m_fontSizeBase: 5
+  m_fontSize: 3
+  m_fontSizeBase: 3
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -798,7 +789,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6369086834198142617}
   - component: {fileID: 3474476033005953962}
-  - component: {fileID: 6566183102974608082}
   - component: {fileID: 4092775971563659855}
   m_Layer: 0
   m_Name: InteractText (1)
@@ -823,7 +813,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 9.550003, y: -15.529999}
+  m_AnchoredPosition: {x: -1.36, y: 0.85}
   m_SizeDelta: {x: 3, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!23 &3474476033005953962
@@ -846,7 +836,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  - {fileID: 6324529880066076023, guid: c25519d9b8b2ec44a9c21c0d45f2ceae, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -868,14 +858,6 @@ MeshRenderer:
   m_SortingLayer: 6
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!222 &6566183102974608082
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9167950671859200422}
-  m_CullTransparentMesh: 1
 --- !u!114 &4092775971563659855
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -898,8 +880,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Interact - E
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c25519d9b8b2ec44a9c21c0d45f2ceae, type: 2}
+  m_sharedMaterial: {fileID: 6324529880066076023, guid: c25519d9b8b2ec44a9c21c0d45f2ceae, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -923,8 +905,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 5
-  m_fontSizeBase: 5
+  m_fontSize: 3
+  m_fontSizeBase: 3
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.U2D.IK;
 using TMPro;
+using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -18,7 +19,7 @@ public class PlayerMovement : MonoBehaviour
     private RopeHandler currentRope = null;
     [SerializeField]
     private DistanceJoint2D distanceJoint2D = null;
-    
+    [SerializeField] private GameObject fearCanvas;
 
 
     private enum playerStance
@@ -61,10 +62,10 @@ public class PlayerMovement : MonoBehaviour
     public bool isDead = false;
     public bool isDying = false;
 
-    
 
     private void Start()
     {
+        fearCanvas.SetActive(true);
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         distanceJoint2D = GetComponent<DistanceJoint2D>();
