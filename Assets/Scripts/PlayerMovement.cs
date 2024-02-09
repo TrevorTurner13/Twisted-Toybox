@@ -25,7 +25,7 @@ public class PlayerMovement : MonoBehaviour
     private enum playerStance
     {
         standing,
-        crouched
+        crouched,
     }
 
     private playerStance currentStance = playerStance.standing;
@@ -37,10 +37,11 @@ public class PlayerMovement : MonoBehaviour
 
     private float horizontal;
     private float speed = 3f;
-    private float swingSpeed = 5f;
+    private float swingSpeed = 8f;
     private float defaultSpeed = 3f;
     private float defaultGravityScale = 1f;
-    private float swingGravityScale = 3f;
+    private float swingGravityScale = 1f;
+
     public float Speed { get { return speed; } set { speed = value; } }
     public float SwingSpeed { get { return swingSpeed; } }
     public float DefaultSpeed { get { return defaultSpeed; } }
@@ -117,6 +118,7 @@ public class PlayerMovement : MonoBehaviour
                         animator.SetBool("isCrawling",false);
                         animator.SetBool("isWalking", true);
                         break;
+                    
                 }
             }
             else
@@ -286,6 +288,7 @@ public class PlayerMovement : MonoBehaviour
                     currentRope = null;
                     transform.parent = null;
                     animator.SetBool("isSwinging", false);
+                    currentStance = playerStance.standing;
                 }
             }
         }
@@ -345,6 +348,7 @@ public class PlayerMovement : MonoBehaviour
                 currentRope = collision.GetComponentInParent<RopeHandler>();
                 Debug.Log(currentRope);
                 animator.SetBool("isSwinging", true);
+                
             }
         }
     }
@@ -374,4 +378,5 @@ public class PlayerMovement : MonoBehaviour
         isDead = true;
     }
 
+    
 }
