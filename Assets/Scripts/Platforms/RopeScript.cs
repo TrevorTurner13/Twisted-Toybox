@@ -20,11 +20,8 @@ public class RopeScript : MonoBehaviour
     {
         if (!_handler.Grabbed && collision.CompareTag("Player") && player.IsGrabbing)
         {
-            connectPoint = _handler.FindNearestRopePoint(player.transform);
-            player.transform.SetParent(connectPoint);
-            player.transform.position = connectPoint.position;
-            connectPoint.gameObject.AddComponent<FixedJoint2D>();
-            connectPoint.gameObject.GetComponent<FixedJoint2D>().connectedBody = player.GetComponent<Rigidbody2D>();
+            connectPoint = _handler.FindNearestRopePoint(player.emptyRB.transform);
+            player.gameObject.GetComponent<DistanceJoint2D>().connectedBody = connectPoint.GetComponent<Rigidbody2D>();
             player.Speed = player.SwingSpeed;
             player.GetComponent<Rigidbody2D>().gravityScale = player.SwingGravityScale;
             _handler.Grabbed = true;

@@ -24,8 +24,12 @@ public class BearTrap : MonoBehaviour
                 
             }
             player = collision.GetComponent<PlayerMovement>();
-            player.MakeRagdoll();            
-            player.BreakBody();
+            if(player != null)
+            {
+                player.MakeRagdoll();
+                player.BreakBody();
+            }
+            
         }
     }
 }

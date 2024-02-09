@@ -17,7 +17,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private RopeHandler currentRope = null;
     [SerializeField]
-    private Transform currentGrabPoint = null;
+    private DistanceJoint2D distanceJoint2D = null;
+    
 
 
     private enum playerStance
@@ -31,6 +32,7 @@ public class PlayerMovement : MonoBehaviour
     public GameObject[] bodyParts;
     public LimbSolver2D[] limbSolvers;
     public Transform handPos;
+    public Rigidbody2D emptyRB;
 
     private float horizontal;
     private float speed = 3f;
@@ -65,21 +67,12 @@ public class PlayerMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        distanceJoint2D = GetComponent<DistanceJoint2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown("f"))
-        {
-            MakeRagdoll();
-            isDying = true;
-        }
-        if (Input.GetKeyDown("g"))
-        {
-            StopRagdoll();
-            isDying = false;
-        }
         if (!isDying)
         {
             rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
@@ -141,10 +134,10 @@ public class PlayerMovement : MonoBehaviour
         {
             animator.SetBool("isDead", true);
         }
-        //else if (isDying)
-        //{
-        //    animator.SetBool("isDying", true);
-        //}
+        else if (isDying)
+        {
+           animator.SetBool("isDying", true);
+        }
     }
 
     public void MakeRagdoll()
@@ -166,6 +159,8 @@ public class PlayerMovement : MonoBehaviour
             }
             bodyParts[i].GetComponent<Collider2D>().enabled = true;
         }
+        isDead = true;
+        isDying = true;
     }
 
     public void BreakBody()
@@ -271,24 +266,17 @@ public class PlayerMovement : MonoBehaviour
             if (context.performed)
             {
                 isGrabbing = true;
-                Debug.Log("Grabbed");
             }
             if (context.canceled)
             {
-                Debug.Log("NoGrab");
                 isGrabbing = false;
 
                 if (currentRope != null)
                 {
-
-                    if (currentGrabPoint != null)
-                    {
-                        Destroy(currentGrabPoint.gameObject.GetComponent<FixedJoint2D>());
-                        currentGrabPoint = null;
-
-                    }
+                    
                     currentRope.Grabbed = false;
-                    speed = 6f;
+                    distanceJoint2D.connectedBody = emptyRB;
+                    speed = 4f;
                     GetComponent<Rigidbody2D>().gravityScale = defaultGravityScale;
                     currentRope = null;
                     transform.parent = null;
@@ -350,7 +338,7 @@ public class PlayerMovement : MonoBehaviour
             if (collision.GetComponentInParent<RopeHandler>() != null)
             {
                 currentRope = collision.GetComponentInParent<RopeHandler>();
-                currentGrabPoint = currentRope.FindNearestRopePoint(transform);
+                Debug.Log(currentRope);
                 animator.SetBool("isSwinging", true);
             }
         }
