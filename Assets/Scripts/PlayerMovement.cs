@@ -26,6 +26,7 @@ public class PlayerMovement : MonoBehaviour
     {
         standing,
         crouched,
+        climbing
     }
 
     private playerStance currentStance = playerStance.standing;
@@ -36,6 +37,7 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody2D emptyRB;
 
     private float horizontal;
+    private float vertical;
     private float speed = 3f;
     private float swingSpeed = 8f;
     private float defaultSpeed = 3f;
@@ -62,7 +64,7 @@ public class PlayerMovement : MonoBehaviour
 
     public bool isDead = false;
     public bool isDying = false;
-
+    public bool isClimbing = false;
 
     private void Start()
     {
@@ -82,7 +84,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (!isDying)
         {
-            rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
+            
 
             if (!isPaused)
             {
@@ -104,39 +106,59 @@ public class PlayerMovement : MonoBehaviour
             {
                 animator.SetBool("isGrounded", false);
             }
-            if (rb.velocity.x != 0)
+            switch (currentStance)
             {
-                switch (currentStance)
-                {
-                    case playerStance.crouched:
+                case playerStance.crouched:
+                    rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
+                    if (rb.velocity.x != 0)
+                    {
                         animator.SetBool("isCrouched", true);
-                        animator.SetBool("isCrawling", true);
-                        break;
-
-                    case playerStance.standing:
-                        animator.SetBool("isCrouched", false);
-                        animator.SetBool("isCrawling",false);
-                        animator.SetBool("isWalking", true);
-                        break;
-                    
-                }
-            }
-            else
-            {
-                switch (currentStance)
-                {
-                    case playerStance.crouched:
-                        animator.SetBool("isCrouched",true);
+                        animator.SetBool("isCrawling", true);                        
+                    }
+                    else
+                    {
+                        animator.SetBool("isCrouched", true);
                         animator.SetBool("isCrawling", false);
-                        break;
+                    }
 
-                    case playerStance.standing:                      
+                    break;
+
+                case playerStance.standing:
+                    rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
+                    if (rb.velocity.x != 0)
+                    {
+                        animator.SetBool("isClimbing", false);
+                        animator.SetBool("isCrouched", false);
+                        animator.SetBool("isCrawling", false);
+                        animator.SetBool("isWalking", true);
+                    }
+                    else
+                    {
                         animator.SetBool("isCrouched", false);
                         animator.SetBool("isWalking", false);
-                        break;
+                    }
+                    break;
 
-                }                                                                                 
+                case playerStance.climbing:
+                    Flip();
+                    rb.velocity = new Vector2(rb.velocity.x, vertical * speed);
+                    isClimbing = true;
+                    
+                    if (rb.velocity.y != 0)
+                    {
+                        animator.SetBool("isClimbing", true);
+                        animator.SetBool("isCrouched", false);
+                        animator.SetBool("isCrawling", false);
+                        animator.SetBool("isWalking", false);
+                    }
+                    else
+                    {
+                        animator.SetBool("isClimbing", false);
+                        animator.SetBool("onLadder", true);
+                    }
+                    break;
             }
+
         }
         else if (isDead)
         {
@@ -210,7 +232,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void Jump(InputAction.CallbackContext context)
     {
-        if (!isDying)
+        if (!isDying && !isClimbing)
         {
             if (context.performed && IsGrounded())
             {
@@ -237,7 +259,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (!isDying)
         {
-            if (isPushing == false)
+            if (isPushing == false && isClimbing == false)
             {
                 isFacingRight = !isFacingRight;
                 Vector3 localScale = transform.localScale;
@@ -251,7 +273,16 @@ public class PlayerMovement : MonoBehaviour
     {
         if (!isDying)
         {
-            horizontal = context.ReadValue<Vector2>().x;
+            if (isClimbing == false)
+            {
+                horizontal = context.ReadValue<Vector2>().x;
+            }
+            else
+            {
+                vertical = context.ReadValue<Vector2>().y;
+            }
+                   
+            
         }
     }
 
@@ -262,6 +293,12 @@ public class PlayerMovement : MonoBehaviour
             if (context.performed && currentInteractable != null)
             {
                 currentInteractable.Interact();
+            }
+            else
+            {    
+                isClimbing = true;
+                currentStance = playerStance.climbing;
+                
             }
         }
 
