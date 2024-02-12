@@ -8,6 +8,7 @@ TagManager:
   - FallingObject
   - LightSource
   - Rope
+  - Ladder
   layers:
   - Default
   - TransparentFX
