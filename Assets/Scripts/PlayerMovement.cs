@@ -26,15 +26,20 @@ public class PlayerMovement : MonoBehaviour
     {
         standing,
         crouched,
-        climbing
+        climbing,
+        carrying
     }
 
     private playerStance currentStance = playerStance.standing;
 
     public GameObject[] bodyParts;
     public LimbSolver2D[] limbSolvers;
-    public Transform handPos;
+
     public Rigidbody2D emptyRB;
+    public Transform carryPos;
+    private Vector2 defaultTransformPosition;
+
+    public Vector2 DefaultTransformPOS { get { return defaultTransformPosition; } }
 
     private float horizontal;
     private float vertical;
@@ -51,6 +56,8 @@ public class PlayerMovement : MonoBehaviour
     public float SwingGravityScale { get { return swingGravityScale; } }
     private float jumpingPower = 6f;
     private bool isFacingRight = true;
+
+    public bool IsFacingRight { get { return isFacingRight; } }
     private bool isGrabbing = false;
 
     private bool isPushing = false;
@@ -72,7 +79,7 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         distanceJoint2D = GetComponent<DistanceJoint2D>();
-
+        defaultTransformPosition = carryPos.position;
         if (CheckpointManager.instance.LastCheckpointPosition != null)
         {
             transform.position = CheckpointManager.instance.LastCheckpointPosition;
@@ -106,21 +113,20 @@ public class PlayerMovement : MonoBehaviour
             {
                 animator.SetBool("isGrounded", false);
             }
+            
+            if(isPushing)
+            {
+                currentStance = playerStance.carrying;
+            }
+            else
+            {
+                currentStance = playerStance.standing;
+            }
             switch (currentStance)
             {
                 case playerStance.crouched:
-                    rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
-                    if (rb.velocity.x != 0)
-                    {
-                        animator.SetBool("isCrouched", true);
-                        animator.SetBool("isCrawling", true);                        
-                    }
-                    else
-                    {
-                        animator.SetBool("isCrouched", true);
-                        animator.SetBool("isCrawling", false);
-                    }
-
+                    animator.SetBool("isCrouched",true);
+                    animator.SetBool("isCrawling", false);
                     break;
 
                 case playerStance.standing:
@@ -131,6 +137,7 @@ public class PlayerMovement : MonoBehaviour
                         animator.SetBool("isCrouched", false);
                         animator.SetBool("isCrawling", false);
                         animator.SetBool("isWalking", true);
+                        animator.SetBool("isCarrying", false);
                     }
                     else
                     {
@@ -157,6 +164,12 @@ public class PlayerMovement : MonoBehaviour
                         animator.SetBool("onLadder", true);
                     }
                     break;
+                case playerStance.carrying:
+                    {
+                        rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
+                        animator.SetBool("isCarrying", true);
+                        break;
+                    }
             }
 
         }
@@ -259,7 +272,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (!isDying)
         {
-            if (isPushing == false && isClimbing == false)
+            if (isClimbing == false)
             {
                 isFacingRight = !isFacingRight;
                 Vector3 localScale = transform.localScale;
@@ -294,12 +307,12 @@ public class PlayerMovement : MonoBehaviour
             {
                 currentInteractable.Interact();
             }
-            else
-            {    
-                isClimbing = true;
-                currentStance = playerStance.climbing;
+            //else
+            //{    
+            //    isClimbing = true;
+            //    currentStance = playerStance.climbing;
                 
-            }
+            //}
         }
 
     }

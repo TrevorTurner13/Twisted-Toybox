@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PushPullBlockController : MonoBehaviour
 {
-
+    [SerializeField] private float throwForce = 2.0f;
     private enum BlockState
     {
         notInInteractRange,
@@ -15,9 +15,10 @@ public class PushPullBlockController : MonoBehaviour
     }
 
     private PlayerMovement player;
-    private HingeJoint2D hinge;
-    private Rigidbody2D neutral;
+    private FixedJoint2D joint;
+    private Rigidbody2D selfRB;
     private bool playerInRange = false;
+    
 
     [SerializeField]
     private BlockState currentState;
@@ -25,8 +26,7 @@ public class PushPullBlockController : MonoBehaviour
     void Start()
     {
         player = FindObjectOfType<PlayerMovement>();
-        hinge = GetComponent<HingeJoint2D>();
-        neutral = hinge.connectedBody;
+        selfRB = GetComponent<Rigidbody2D>();
     }
     // Update is called once per frame
     void Update()
@@ -37,22 +37,34 @@ public class PushPullBlockController : MonoBehaviour
                 if (player.IsGrabbing == true && player.IsGrounded())
                 {
                     currentState= BlockState.interacted;
+                    player.carryPos.position = new Vector2(transform.position.x, transform.position.y + 1f);
                 }
                 break;
 
             case BlockState.interacted:
                 player.IsPushing = true;
-                hinge.connectedBody = player.GetComponent<Rigidbody2D>();
+                transform.SetParent(player.carryPos);
+                transform.position = player.carryPos.position;
                 if (player.IsGrabbing == false || player.IsGrounded()==false)
                 {
                     currentState = BlockState.notInteracted;
+                    if (player.IsFacingRight)
+                    {
+                        Throw(1);
+                    }
+                    else
+                    {
+                        Throw(-1);
+                    }
+                        
+                    
                 }
                 break;
 
             case BlockState.notInteracted:
                 player.IsPushing = false;
-                hinge.connectedBody = neutral;
-                
+                transform.SetParent(null);
+                player.carryPos.position = player.DefaultTransformPOS;
                 if (playerInRange == true)
                 {
                     currentState = BlockState.inInteractRange;
@@ -87,4 +99,12 @@ public class PushPullBlockController : MonoBehaviour
             playerInRange = false;
         }
     }
+
+    public void Throw(float xDir)
+    {
+        selfRB.velocity = new Vector2(transform.localScale.x, 0) * throwForce * xDir;
+       
+    }
+
+  
 }
