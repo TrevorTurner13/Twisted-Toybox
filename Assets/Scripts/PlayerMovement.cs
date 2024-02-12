@@ -22,7 +22,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private GameObject fearCanvas;
 
 
-    private enum playerStance
+    public enum playerStance
     {
         standing,
         crouched,
@@ -31,6 +31,7 @@ public class PlayerMovement : MonoBehaviour
     }
 
     private playerStance currentStance = playerStance.standing;
+    public playerStance CurrentStance { get { return currentStance; } set { value = currentStance; } }
 
     public GameObject[] bodyParts;
     public LimbSolver2D[] limbSolvers;
@@ -72,6 +73,7 @@ public class PlayerMovement : MonoBehaviour
     public bool isDead = false;
     public bool isDying = false;
     public bool isClimbing = false;
+    private bool inClimbRange = false;
 
     private void Start()
     {
@@ -114,25 +116,36 @@ public class PlayerMovement : MonoBehaviour
                 animator.SetBool("isGrounded", false);
             }
             
-            if(isPushing)
-            {
-                currentStance = playerStance.carrying;
-            }
-            else
-            {
-                currentStance = playerStance.standing;
-            }
+            //if(isPushing)
+            //{
+            //    currentStance = playerStance.carrying;
+            //}
+            //else
+            //{
+            //    currentStance = playerStance.standing;
+            //}
             switch (currentStance)
             {
                 case playerStance.crouched:
-                    animator.SetBool("isCrouched",true);
-                    animator.SetBool("isCrawling", false);
+                    rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
+                    if (rb.velocity.x != 0)
+                    {
+                        animator.SetBool("isWalking", false);
+                        animator.SetBool("isCrouched", true);
+                        animator.SetBool("isCrawling", true);
+                    }
+                    else
+                    {
+                        animator.SetBool("isCrouched", true);
+                        animator.SetBool("isCrawling", false);
+                    }
                     break;
 
                 case playerStance.standing:
                     rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
                     if (rb.velocity.x != 0)
                     {
+                        animator.SetBool("onLadder", false);
                         animator.SetBool("isClimbing", false);
                         animator.SetBool("isCrouched", false);
                         animator.SetBool("isCrawling", false);
@@ -147,8 +160,8 @@ public class PlayerMovement : MonoBehaviour
                     break;
 
                 case playerStance.climbing:
-                    Flip();
-                    rb.velocity = new Vector2(rb.velocity.x, vertical * speed);
+                   
+                    rb.velocity = new Vector2(rb.velocity.x * 0, vertical * speed);
                     isClimbing = true;
                     
                     if (rb.velocity.y != 0)
@@ -288,6 +301,7 @@ public class PlayerMovement : MonoBehaviour
         {
             if (isClimbing == false)
             {
+                
                 horizontal = context.ReadValue<Vector2>().x;
             }
             else
@@ -307,12 +321,12 @@ public class PlayerMovement : MonoBehaviour
             {
                 currentInteractable.Interact();
             }
-            //else
-            //{    
-            //    isClimbing = true;
-            //    currentStance = playerStance.climbing;
-                
-            //}
+            else if( context.performed && inClimbRange)
+            {
+                Debug.Log("startClimb");
+                currentStance = playerStance.climbing;
+            }
+
         }
 
     }
@@ -401,7 +415,13 @@ public class PlayerMovement : MonoBehaviour
                 
             }
         }
+        if (collision.CompareTag("Ladder"))
+        {
+           
+            inClimbRange = true;
+        }
     }
+
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.CompareTag("Interactable"))
@@ -412,6 +432,16 @@ public class PlayerMovement : MonoBehaviour
             {
                 ButtonController button = collision.GetComponent<ButtonController>();
                 button.GetComponentInChildren<TextMeshPro>().enabled = false;
+            }
+        }
+        else if (collision.CompareTag("Ladder"))
+        {
+            inClimbRange = false;
+            if (isClimbing)
+            {
+                isClimbing = false;
+                currentStance = playerStance.standing;
+                rb.AddForce(Vector2.up * 5, ForceMode2D.Impulse);
             }
         }
     }

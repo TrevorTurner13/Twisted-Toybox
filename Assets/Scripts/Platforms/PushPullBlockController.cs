@@ -43,6 +43,7 @@ public class PushPullBlockController : MonoBehaviour
 
             case BlockState.interacted:
                 player.IsPushing = true;
+                player.CurrentStance = PlayerMovement.playerStance.carrying;
                 transform.SetParent(player.carryPos);
                 transform.position = player.carryPos.position;
                 if (player.IsGrabbing == false || player.IsGrounded()==false)
@@ -63,6 +64,7 @@ public class PushPullBlockController : MonoBehaviour
 
             case BlockState.notInteracted:
                 player.IsPushing = false;
+                player.CurrentStance = PlayerMovement.playerStance.standing;
                 transform.SetParent(null);
                 player.carryPos.position = player.DefaultTransformPOS;
                 if (playerInRange == true)
