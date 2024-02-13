@@ -14,6 +14,11 @@ public class RopeScript : MonoBehaviour
 
     private Transform connectPoint;
 
+    private void Start()
+    {
+        player = FindAnyObjectByType<PlayerMovement>();
+    }
+
 
 
     private void OnTriggerEnter2D(Collider2D collision)

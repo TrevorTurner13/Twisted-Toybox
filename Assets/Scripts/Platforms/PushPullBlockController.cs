@@ -52,10 +52,12 @@ public class PushPullBlockController : MonoBehaviour
                     if (player.IsFacingRight)
                     {
                         Throw(1);
+                        Debug.Log(player.IsFacingRight);
                     }
                     else
                     {
                         Throw(-1);
+                        Debug.Log(player.IsFacingRight);
                     }
                         
                     
