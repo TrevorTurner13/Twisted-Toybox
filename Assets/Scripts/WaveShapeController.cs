@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.U2D;
 
 
-    [ExecuteAlways]
+    //[ExecuteAlways]
     public class WaveShapeController : MonoBehaviour
     {
     //[SerializeField]
