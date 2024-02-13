@@ -57,13 +57,32 @@ using UnityEngine.U2D;
         // we only want to detect when they collide so we can trigger the impact
         private void OnCollisionEnter2D(Collision2D other)
         {
-            if (other.gameObject.tag.Equals("FallingObject"))
+            if (other.gameObject.tag.Equals("Player") /*|| other.gameObject.tag.Equals("FallingObject")*/)
             {
-                FallingObject fallingObject = other.gameObject.GetComponent<FallingObject>();
-                Rigidbody2D rb = fallingObject.rigidbody2D;
-                var speed = rb.velocity;
+            PlayerMovement player = other.gameObject.GetComponent<PlayerMovement>();
 
-                velocity += speed.y / resistance;
+            //FallingObject fallingObject = other.gameObject.GetComponent<FallingObject>();
+
+            Rigidbody2D rb = player.GetComponent<Rigidbody2D>();
+
+            //Rigidbody2D Rb = fallingObject.rigidbody2D;
+
+            var speed = rb.velocity;
+
+
+            velocity += speed.y / resistance;
+            }
+
+            else if (other.gameObject.tag.Equals("FallingObject"))
+            {
+
+            FallingObject fallingObject = other.gameObject.GetComponent<FallingObject>();
+
+            Rigidbody2D rb = fallingObject.rigidbody2D;
+
+            var speed = rb.velocity;
+
+            velocity += speed.y / resistance;
             }
         }
     }

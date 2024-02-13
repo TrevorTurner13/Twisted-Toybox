@@ -32,6 +32,7 @@ public class FallingObject : MonoBehaviour
         if (isMoving)
         {
             rigidbody2D.velocity = movementDirection * forceAmount;
+
         }
     }
 }

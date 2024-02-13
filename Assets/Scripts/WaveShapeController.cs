@@ -7,9 +7,12 @@ using UnityEngine.U2D;
     [ExecuteAlways]
     public class WaveShapeController : MonoBehaviour
     {
-    [SerializeField]
-    private GameObject box;
-    [SerializeField]
+    //[SerializeField]
+    //private GameObject box;
+
+    //public static WaveShapeController Instance { get; private set; }
+    public static WaveShapeController instance;
+        [SerializeField]
         private GameObject wavePointPref;
         //////////////////
         private int CornersCount = 2;
