@@ -40,6 +40,9 @@ public class PlayerMovement : MonoBehaviour
     public Transform carryPos;
     private Vector2 defaultTransformPosition;
 
+    private Vector2 climbSpeed;
+   
+
     public Vector2 DefaultTransformPOS { get { return defaultTransformPosition; } }
 
     private float horizontal;
@@ -74,6 +77,7 @@ public class PlayerMovement : MonoBehaviour
     public bool isDying = false;
     public bool isClimbing = false;
     private bool inClimbRange = false;
+    private Transform playerPlacement = null; 
 
     private void Start()
     {
@@ -86,6 +90,7 @@ public class PlayerMovement : MonoBehaviour
         {
             transform.position = CheckpointManager.instance.LastCheckpointPosition;
         }
+        climbSpeed = new Vector2(rb.velocity.x * 0, vertical * speed);
     }
 
     // Update is called once per frame
@@ -113,7 +118,10 @@ public class PlayerMovement : MonoBehaviour
             }
             else
             {
-                animator.SetBool("isGrounded", false);
+                if (!isClimbing) 
+                {
+                    animator.SetBool("isGrounded", false);
+                }               
             }
             
             //if(isPushing)
@@ -159,8 +167,7 @@ public class PlayerMovement : MonoBehaviour
                     }
                     break;
 
-                case playerStance.climbing:
-                   
+                case playerStance.climbing:                   
                     rb.velocity = new Vector2(rb.velocity.x * 0, vertical * speed);
                     isClimbing = true;
                     
@@ -170,6 +177,7 @@ public class PlayerMovement : MonoBehaviour
                         animator.SetBool("isCrouched", false);
                         animator.SetBool("isCrawling", false);
                         animator.SetBool("isWalking", false);
+                        animator.SetBool("onLadder", true);
                     }
                     else
                     {
@@ -320,11 +328,15 @@ public class PlayerMovement : MonoBehaviour
             if (context.performed && currentInteractable != null)
             {
                 currentInteractable.Interact();
+                
             }
-            else if( context.performed && inClimbRange)
+            else if( context.performed && inClimbRange && IsGrounded())
             {
+                transform.position = playerPlacement.position;
+                rb.gravityScale = 0;
                 Debug.Log("startClimb");
                 currentStance = playerStance.climbing;
+                vertical = 0;
             }
 
         }
@@ -417,7 +429,8 @@ public class PlayerMovement : MonoBehaviour
         }
         if (collision.CompareTag("Ladder"))
         {
-           
+            playerPlacement = collision.transform.Find("Player Placement").transform;
+             
             inClimbRange = true;
         }
     }
@@ -439,9 +452,11 @@ public class PlayerMovement : MonoBehaviour
             inClimbRange = false;
             if (isClimbing)
             {
+                playerPlacement = null;
                 isClimbing = false;
+                rb.gravityScale = DefaultGravityScale;
                 currentStance = playerStance.standing;
-                rb.AddForce(Vector2.up * 5, ForceMode2D.Impulse);
+                rb.AddForce(Vector2.up * 2, ForceMode2D.Impulse);
             }
         }
     }
