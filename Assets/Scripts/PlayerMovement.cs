@@ -104,16 +104,11 @@ public class PlayerMovement : MonoBehaviour
             {
                 if (!isFacingRight && horizontal > 0)
                 {
-                    Debug.Log(isFacingRight);
                     Flip();
-                    Debug.Log(isFacingRight);
-
                 }
                 else if (isFacingRight && horizontal < 0)
                 {
-                    Debug.Log(isFacingRight);
                     Flip();
-                    Debug.Log(isFacingRight);
                 }
             }
             if (IsGrounded())
@@ -355,12 +350,10 @@ public class PlayerMovement : MonoBehaviour
             if (context.performed)
             {
                 isGrabbing = true;
-                Debug.Log(isFacingRight);
             }
             if (context.canceled)
             {
                 isGrabbing = false;
-                Debug.Log(isFacingRight);
                 if (currentRope != null)
                 {
                     currentRope.Grabbed = false;
@@ -428,7 +421,6 @@ public class PlayerMovement : MonoBehaviour
             if (collision.GetComponentInParent<RopeHandler>() != null)
             {
                 currentRope = collision.GetComponentInParent<RopeHandler>();
-                Debug.Log(currentRope);
                 animator.SetBool("isSwinging", true);
                 
             }

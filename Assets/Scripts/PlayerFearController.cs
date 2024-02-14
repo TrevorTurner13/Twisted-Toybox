@@ -10,7 +10,7 @@ public class PlayerFearController : MonoBehaviour
     
     private float maxFear = 100.0f;
     private float currentFear;
-    public float fearGainRate = 3.33f;
+    public float fearGainRate = 1f;
     public float fearLossRate = 33.3f;
     
     public float minOrthoSize = 3; // Minimum field of view
