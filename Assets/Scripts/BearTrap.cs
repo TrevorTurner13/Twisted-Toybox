@@ -29,7 +29,16 @@ public class BearTrap : MonoBehaviour
                 player.MakeRagdoll();
                 player.BreakBody();
             }
-            
+
+          DroppedBody body = collision.GetComponent<DroppedBody>();
+
+            Debug.Log(body);
+
+            if(body != null)
+            {
+                body.BreakBody();
+            }
+            GetComponent<BoxCollider2D>().enabled = false;
         }
     }
 }
