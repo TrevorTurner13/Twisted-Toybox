@@ -32,8 +32,6 @@ public class BearTrap : MonoBehaviour
 
           DroppedBody body = collision.GetComponent<DroppedBody>();
 
-            Debug.Log(body);
-
             if(body != null)
             {
                 body.BreakBody();
