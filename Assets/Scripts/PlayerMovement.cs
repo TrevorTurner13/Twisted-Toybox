@@ -96,7 +96,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!isDying)
+        if (!isDying && !StartCutscene.isCutsceneOn)
         {
             
 
