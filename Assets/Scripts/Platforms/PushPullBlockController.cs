@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PushPullBlockController : MonoBehaviour
 {
-    [SerializeField] private float throwForce = 2.0f;
+    [SerializeField] private float throwForce = 1.0f;
     private enum BlockState
     {
         notInInteractRange,
@@ -51,13 +51,13 @@ public class PushPullBlockController : MonoBehaviour
                     currentState = BlockState.notInteracted;
                     if (player.IsFacingRight)
                     {
-                        Throw(1);
-                        Debug.Log(player.IsFacingRight);
+                        Throw(-1);
+                        playerInRange = false;
                     }
                     else
                     {
-                        Throw(-1);
-                        Debug.Log(player.IsFacingRight);
+                        Throw(1);
+                        playerInRange = false;
                     }
                         
                     
@@ -106,7 +106,7 @@ public class PushPullBlockController : MonoBehaviour
 
     public void Throw(float xDir)
     {
-        selfRB.velocity = new Vector2(transform.localScale.x, 0) * throwForce * xDir;
+        selfRB.velocity = new Vector2(transform.localScale.x, -1) * throwForce * xDir;
        
     }
 

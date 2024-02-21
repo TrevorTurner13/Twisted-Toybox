@@ -105,10 +105,11 @@ public class PlayerMovement : MonoBehaviour
                 if (!isFacingRight && horizontal > 0)
                 {
                     Flip();
+
                 }
                 else if (isFacingRight && horizontal < 0)
                 {
-                    Flip();
+                    Flip();              
                 }
             }
             if (IsGrounded())
