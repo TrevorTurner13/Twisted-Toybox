@@ -292,6 +292,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6a8ff83c470b914093e590bbc16fa08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bearTrapSFX: {fileID: 8300000, guid: 4d4fc79be2f20204e85080a9a5075a74, type: 3}
   rbs:
   - {fileID: 8401760471518011210}
   - {fileID: 935628047028443130}

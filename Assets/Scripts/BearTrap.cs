@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BearTrap : MonoBehaviour
 {
+    [SerializeField] private AudioClip bearTrapSFX;
     [SerializeField] private Rigidbody2D[] rbs;
     private PlayerMovement player;
     private Collider2D col;
@@ -17,6 +18,8 @@ public class BearTrap : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            SoundFXManager.instance.PlaySoundFXClip(bearTrapSFX, transform, 1f);
+
             col.enabled = false;
             foreach (var rb in rbs)
             {
