@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class ElevatorController : MonoBehaviour
@@ -6,6 +7,10 @@ public class ElevatorController : MonoBehaviour
     public Transform destination2;
     public float speed;
     public float startDelay;
+    public List<ButtonController> requiredActivationSwitches = new List<ButtonController>();
+    public List<ParticleHandler> particleHandlers = new List<ParticleHandler>();
+    private int switchesActivated;
+    [SerializeField] private BoxCollider2D sceneTrigger;
 
     private enum ElevatorState
     {
@@ -14,10 +19,11 @@ public class ElevatorController : MonoBehaviour
         MovingToStart,
         AtStart,
         AtDestination1,
-        AtDestination2
+        AtDestination2,
+        Deactivated
     }
 
-    private ElevatorState currentState = ElevatorState.AtStart;
+    [SerializeField] private ElevatorState currentState;
     private Vector3 startPosition;
     private float delayTimer;
 
@@ -81,6 +87,9 @@ public class ElevatorController : MonoBehaviour
                     }
                 }
                 break;
+            case ElevatorState.Deactivated:
+                GetComponent<BoxCollider2D>().enabled = false;
+                break;
         }
     }
 
@@ -132,19 +141,53 @@ public class ElevatorController : MonoBehaviour
         transform.position = Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime);
     }
 
-    public void ActivateElevator(string target) //In OnPressed in the button input either Start or Destination depending on desired location
+    public void CallElevator(string target) //In OnPressed in the button input either Start or Destination depending on desired location
     {
-        if (target == "Start")
+        if (currentState != ElevatorState.Deactivated)
         {
-            currentState = ElevatorState.MovingToStart;
+            if (target == "Start")
+            {
+                currentState = ElevatorState.MovingToStart;
+            }
+            else if (target == "Destination1")
+            {
+                currentState = ElevatorState.MovingToDestination1;
+            }
+            else if (target == "Destination2")
+            {
+                currentState = ElevatorState.MovingToDestination2;
+            }
         }
-        else if (target == "Destination1")
+    }
+
+    public void ActivateElevator()
+    {
+        for (int i = 0; i < requiredActivationSwitches.Count; i++)
         {
-            currentState = ElevatorState.MovingToDestination1;
-        }
-        else if (target == "Destination2")
-        {
-            currentState = ElevatorState.MovingToDestination2;
+            ButtonController controller = requiredActivationSwitches[i];
+            if (controller.Activated)
+            {
+                switchesActivated++;
+
+                if(switchesActivated >= requiredActivationSwitches.Count) 
+                {
+                    GetComponent<BoxCollider2D>().enabled = true;
+                    currentState = ElevatorState.AtStart;
+                    foreach (ParticleHandler handler in particleHandlers)
+                    {
+                        handler.ShouldPlay = false;
+                    }
+                    if(sceneTrigger != null)
+                    {
+                        sceneTrigger.enabled = true;
+                    }
+                }
+            }
+            else
+            {
+                switchesActivated--;
+            }
+
         }
     }
 }
