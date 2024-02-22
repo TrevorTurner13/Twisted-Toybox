@@ -24,5 +24,6 @@ public class StartCutscene : MonoBehaviour
     {
         isCutsceneOn = false;
         camAnimator.SetBool("CutScene1", false);
+        Destroy(gameObject);
     }
 }
