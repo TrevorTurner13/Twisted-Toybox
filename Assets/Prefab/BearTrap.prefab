@@ -579,10 +579,10 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 1.004066, y: -0.13765621}
-  m_ConnectedAnchor: {x: -0.99594146, y: -0.13764828}
+  m_ConnectedAnchor: {x: -0.99593455, y: -0.13765611}
   m_UseMotor: 1
   m_Motor:
-    m_MotorSpeed: 5000
+    m_MotorSpeed: 2000
     m_MaximumMotorForce: 10000
   m_UseLimits: 1
   m_AngleLimits:

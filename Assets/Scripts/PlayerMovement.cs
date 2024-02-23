@@ -475,6 +475,4 @@ public class PlayerMovement : MonoBehaviour
     {
         isDead = true;
     }
-
-    
 }
