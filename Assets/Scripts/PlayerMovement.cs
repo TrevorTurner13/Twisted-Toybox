@@ -136,7 +136,9 @@ public class PlayerMovement : MonoBehaviour
             switch (currentStance)
             {
                 case playerStance.crouched:
+                    speed = 2f;
                     rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
+                    
                     if (rb.velocity.x != 0)
                     {
                         animator.SetBool("isWalking", false);
@@ -151,6 +153,7 @@ public class PlayerMovement : MonoBehaviour
                     break;
 
                 case playerStance.standing:
+                    speed = defaultSpeed;
                     rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
                     if (rb.velocity.x != 0)
                     {
@@ -168,7 +171,8 @@ public class PlayerMovement : MonoBehaviour
                     }
                     break;
 
-                case playerStance.climbing:                   
+                case playerStance.climbing:
+                    speed = 2f;
                     rb.velocity = new Vector2(rb.velocity.x * 0, vertical * speed);
                     isClimbing = true;
                     

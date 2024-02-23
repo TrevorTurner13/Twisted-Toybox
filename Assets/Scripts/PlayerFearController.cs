@@ -20,6 +20,8 @@ public class PlayerFearController : MonoBehaviour
     public Image fearOverlay;
     public Image secondFearOverlay;
 
+    public AudioSource fearAudio;
+    private float fearVolume;
     private enum FearState
     {
         noFear,
@@ -35,6 +37,7 @@ public class PlayerFearController : MonoBehaviour
         {
             virtualCamera = FindObjectOfType<CinemachineVirtualCamera>();
         }
+     
     }
     // Update is called once per frame
     void Update()
@@ -72,6 +75,9 @@ public class PlayerFearController : MonoBehaviour
         //Change transparency of fearoverlay depending on fear level
         AdjustFearOverlay(fearOverlay);
         AdjustFearOverlay(secondFearOverlay);
+
+        fearVolume = Mathf.Lerp(0.0f, 0.2f, currentFear / maxFear);
+        fearAudio.volume = fearVolume;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
