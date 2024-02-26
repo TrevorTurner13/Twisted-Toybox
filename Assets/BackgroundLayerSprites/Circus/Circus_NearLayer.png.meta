@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 7a716dd5880b3a445902c97aefcfa3d0
+guid: a5ae3891b449cd2468ed822d90c19063
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 64
+  spritePixelsToUnits: 136
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -69,7 +69,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 4096
+    maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -123,13 +123,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: CircusBigTops_0
+      name: Circus_NearLayer_0
       rect:
         serializedVersion: 2
-        x: 26
-        y: 187
-        width: 1145
-        height: 976
+        x: 0
+        y: 0
+        width: 1088
+        height: 1088
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,20 +137,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0c77a4f2ecc7b034aab131dd5cfa3322
-      internalID: -736119127
+      spriteID: 4d0d51ccfc8d32641bddb105419b7360
+      internalID: -163955790
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CircusBigTops_1
+      name: Circus_NearLayer_1
       rect:
         serializedVersion: 2
-        x: 1268
-        y: 169
-        width: 1145
-        height: 976
+        x: 1088
+        y: 0
+        width: 1088
+        height: 1088
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,20 +158,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8d87ed9aef2ee8a45b8b4d00b39d1f28
-      internalID: 366583556
+      spriteID: 91e54e637288110418dbe3e80bbce825
+      internalID: -1524218993
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CircusBigTops_2
+      name: Circus_NearLayer_2
       rect:
         serializedVersion: 2
-        x: 2450
-        y: 187
-        width: 1145
-        height: 976
+        x: 2176
+        y: 0
+        width: 1088
+        height: 1088
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,8 +179,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: de8a1e997e87246449c465e09a0b3e2c
-      internalID: -670531405
+      spriteID: 0684ef0376c663f43a95e6adc7646527
+      internalID: 1224646372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circus_NearLayer_3
+      rect:
+        serializedVersion: 2
+        x: 3264
+        y: 0
+        width: 1088
+        height: 1088
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c0415c1e02ba8841834df3dc7034c3d
+      internalID: -1512869269
       vertices: []
       indices: 
       edges: []
@@ -196,9 +217,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      CircusBigTops_0: -736119127
-      CircusBigTops_1: 366583556
-      CircusBigTops_2: -670531405
+      Circus_NearLayer_0: -163955790
+      Circus_NearLayer_1: -1524218993
+      Circus_NearLayer_2: 1224646372
+      Circus_NearLayer_3: -1512869269
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

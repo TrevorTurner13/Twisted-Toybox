@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 7a716dd5880b3a445902c97aefcfa3d0
+guid: 431b51f46d9feab4d832023ccc7b7a3a
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 64
+  spritePixelsToUnits: 136
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -123,13 +123,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: CircusBigTops_0
+      name: CircusBackdrops_0
       rect:
         serializedVersion: 2
-        x: 26
-        y: 187
-        width: 1145
-        height: 976
+        x: 0
+        y: 2176
+        width: 1088
+        height: 1088
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,20 +137,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0c77a4f2ecc7b034aab131dd5cfa3322
-      internalID: -736119127
+      spriteID: 25c18a365ac76fe4e8650f4c58f44470
+      internalID: 884634348
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CircusBigTops_1
+      name: CircusBackdrops_1
       rect:
         serializedVersion: 2
-        x: 1268
-        y: 169
-        width: 1145
-        height: 976
+        x: 1088
+        y: 2176
+        width: 1088
+        height: 1088
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,20 +158,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8d87ed9aef2ee8a45b8b4d00b39d1f28
-      internalID: 366583556
+      spriteID: 44e108121374ca74899a179b70ac2579
+      internalID: 519943490
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CircusBigTops_2
+      name: CircusBackdrops_2
       rect:
         serializedVersion: 2
-        x: 2450
-        y: 187
-        width: 1145
-        height: 976
+        x: 2176
+        y: 2176
+        width: 1088
+        height: 1088
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,8 +179,134 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: de8a1e997e87246449c465e09a0b3e2c
-      internalID: -670531405
+      spriteID: db0e62330aad9fd4a944dea72c7bf2b1
+      internalID: -95469007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircusBackdrops_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1088
+        width: 1088
+        height: 1088
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2cef7601aaacd04c89fe41213f9747b
+      internalID: 247637699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircusBackdrops_4
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 1088
+        width: 1088
+        height: 1088
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82871e11a43392a43b6afb0efbb1f995
+      internalID: -35123734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircusBackdrops_5
+      rect:
+        serializedVersion: 2
+        x: 2176
+        y: 1088
+        width: 1088
+        height: 1088
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ad85d9328bd9924592db39bb55885d0
+      internalID: -1827389554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircusBackdrops_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1088
+        height: 1088
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18b213e3d39f2d3439edb96c32f80367
+      internalID: 863807780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircusBackdrops_7
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 0
+        width: 1088
+        height: 1088
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78d71a4ada823e84099a18203e729653
+      internalID: 893333749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircusBackdrops_8
+      rect:
+        serializedVersion: 2
+        x: 2176
+        y: 0
+        width: 1088
+        height: 1088
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da8db69d513e50c4a8c545ecaa343b0c
+      internalID: -1003485116
       vertices: []
       indices: 
       edges: []
@@ -196,9 +322,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      CircusBigTops_0: -736119127
-      CircusBigTops_1: 366583556
-      CircusBigTops_2: -670531405
+      CircusBackdrops_0: 884634348
+      CircusBackdrops_1: 519943490
+      CircusBackdrops_2: -95469007
+      CircusBackdrops_3: 247637699
+      CircusBackdrops_4: -35123734
+      CircusBackdrops_5: -1827389554
+      CircusBackdrops_6: 863807780
+      CircusBackdrops_7: 893333749
+      CircusBackdrops_8: -1003485116
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
