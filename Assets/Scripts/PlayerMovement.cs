@@ -59,7 +59,7 @@ public class PlayerMovement : MonoBehaviour
     public float DefaultGravityScale { get { return defaultGravityScale; } }
     public float SwingGravityScale { get { return swingGravityScale; } }
     private float jumpingPower = 6f;
-    private bool isFacingRight = true;
+    public bool isFacingRight = true;
 
     public bool IsFacingRight { get { return isFacingRight; } }
     private bool isGrabbing = false;
@@ -302,7 +302,14 @@ public class PlayerMovement : MonoBehaviour
         {
             if (isClimbing == false)
             {
-                isFacingRight = !isFacingRight;
+                if (isFacingRight)
+                {
+                    isFacingRight = false;
+                }
+                else
+                {
+                    isFacingRight = true;
+                }
                 Vector3 localScale = transform.localScale;
                 localScale.x *= -1f;
                 transform.localScale = localScale;
@@ -343,8 +350,8 @@ public class PlayerMovement : MonoBehaviour
                 {
                     Flip();
                 }
-                else if (!currentLadder.isFacingRight && isFacingRight) //if player is facing right but ladder is facing left flip the player
-                {
+                else if (!currentLadder.isFacingRight && isFacingRight==true) //if player is facing right but ladder is facing left flip the player
+                {                    
                     Flip();
                 }
                 transform.position = playerPlacement.position;

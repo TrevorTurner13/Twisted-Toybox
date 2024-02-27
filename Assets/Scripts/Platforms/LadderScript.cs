@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LadderScript : MonoBehaviour
 {
-    public bool isFacingRight;
+    public bool isFacingRight = false;
 }
 
 
