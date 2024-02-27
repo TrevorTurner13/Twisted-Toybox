@@ -59,7 +59,7 @@ public class PlayerMovement : MonoBehaviour
     public float DefaultGravityScale { get { return defaultGravityScale; } }
     public float SwingGravityScale { get { return swingGravityScale; } }
     private float jumpingPower = 6f;
-    private bool isFacingRight = true;
+    public bool isFacingRight = true;
 
     public bool IsFacingRight { get { return isFacingRight; } }
     private bool isGrabbing = false;
@@ -77,7 +77,9 @@ public class PlayerMovement : MonoBehaviour
     public bool isDying = false;
     public bool isClimbing = false;
     private bool inClimbRange = false;
-    private Transform playerPlacement = null; 
+    private Transform playerPlacement = null;
+
+    public LadderScript currentLadder;
 
     private void Start()
     {
@@ -300,7 +302,14 @@ public class PlayerMovement : MonoBehaviour
         {
             if (isClimbing == false)
             {
-                isFacingRight = !isFacingRight;
+                if (isFacingRight)
+                {
+                    isFacingRight = false;
+                }
+                else
+                {
+                    isFacingRight = true;
+                }
                 Vector3 localScale = transform.localScale;
                 localScale.x *= -1f;
                 transform.localScale = localScale;
@@ -335,12 +344,19 @@ public class PlayerMovement : MonoBehaviour
                 currentInteractable.Interact();
                 
             }
-            else if( context.performed && inClimbRange && IsGrounded())
+            else if( context.performed && inClimbRange && IsGrounded()) //when player interacts it checks if the interaction is with a ladder
             {
+                if (currentLadder.isFacingRight && !isFacingRight)  //if player is facing left but ladder is facing right flip the player
+                {
+                    Flip();
+                }
+                else if (!currentLadder.isFacingRight && isFacingRight==true) //if player is facing right but ladder is facing left flip the player
+                {                    
+                    Flip();
+                }
                 transform.position = playerPlacement.position;
-                rb.gravityScale = 0;
-                Debug.Log("startClimb");
-                currentStance = playerStance.climbing;
+                rb.gravityScale = 0;             
+                currentStance = playerStance.climbing;            //Changes players current stance to climbing, set gravity to 0 and resets vertical speed to zero to avoid unwanted vertical movement 
                 vertical = 0;
             }
 
@@ -432,8 +448,8 @@ public class PlayerMovement : MonoBehaviour
         }
         if (collision.CompareTag("Ladder"))
         {
-            playerPlacement = collision.transform.Find("Player Placement").transform;
-             
+            currentLadder = collision.GetComponent<LadderScript>();                    //When player enters ladders collision, find the ladders player placement            
+            playerPlacement = collision.transform.Find("Player Placement").transform;  // and player is now in climbing range         
             inClimbRange = true;
         }
     }
@@ -452,14 +468,15 @@ public class PlayerMovement : MonoBehaviour
         }
         else if (collision.CompareTag("Ladder"))
         {
-            inClimbRange = false;
+            inClimbRange = false;  
+            currentLadder = null;
             if (isClimbing)
-            {
-                playerPlacement = null;
+            {               
+                playerPlacement = null;          //When player leaves a ladder after climbing, reset all variables related to climbing
                 isClimbing = false;
                 rb.gravityScale = DefaultGravityScale;
                 currentStance = playerStance.standing;
-                rb.AddForce(Vector2.up * 2, ForceMode2D.Impulse);
+                rb.AddForce(Vector2.up * 2, ForceMode2D.Impulse); //Adds an upwards boost to the player to help getting onto next platform
             }
         }
     }
