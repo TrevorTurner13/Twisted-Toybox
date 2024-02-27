@@ -77,7 +77,9 @@ public class PlayerMovement : MonoBehaviour
     public bool isDying = false;
     public bool isClimbing = false;
     private bool inClimbRange = false;
-    private Transform playerPlacement = null; 
+    private Transform playerPlacement = null;
+
+    public LadderScript currentLadder;
 
     private void Start()
     {
@@ -337,6 +339,14 @@ public class PlayerMovement : MonoBehaviour
             }
             else if( context.performed && inClimbRange && IsGrounded())
             {
+                if (currentLadder.isFacingRight && !isFacingRight)
+                {
+                    Flip();
+                }
+                else if (!currentLadder.isFacingRight && isFacingRight)
+                {
+                    Flip();
+                }
                 transform.position = playerPlacement.position;
                 rb.gravityScale = 0;
                 Debug.Log("startClimb");
@@ -432,8 +442,8 @@ public class PlayerMovement : MonoBehaviour
         }
         if (collision.CompareTag("Ladder"))
         {
-            playerPlacement = collision.transform.Find("Player Placement").transform;
-             
+            currentLadder = collision.GetComponent<LadderScript>();
+            playerPlacement = collision.transform.Find("Player Placement").transform;            
             inClimbRange = true;
         }
     }
@@ -453,8 +463,9 @@ public class PlayerMovement : MonoBehaviour
         else if (collision.CompareTag("Ladder"))
         {
             inClimbRange = false;
+            currentLadder = null;
             if (isClimbing)
-            {
+            {               
                 playerPlacement = null;
                 isClimbing = false;
                 rb.gravityScale = DefaultGravityScale;
