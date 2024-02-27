@@ -7,12 +7,26 @@ public class ButtonController : MonoBehaviour
 {
     public UnityEvent onPressed;
     private bool activated = false;
+    private Animator animator;
     [SerializeField] private ParticleHandler particleHandler;
+
     public bool Activated { get { return activated; } }
 
     private void Start()
     {
         particleHandler = GetComponentInChildren<ParticleHandler>();
+        animator = GetComponent<Animator>();
+
+    }
+
+    public void SwitchOn()
+    {
+        if (animator != null)
+        {
+            animator.SetBool("On", !animator.GetBool("On"));
+        }
+
+
     }
 
     public void Interact()
