@@ -1,0 +1,866 @@
+fileFormatVersion: 2
+guid: eaacf8da013f8a048861d3b84f847d08
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 136
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: JackInTheBox_ForegroundLayerTiles_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5440
+        width: 1088
+        height: 1088
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd65d1bc6fa76b444935e91d19329a2e
+      internalID: -1810850976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JackInTheBox_ForegroundLayerTiles_1
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 5440
+        width: 1088
+        height: 1088
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef1466fb8ae25254daab408dfa55f247
+      internalID: -1502086480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JackInTheBox_ForegroundLayerTiles_2
+      rect:
+        serializedVersion: 2
+        x: 2176
+        y: 5440
+        width: 1088
+        height: 1088
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a56b59c650405b24fa65c6b59307ef93
+      internalID: 1210678669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JackInTheBox_ForegroundLayerTiles_3
+      rect:
+        serializedVersion: 2
+        x: 3264
+        y: 5440
+        width: 1088
+        height: 1088
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5103382ece644704983b6c168e9a09c6
+      internalID: 109253112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JackInTheBox_ForegroundLayerTiles_4
+      rect:
+        serializedVersion: 2
+        x: 4352
+        y: 5440
+        width: 1088
+        height: 1088
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa8da35bfa293a844a72bee1a27b3d66
+      internalID: 2035383171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JackInTheBox_ForegroundLayerTiles_5
+      rect:
+        serializedVersion: 2
+        x: 5440
+        y: 5440
+        width: 1088
+        height: 1088
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82991f0d727515b4e8f4afc93c9b1716
+      internalID: 1766009290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JackInTheBox_ForegroundLayerTiles_6
+      rect:
+        serializedVersion: 2
+        x: 6528
+        y: 5440
+        width: 1088
+        height: 1088
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b303420662d9fe84485516a38f381c8a
+      internalID: 1806525173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JackInTheBox_ForegroundLayerTiles_7
+      rect:
+        serializedVersion: 2
+        x: 7616
+        y: 5440
+        width: 1088
+        height: 1088
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35d990a9c2c0ccc41a39c9278d46cb91
+      internalID: -2119026882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JackInTheBox_ForegroundLayerTiles_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4352
+        width: 1088
+        height: 1088
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1a5c5079294f854781a936e76d28342
+      internalID: -1201458484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JackInTheBox_ForegroundLayerTiles_9
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 4352
+        width: 1088
+        height: 1088
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90b120524f6eecb42b7fe2757f1dd9fd
+      internalID: 349148228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JackInTheBox_ForegroundLayerTiles_10
+      rect:
+        serializedVersion: 2
+        x: 2176
+        y: 4352
+        width: 1088
+        height: 1088
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc4c71f582e6f774ba14236994c6db4b
+      internalID: -745441767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JackInTheBox_ForegroundLayerTiles_11
+      rect:
+        serializedVersion: 2
+        x: 3264
+        y: 4352
+        width: 1088
+        height: 1088
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4caf208598ec1e1478ebe26f4af7e8f5
+      internalID: -73622430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JackInTheBox_ForegroundLayerTiles_12
+      rect:
+        serializedVersion: 2
+        x: 4352
+        y: 4352
+        width: 1088
+        height: 1088
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8815596a58f16040b49ca9f46e3427a
+      internalID: 319985545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JackInTheBox_ForegroundLayerTiles_13
+      rect:
+        serializedVersion: 2
+        x: 5440
+        y: 4352
+        width: 1088
+        height: 1088
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 303b7fc59a1049b4fb1da5ee759c0461
+      internalID: 515572386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JackInTheBox_ForegroundLayerTiles_14
+      rect:
+        serializedVersion: 2
+        x: 6528
+        y: 4352
+        width: 1088
+        height: 1088
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42fa9f6e414ad254fa9c0ae78a0a6ed1
+      internalID: 1551424139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JackInTheBox_ForegroundLayerTiles_15
+      rect:
+        serializedVersion: 2
+        x: 7616
+        y: 4352
+        width: 1088
+        height: 1088
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fdf3aa719512384d8fe946235eef013
+      internalID: 4735022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JackInTheBox_ForegroundLayerTiles_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3264
+        width: 1088
+        height: 1088
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40c6ab80a8518254aad262a1c3c519d1
+      internalID: 1470562976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JackInTheBox_ForegroundLayerTiles_17
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 3264
+        width: 1088
+        height: 1088
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a70b6098d2dcc34eb6382b4012278ee
+      internalID: -1760337110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JackInTheBox_ForegroundLayerTiles_18
+      rect:
+        serializedVersion: 2
+        x: 2176
+        y: 3264
+        width: 1088
+        height: 1088
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 171c6bc98d9b804478b1b553393df266
+      internalID: 342894589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JackInTheBox_ForegroundLayerTiles_19
+      rect:
+        serializedVersion: 2
+        x: 3264
+        y: 3264
+        width: 1088
+        height: 1088
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ae872fd50a38ab4ca57a89a7f9cffa7
+      internalID: 1977051657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JackInTheBox_ForegroundLayerTiles_20
+      rect:
+        serializedVersion: 2
+        x: 4352
+        y: 3264
+        width: 1088
+        height: 1088
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38b25c96166ddc7499aabaf351105581
+      internalID: 145603774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JackInTheBox_ForegroundLayerTiles_21
+      rect:
+        serializedVersion: 2
+        x: 5440
+        y: 3264
+        width: 1088
+        height: 1088
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9177aa6524a0134fa15badf2e039e32
+      internalID: 1835289243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JackInTheBox_ForegroundLayerTiles_22
+      rect:
+        serializedVersion: 2
+        x: 6528
+        y: 3264
+        width: 1088
+        height: 1088
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a86946f7b6b7aa44ca0d630af38f0da5
+      internalID: 2133202074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JackInTheBox_ForegroundLayerTiles_23
+      rect:
+        serializedVersion: 2
+        x: 7616
+        y: 3264
+        width: 1088
+        height: 1088
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c57189fcee9e6f8449dced22acfb8609
+      internalID: 447087036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JackInTheBox_ForegroundLayerTiles_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2176
+        width: 1088
+        height: 1088
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff68f370d01ec6c4b96fed71018c67a8
+      internalID: -398468791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JackInTheBox_ForegroundLayerTiles_25
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 2176
+        width: 1088
+        height: 1088
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63fea1686587dc649b5680d68b67bb72
+      internalID: 640168325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JackInTheBox_ForegroundLayerTiles_26
+      rect:
+        serializedVersion: 2
+        x: 2176
+        y: 2176
+        width: 1088
+        height: 1088
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcf40e18d7699e240bd9a6ce167e45d6
+      internalID: -941723195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JackInTheBox_ForegroundLayerTiles_27
+      rect:
+        serializedVersion: 2
+        x: 3264
+        y: 2176
+        width: 1088
+        height: 1088
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b032f2e523888d4ebe25126cfae5a09
+      internalID: 730918033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JackInTheBox_ForegroundLayerTiles_28
+      rect:
+        serializedVersion: 2
+        x: 4352
+        y: 2176
+        width: 1088
+        height: 1088
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3315c4cac6dfd0f4b8d9aa9f9d9c6c7a
+      internalID: 285726589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JackInTheBox_ForegroundLayerTiles_29
+      rect:
+        serializedVersion: 2
+        x: 5440
+        y: 2176
+        width: 1088
+        height: 1088
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b1a45a373b812149a7fd30b095a0683
+      internalID: 1104988977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JackInTheBox_ForegroundLayerTiles_30
+      rect:
+        serializedVersion: 2
+        x: 6528
+        y: 2176
+        width: 1088
+        height: 1088
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fa28d84505b73542b5409c234639e9d
+      internalID: 194567337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JackInTheBox_ForegroundLayerTiles_31
+      rect:
+        serializedVersion: 2
+        x: 7616
+        y: 2176
+        width: 1088
+        height: 1088
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82f5d6e9dcf0a0541a738a6b0e89ba41
+      internalID: 581413184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JackInTheBox_ForegroundLayerTiles_32
+      rect:
+        serializedVersion: 2
+        x: 8704
+        y: 2176
+        width: 1088
+        height: 1088
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0d1207d9dafa664bbbe2b9d42fbd765
+      internalID: 1138079088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      JackInTheBox_ForegroundLayerTiles_0: -1810850976
+      JackInTheBox_ForegroundLayerTiles_1: -1502086480
+      JackInTheBox_ForegroundLayerTiles_10: -745441767
+      JackInTheBox_ForegroundLayerTiles_11: -73622430
+      JackInTheBox_ForegroundLayerTiles_12: 319985545
+      JackInTheBox_ForegroundLayerTiles_13: 515572386
+      JackInTheBox_ForegroundLayerTiles_14: 1551424139
+      JackInTheBox_ForegroundLayerTiles_15: 4735022
+      JackInTheBox_ForegroundLayerTiles_16: 1470562976
+      JackInTheBox_ForegroundLayerTiles_17: -1760337110
+      JackInTheBox_ForegroundLayerTiles_18: 342894589
+      JackInTheBox_ForegroundLayerTiles_19: 1977051657
+      JackInTheBox_ForegroundLayerTiles_2: 1210678669
+      JackInTheBox_ForegroundLayerTiles_20: 145603774
+      JackInTheBox_ForegroundLayerTiles_21: 1835289243
+      JackInTheBox_ForegroundLayerTiles_22: 2133202074
+      JackInTheBox_ForegroundLayerTiles_23: 447087036
+      JackInTheBox_ForegroundLayerTiles_24: -398468791
+      JackInTheBox_ForegroundLayerTiles_25: 640168325
+      JackInTheBox_ForegroundLayerTiles_26: -941723195
+      JackInTheBox_ForegroundLayerTiles_27: 730918033
+      JackInTheBox_ForegroundLayerTiles_28: 285726589
+      JackInTheBox_ForegroundLayerTiles_29: 1104988977
+      JackInTheBox_ForegroundLayerTiles_3: 109253112
+      JackInTheBox_ForegroundLayerTiles_30: 194567337
+      JackInTheBox_ForegroundLayerTiles_31: 581413184
+      JackInTheBox_ForegroundLayerTiles_32: 1138079088
+      JackInTheBox_ForegroundLayerTiles_4: 2035383171
+      JackInTheBox_ForegroundLayerTiles_5: 1766009290
+      JackInTheBox_ForegroundLayerTiles_6: 1806525173
+      JackInTheBox_ForegroundLayerTiles_7: -2119026882
+      JackInTheBox_ForegroundLayerTiles_8: -1201458484
+      JackInTheBox_ForegroundLayerTiles_9: 349148228
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

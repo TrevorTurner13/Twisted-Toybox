@@ -434,7 +434,10 @@ public class PlayerMovement : MonoBehaviour
                 ButtonController button = collision.GetComponent<ButtonController>();
                 currentInteractable = button;
 
-                button.GetComponentInChildren<TextMeshPro>().enabled = true;
+                if (button.GetComponentInChildren<TextMeshPro>() != null) 
+                {
+                    button.GetComponentInChildren<TextMeshPro>().enabled = true;
+                }
             }
         }
         if (collision.CompareTag("Rope") && isGrabbing)
@@ -463,7 +466,10 @@ public class PlayerMovement : MonoBehaviour
             if (collision.GetComponent<ButtonController>() != null)
             {
                 ButtonController button = collision.GetComponent<ButtonController>();
-                button.GetComponentInChildren<TextMeshPro>().enabled = false;
+                if (button.GetComponentInChildren<TextMeshPro>() != null)
+                {
+                    button.GetComponentInChildren<TextMeshPro>().enabled = false;
+                }
             }
         }
         else if (collision.CompareTag("Ladder"))
