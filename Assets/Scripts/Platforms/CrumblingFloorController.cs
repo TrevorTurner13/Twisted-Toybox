@@ -10,8 +10,8 @@ public class CrumblingFloorController : MonoBehaviour
 
     private float breakTimer;
     private float regenTimer;
-    private SpriteRenderer renderer;
-    private BoxCollider2D collider;
+    private new SpriteRenderer renderer;
+    private new BoxCollider2D collider;
 
    private enum CrumblingState
     {

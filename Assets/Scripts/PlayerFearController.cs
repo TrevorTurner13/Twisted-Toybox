@@ -77,7 +77,7 @@ public class PlayerFearController : MonoBehaviour
         AdjustFearOverlay(fearOverlay);
         AdjustFearOverlay(secondFearOverlay);
       
-            fearVolume = Mathf.Lerp(0.0f, 0.2f, currentFear / maxFear);
+            fearVolume = Mathf.Lerp(0.0f, 0.1f, currentFear / maxFear);
             fearAudio.volume = fearVolume;
         
     }
