@@ -31,7 +31,7 @@ public class PlayerMovement : MonoBehaviour
     }
 
     private playerStance currentStance = playerStance.standing;
-    public playerStance CurrentStance { get { return currentStance; } set { value = currentStance; } }
+    public playerStance CurrentStance { get { return currentStance; } set {currentStance = value; } }
 
     public GameObject[] bodyParts;
     public LimbSolver2D[] limbSolvers;
@@ -170,6 +170,7 @@ public class PlayerMovement : MonoBehaviour
                     {
                         animator.SetBool("isCrouched", false);
                         animator.SetBool("isWalking", false);
+                        animator.SetBool("isCarrying", false);
                     }
                     break;
 
@@ -194,6 +195,7 @@ public class PlayerMovement : MonoBehaviour
                     break;
                 case playerStance.carrying:
                     {
+                        Debug.Log("Carrying");
                         rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
                         animator.SetBool("isCarrying", true);
                         break;
