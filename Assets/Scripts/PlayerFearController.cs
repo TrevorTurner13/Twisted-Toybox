@@ -10,18 +10,18 @@ public class PlayerFearController : MonoBehaviour
     
     private float maxFear = 100.0f;
     private float currentFear;
-    public float fearGainRate = 1f;
-    public float fearLossRate = 33.3f;
+    public float fearGainRate = 1f; //rate fear increases whne out of light
+    public float fearLossRate = 33.3f; //Rate fear drops when in light
     
     public float minOrthoSize = 3; // Minimum field of view
     public float maxOrthoSize = 9f; // Maximum field of view (less zoomed)
     public CinemachineVirtualCamera virtualCamera;
 
-    public Image fearOverlay;
-    public Image secondFearOverlay;
+    public Image fearOverlay;      //both layers of the vignette
+    public Image secondFearOverlay;//
 
     public AudioSource fearAudio;
-    private float fearVolume;
+    private float fearVolume;  //volume of Fear SFX
     private enum FearState
     {
         noFear,
@@ -106,7 +106,7 @@ public class PlayerFearController : MonoBehaviour
     }
     
     private void AdjustFearOverlay(Image layer)
-    {
+    {                                                                     //As the fear level raises/lowers the vignette around the screen will change opacity from completely transparent to fully opaque
         if (layer != null)
         {
             Color overlayColor = layer.color;
