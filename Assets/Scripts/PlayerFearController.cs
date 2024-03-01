@@ -76,8 +76,15 @@ public class PlayerFearController : MonoBehaviour
         //Change transparency of fearoverlay depending on fear level
         AdjustFearOverlay(fearOverlay);
         AdjustFearOverlay(secondFearOverlay);
-      
-            fearVolume = Mathf.Lerp(0.0f, 0.1f, currentFear / maxFear);
+
+      if ( currentFear > 30)
+        {
+            fearVolume = Mathf.Lerp(0.0f, 0.1f, (currentFear - 30) / maxFear);
+        }
+        else
+        {
+            fearVolume = 0.0f;
+        }   
             fearAudio.volume = fearVolume;
         
     }
