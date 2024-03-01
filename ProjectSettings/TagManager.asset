@@ -9,6 +9,8 @@ TagManager:
   - LightSource
   - Rope
   - Ladder
+  - Scene1Collider
+  - Scene4Collider
   layers:
   - Default
   - TransparentFX
