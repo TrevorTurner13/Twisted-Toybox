@@ -11,8 +11,6 @@ public class PlayerFearController : MonoBehaviour
     private float maxFear = 100.0f;
     private float currentFear;
     public float CurrentFear {  get { return currentFear; } set { currentFear = value; } }
-    public float fearGainRate = 1f;
-    public float fearLossRate = 33.3f;
     public float fearGainRate = 1f; //rate fear increases whne out of light
     public float fearLossRate = 33.3f; //Rate fear drops when in light
     
