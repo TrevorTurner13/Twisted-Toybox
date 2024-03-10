@@ -27,11 +27,13 @@ public class PlayerMovement : MonoBehaviour
         standing,
         crouched,
         climbing,
-        carrying
+        carrying,
+        chased,
+        cutscene
     }
 
     private playerStance currentStance = playerStance.standing;
-    public playerStance CurrentStance { get { return currentStance; } set { value = currentStance; } }
+    public playerStance CurrentStance { get { return currentStance; } set {currentStance = value; } }
 
     public GameObject[] bodyParts;
     public LimbSolver2D[] limbSolvers;
@@ -49,6 +51,7 @@ public class PlayerMovement : MonoBehaviour
     private float vertical;
     private float speed = 3f;
     private float swingSpeed = 8f;
+    private float chaseSpeed = 4f;
     private float defaultSpeed = 3f;
     private float defaultGravityScale = 1f;
     private float swingGravityScale = 1f;
@@ -56,6 +59,8 @@ public class PlayerMovement : MonoBehaviour
     public float Speed { get { return speed; } set { speed = value; } }
     public float SwingSpeed { get { return swingSpeed; } }
     public float DefaultSpeed { get { return defaultSpeed; } }
+
+    public float ChaseSpeed { get { return chaseSpeed; } } 
     public float DefaultGravityScale { get { return defaultGravityScale; } }
     public float SwingGravityScale { get { return swingGravityScale; } }
     private float jumpingPower = 6f;
@@ -98,7 +103,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!isDying && !StartCutscene.isCutsceneOn)
+        if (!isDying)
         {
             
 
@@ -117,7 +122,6 @@ public class PlayerMovement : MonoBehaviour
             if (IsGrounded())
             {
                 animator.SetBool("isGrounded", true);
-                speed = defaultSpeed;
             }
             else
             {
@@ -156,6 +160,7 @@ public class PlayerMovement : MonoBehaviour
 
                 case playerStance.standing:
                     speed = defaultSpeed;
+                    animator.speed = 1.2f;
                     rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
                     if (rb.velocity.x != 0)
                     {
@@ -170,6 +175,7 @@ public class PlayerMovement : MonoBehaviour
                     {
                         animator.SetBool("isCrouched", false);
                         animator.SetBool("isWalking", false);
+                        animator.SetBool("isCarrying", false);
                     }
                     break;
 
@@ -194,10 +200,41 @@ public class PlayerMovement : MonoBehaviour
                     break;
                 case playerStance.carrying:
                     {
+                        Debug.Log("Carrying");
                         rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
                         animator.SetBool("isCarrying", true);
                         break;
                     }
+                case playerStance.chased:
+                    speed = chaseSpeed;
+                    animator.speed = 1.2f;
+                    rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
+                    if (rb.velocity.x != 0)
+                    {
+                        animator.SetBool("onLadder", false);
+                        animator.SetBool("isClimbing", false);
+                        animator.SetBool("isCrouched", false);
+                        animator.SetBool("isCrawling", false);
+                        animator.SetBool("isWalking", true);
+                        animator.SetBool("isCarrying", false);
+                    }
+                    else
+                    {
+                        animator.SetBool("isCrouched", false);
+                        animator.SetBool("isWalking", false);
+                        animator.SetBool("isCarrying", false);
+                    }
+                    break;
+                case playerStance.cutscene:
+                    speed = 0f;
+                    rb.velocity = new Vector2(0, 0);
+                    animator.SetBool("onLadder", false);
+                    animator.SetBool("isClimbing", false);
+                    animator.SetBool("isCrouched", false);
+                    animator.SetBool("isCrawling", false);
+                    animator.SetBool("isWalking", false);
+                    animator.SetBool("isCarrying", false);
+                    break;
             }
 
         }
@@ -402,7 +439,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void Crouch (InputAction.CallbackContext context)
     {
-        if (context.performed && currentStance == playerStance.standing)
+        if (context.performed && currentStance == playerStance.standing || context.performed && currentStance == playerStance.chased)
         {
             currentStance = playerStance.crouched;
         }
@@ -434,7 +471,10 @@ public class PlayerMovement : MonoBehaviour
                 ButtonController button = collision.GetComponent<ButtonController>();
                 currentInteractable = button;
 
-                button.GetComponentInChildren<TextMeshPro>().enabled = true;
+                if (button.GetComponentInChildren<TextMeshPro>() != null) 
+                {
+                    button.GetComponentInChildren<TextMeshPro>().enabled = true;
+                }
             }
         }
         if (collision.CompareTag("Rope") && isGrabbing)
@@ -463,7 +503,10 @@ public class PlayerMovement : MonoBehaviour
             if (collision.GetComponent<ButtonController>() != null)
             {
                 ButtonController button = collision.GetComponent<ButtonController>();
-                button.GetComponentInChildren<TextMeshPro>().enabled = false;
+                if (button.GetComponentInChildren<TextMeshPro>() != null)
+                {
+                    button.GetComponentInChildren<TextMeshPro>().enabled = false;
+                }
             }
         }
         else if (collision.CompareTag("Ladder"))

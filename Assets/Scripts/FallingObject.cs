@@ -5,7 +5,7 @@ using UnityEngine;
 public class FallingObject : MonoBehaviour
 {
     private Vector2 movementDirection;
-    public Rigidbody2D rigidbody2D;
+    public new Rigidbody2D rigidbody2D;
     [SerializeField]
     private float forceAmount;
     private float timeElapsed;

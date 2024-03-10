@@ -41,7 +41,7 @@ public class PushPullBlockController : MonoBehaviour
                 }
                 break;
 
-            case BlockState.interacted:
+            case BlockState.interacted:               
                 player.IsPushing = true;
                 player.CurrentStance = PlayerMovement.playerStance.carrying;
                 transform.SetParent(player.carryPos);
