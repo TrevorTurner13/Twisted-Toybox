@@ -107,7 +107,7 @@ public class PlayerFearController : MonoBehaviour
     }
     
     private void AdjustFearOverlay(Image layer)
-    {                                                                     //As the fear level raises/lowers the vignette around the screen will change opacity from completely transparent to fully opaque
+    {                                                                    
         if (layer != null)
         {
             Color overlayColor = layer.color;

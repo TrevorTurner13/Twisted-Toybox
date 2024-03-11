@@ -39,6 +39,7 @@ public class StartCutscene : MonoBehaviour
     {
         if (CompareTag("Scene1Collider"))
         {
+            player.CurrentStance = PlayerMovement.playerStance.standing;
             isCutsceneOn = false;
             camAnimator.SetBool("CutScene1", false);
             Destroy(gameObject);

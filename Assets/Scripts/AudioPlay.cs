@@ -10,6 +10,7 @@ public class AudioPlay : MonoBehaviour
     public void PlaySource()
     {
         source.clip = clips[Random.Range(0, clips.Length)];
+        source.pitch = Random.Range(0, 2);
         source.Play();
     }
 }
