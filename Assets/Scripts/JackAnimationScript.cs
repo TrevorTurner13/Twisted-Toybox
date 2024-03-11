@@ -1,18 +1,23 @@
+using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class JackAnimationScript : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] Animator animator;
+    [SerializeField] GameObject jack;
+    [SerializeField] PlayerMovement player;
+    [SerializeField] CinemachineVirtualCamera virtualCamera;
+    [SerializeField] GameObject falsePuppet;
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if (collision.CompareTag("Player"))
+        {
+            player.gameObject.SetActive(false);
+            virtualCamera.m_Follow = falsePuppet.transform;
+            animator.SetTrigger("PlayerGrabTrigger");
+            
+        }
     }
 }
