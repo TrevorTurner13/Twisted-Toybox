@@ -9,6 +9,7 @@ public class ButtonController : MonoBehaviour
     private bool activated = false;
     private Animator animator;
     [SerializeField] private ParticleHandler particleHandler;
+    private AudioSource switchSource;
 
     public bool Activated { get { return activated; } }
 
@@ -16,7 +17,7 @@ public class ButtonController : MonoBehaviour
     {
         particleHandler = GetComponentInChildren<ParticleHandler>();
         animator = GetComponent<Animator>();
-
+        switchSource = GetComponentInChildren<AudioSource>();
     }
 
     public void SwitchOn()
@@ -25,7 +26,11 @@ public class ButtonController : MonoBehaviour
         {
             animator.SetBool("On", !animator.GetBool("On"));
         }
-
+        if(switchSource != null)
+        {
+            switchSource.Play();
+        }
+        
 
     }
 

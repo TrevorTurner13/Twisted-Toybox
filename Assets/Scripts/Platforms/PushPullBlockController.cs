@@ -51,12 +51,12 @@ public class PushPullBlockController : MonoBehaviour
                     currentState = BlockState.notInteracted;
                     if (player.IsFacingRight)
                     {
-                        Throw(-1);
+                        Throw(1);
                         playerInRange = false;
                     }
                     else
                     {
-                        Throw(1);
+                        Throw(-1);
                         playerInRange = false;
                     }
                         
@@ -101,13 +101,15 @@ public class PushPullBlockController : MonoBehaviour
         {
             currentState = BlockState.notInInteractRange;
             playerInRange = false;
+            transform.SetParent(null);
         }
     }
 
     public void Throw(float xDir)
     {
-        selfRB.velocity = new Vector2(transform.localScale.x, -1) * throwForce * xDir;
-       
+        selfRB.velocity = throwForce * new Vector2(transform.localScale.x * xDir, 1);
+        currentState = BlockState.notInInteractRange;
+        player.CurrentStance = PlayerMovement.playerStance.standing;
     }
 
   

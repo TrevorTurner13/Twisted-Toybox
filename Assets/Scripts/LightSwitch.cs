@@ -7,11 +7,13 @@ using UnityEngine.Rendering.Universal;
 public class LightSwitch : MonoBehaviour
 {
     private List<Light2D> lights = new List<Light2D>();
+    private List<AudioSource> audioSources = new List<AudioSource>();
     private List<Collider2D> lightColliders =  new List<Collider2D>();
 
     void Start()
     {
         FindLights();
+        FindAudioSources();
     }
 
     private void FindLights()
@@ -39,11 +41,33 @@ public class LightSwitch : MonoBehaviour
         }
     }
 
+    private void FindAudioSources()
+    {
+        audioSources.Clear();
+
+        for (int i = 0; i < transform.childCount; i++)
+        {
+            for (int j = 0; j < transform.GetChild(i).transform.childCount; j++)
+            {
+                AudioSource audio = transform.GetChild(i).transform.GetChild(j).GetComponentInChildren<AudioSource>();
+
+                if (audio != null)
+                {
+                    audioSources.Add(audio);
+                }
+            }
+        }
+    }
+
     public void FlipSwitch()
     {
         foreach(Light2D light in lights)
         {
             light.gameObject.SetActive(!light.gameObject.activeSelf);
+        }
+        foreach (AudioSource audio in audioSources)
+        {
+            audio.Play();
         }
         foreach (Collider2D col in lightColliders)
         {

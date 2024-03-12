@@ -200,9 +200,23 @@ public class PlayerMovement : MonoBehaviour
                     break;
                 case playerStance.carrying:
                     {
-                        Debug.Log("Carrying");
+                        speed = defaultSpeed;
                         rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
-                        animator.SetBool("isCarrying", true);
+                        if (rb.velocity.x != 0)
+                        {
+                            animator.SetBool("onLadder", false);
+                            animator.SetBool("isClimbing", false);
+                            animator.SetBool("isCrouched", false);
+                            animator.SetBool("isCrawling", false);
+                            animator.SetBool("isWalking", true);
+                            animator.SetBool("isCarrying", true);
+                        }
+                        else
+                        {
+                            animator.SetBool("isCrouched", false);
+                            animator.SetBool("isWalking", false);
+                            animator.SetBool("isCarrying", true);
+                        }
                         break;
                     }
                 case playerStance.chased:

@@ -7,6 +7,7 @@ public class RigidbodyBreakScript : MonoBehaviour
 
     List<Rigidbody2D> rigidbodies = new List<Rigidbody2D>();
     List<Transform> childTransforms = new List<Transform>();
+    [SerializeField] private AudioSource sfxSource;
 
     // Start is called before the first frame update
     void Start()
@@ -42,6 +43,12 @@ public class RigidbodyBreakScript : MonoBehaviour
                 rigidbody.isKinematic = false;
                 
             }
+            if (sfxSource != null)
+            {
+                sfxSource.Play();
+                sfxSource = null;
+            }
         }
+        
     }
 }

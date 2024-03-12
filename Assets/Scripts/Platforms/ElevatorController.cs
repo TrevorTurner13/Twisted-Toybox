@@ -11,6 +11,9 @@ public class ElevatorController : MonoBehaviour
     public List<ParticleHandler> particleHandlers = new List<ParticleHandler>();
     private int switchesActivated;
     [SerializeField] private BoxCollider2D sceneTrigger;
+    [SerializeField] private AudioSource elevatorSource;
+    [SerializeField] private AudioSource elevatorStopSource;
+    private bool audioPlaying = false;
 
     private enum ElevatorState
     {
@@ -30,7 +33,6 @@ public class ElevatorController : MonoBehaviour
     void Start()
     {
         startPosition = transform.position;
-
     }
 
     void Update()
@@ -38,15 +40,30 @@ public class ElevatorController : MonoBehaviour
         switch (currentState)
         {
             case ElevatorState.AtStart:
-
+                if (audioPlaying)
+                {
+                    elevatorStopSource.Play();
+                    elevatorSource.Stop();
+                    audioPlaying = false;
+                }
                 break;
 
             case ElevatorState.AtDestination1:
-
+                if (audioPlaying)
+                {
+                    elevatorStopSource.Play();
+                    elevatorSource.Stop();
+                    audioPlaying = false;
+                }
                 break;
 
             case ElevatorState.AtDestination2:
-                
+                if (audioPlaying)
+                {
+                    elevatorStopSource.Play();
+                    elevatorSource.Stop();
+                    audioPlaying = false;
+                }
                 break;
 
             case ElevatorState.MovingToDestination1:
@@ -54,6 +71,12 @@ public class ElevatorController : MonoBehaviour
                 if (delayTimer >= startDelay)
                 {
                     MoveElevator(destination1.position);
+                    if (!audioPlaying)
+                    {
+                        elevatorSource.Play();
+                        audioPlaying = true;
+                    }
+                    
                     if (transform.position == destination1.position)
                     {
                         currentState = ElevatorState.AtDestination1;
@@ -67,6 +90,12 @@ public class ElevatorController : MonoBehaviour
                 if (delayTimer >= startDelay)
                 {
                     MoveElevator(destination2.position);
+                    if (!audioPlaying)
+                    {
+                        elevatorSource.Play();
+                        audioPlaying = true;
+                    }
+
                     if (transform.position == destination2.position)
                     {
                         currentState = ElevatorState.AtDestination2;
@@ -80,6 +109,12 @@ public class ElevatorController : MonoBehaviour
                 if (delayTimer >= startDelay)
                 {
                     MoveElevator(startPosition);
+                    if (!audioPlaying)
+                    {
+                        elevatorSource.Play();
+                        audioPlaying = true;
+                    }
+
                     if (transform.position == startPosition)
                     {
                         currentState = ElevatorState.AtStart; 

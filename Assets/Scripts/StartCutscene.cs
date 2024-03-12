@@ -10,12 +10,20 @@ public class StartCutscene : MonoBehaviour
     [SerializeField] private Animator animator;
     [SerializeField] private Animator camAnimator;
     [SerializeField] private PlayerMovement player;
+    [SerializeField] private AudioSource cutsceneAudio;
+    [SerializeField] private AudioSource levelAudio;
+    [SerializeField] private AudioClip cutsceneClip;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
             player.CurrentStance = PlayerMovement.playerStance.cutscene;
+            SetCutsceneAudio(cutsceneClip);
+            cutsceneAudio.loop = false;
+            levelAudio.Pause();
+            cutsceneAudio.Play();
+            
             if (CompareTag("Scene1Collider"))
             {
                 isCutsceneOn = true;
@@ -52,10 +60,16 @@ public class StartCutscene : MonoBehaviour
             Destroy(gameObject);
             
         }
+        levelAudio.Play();
     }
 
     void SetBossAnimation()
     {
         animator.SetTrigger("ChaseTrigger");
+    }
+
+    void SetCutsceneAudio(AudioClip clip)
+    {
+        cutsceneAudio.clip = clip;
     }
 }
