@@ -27,11 +27,6 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private GameObject fearCanvas;
     [SerializeField] private Rigidbody2D grapplePoint;
 
-    private float ropeAngleVelocity = 0f;
-    private float ropeAngle;
-    private float ropeLength;
-
-
     public enum playerStance
     {
         standing,
@@ -69,7 +64,6 @@ public class PlayerMovement : MonoBehaviour
     private float swingGravityScale = 3f;
 
     public float Speed { get { return speed; } set { speed = value; } }
-    public float SwingSpeed { get { return swingForce; } }
     public float DefaultSpeed { get { return defaultSpeed; } }
 
     public float ChaseSpeed { get { return chaseSpeed; } } 
@@ -417,10 +411,6 @@ public class PlayerMovement : MonoBehaviour
             if (isClimbing == false)
             {
                 horizontal = context.ReadValue<Vector2>().x;
-            }
-            else if(currentStance == playerStance.swinging)
-            {
-                horizontal = context.ReadValue<Vector2>().x;              
             }
             else
             {
