@@ -89,6 +89,15 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""RopeSwing"",
+                    ""type"": ""Button"",
+                    ""id"": ""9e2d85b4-7fdf-4255-b73c-8b8afc46b62f"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": ""Hold(pressPoint=0.1)"",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -298,6 +307,17 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Crouch"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""7ae0c239-de14-4cd6-aafe-aab3316a63e3"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""RopeSwing"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -912,6 +932,7 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
         m_Player_Pause = m_Player.FindAction("Pause", throwIfNotFound: true);
         m_Player_Unpause = m_Player.FindAction("Unpause", throwIfNotFound: true);
         m_Player_Crouch = m_Player.FindAction("Crouch", throwIfNotFound: true);
+        m_Player_RopeSwing = m_Player.FindAction("RopeSwing", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -993,6 +1014,7 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Pause;
     private readonly InputAction m_Player_Unpause;
     private readonly InputAction m_Player_Crouch;
+    private readonly InputAction m_Player_RopeSwing;
     public struct PlayerActions
     {
         private @PlayerInputs m_Wrapper;
@@ -1004,6 +1026,7 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
         public InputAction @Pause => m_Wrapper.m_Player_Pause;
         public InputAction @Unpause => m_Wrapper.m_Player_Unpause;
         public InputAction @Crouch => m_Wrapper.m_Player_Crouch;
+        public InputAction @RopeSwing => m_Wrapper.m_Player_RopeSwing;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -1034,6 +1057,9 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
             @Crouch.started += instance.OnCrouch;
             @Crouch.performed += instance.OnCrouch;
             @Crouch.canceled += instance.OnCrouch;
+            @RopeSwing.started += instance.OnRopeSwing;
+            @RopeSwing.performed += instance.OnRopeSwing;
+            @RopeSwing.canceled += instance.OnRopeSwing;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -1059,6 +1085,9 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
             @Crouch.started -= instance.OnCrouch;
             @Crouch.performed -= instance.OnCrouch;
             @Crouch.canceled -= instance.OnCrouch;
+            @RopeSwing.started -= instance.OnRopeSwing;
+            @RopeSwing.performed -= instance.OnRopeSwing;
+            @RopeSwing.canceled -= instance.OnRopeSwing;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -1256,6 +1285,7 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
         void OnPause(InputAction.CallbackContext context);
         void OnUnpause(InputAction.CallbackContext context);
         void OnCrouch(InputAction.CallbackContext context);
+        void OnRopeSwing(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {

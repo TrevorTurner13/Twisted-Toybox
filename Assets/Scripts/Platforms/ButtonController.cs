@@ -26,10 +26,7 @@ public class ButtonController : MonoBehaviour
         {
             animator.SetBool("On", !animator.GetBool("On"));
         }
-        if(switchSource != null)
-        {
-            switchSource.Play();
-        }
+        PlaySound();
         
 
     }
@@ -49,5 +46,11 @@ public class ButtonController : MonoBehaviour
         particleHandler.RunParticles();
     }
 
-    
+    public void PlaySound()
+    {
+        if (switchSource != null)
+        {
+            switchSource.Play();
+        }
+    }
 }

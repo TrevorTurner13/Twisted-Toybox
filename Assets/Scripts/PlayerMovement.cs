@@ -6,6 +6,8 @@ using UnityEngine.InputSystem;
 using UnityEngine.U2D.IK;
 using TMPro;
 using UnityEngine.UI;
+using Cinemachine;
+using UnityEditor.Experimental.GraphView;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -13,13 +15,21 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Animator animator;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
+    [SerializeField] private Camera mainCamera;
+    public LineRenderer lineRenderer;
     [SerializeField]
     public ButtonController currentInteractable;
     [SerializeField]
     private RopeHandler currentRope = null;
+    public RopeHandler CurrentRope { get { return currentRope; } set { currentRope = value; } }
     [SerializeField]
     private DistanceJoint2D distanceJoint2D = null;
     [SerializeField] private GameObject fearCanvas;
+    [SerializeField] private Rigidbody2D grapplePoint;
+
+    private float ropeAngleVelocity = 0f;
+    private float ropeAngle;
+    private float ropeLength;
 
 
     public enum playerStance
@@ -29,7 +39,8 @@ public class PlayerMovement : MonoBehaviour
         climbing,
         carrying,
         chased,
-        cutscene
+        cutscene,
+        swinging
     }
 
     private playerStance currentStance = playerStance.standing;
@@ -40,6 +51,7 @@ public class PlayerMovement : MonoBehaviour
 
     public Rigidbody2D emptyRB;
     public Transform carryPos;
+    public Transform grabPos;
     private Vector2 defaultTransformPosition;
 
     private Vector2 climbSpeed;
@@ -50,14 +62,14 @@ public class PlayerMovement : MonoBehaviour
     private float horizontal;
     private float vertical;
     private float speed = 3f;
-    private float swingSpeed = 8f;
+    private float swingForce = 15f;
     private float chaseSpeed = 4f;
     private float defaultSpeed = 3f;
     private float defaultGravityScale = 1f;
-    private float swingGravityScale = 1f;
+    private float swingGravityScale = 3f;
 
     public float Speed { get { return speed; } set { speed = value; } }
-    public float SwingSpeed { get { return swingSpeed; } }
+    public float SwingSpeed { get { return swingForce; } }
     public float DefaultSpeed { get { return defaultSpeed; } }
 
     public float ChaseSpeed { get { return chaseSpeed; } } 
@@ -150,11 +162,13 @@ public class PlayerMovement : MonoBehaviour
                         animator.SetBool("isWalking", false);
                         animator.SetBool("isCrouched", true);
                         animator.SetBool("isCrawling", true);
+                        animator.SetBool("isSwinging", false);
                     }
                     else
                     {
                         animator.SetBool("isCrouched", true);
                         animator.SetBool("isCrawling", false);
+                        animator.SetBool("isSwinging", false);
                     }
                     break;
 
@@ -170,12 +184,14 @@ public class PlayerMovement : MonoBehaviour
                         animator.SetBool("isCrawling", false);
                         animator.SetBool("isWalking", true);
                         animator.SetBool("isCarrying", false);
+                        animator.SetBool("isSwinging", false);
                     }
                     else
                     {
                         animator.SetBool("isCrouched", false);
                         animator.SetBool("isWalking", false);
                         animator.SetBool("isCarrying", false);
+                        animator.SetBool("isSwinging", false);
                     }
                     break;
 
@@ -191,11 +207,13 @@ public class PlayerMovement : MonoBehaviour
                         animator.SetBool("isCrawling", false);
                         animator.SetBool("isWalking", false);
                         animator.SetBool("onLadder", true);
+                        animator.SetBool("isSwinging", false);
                     }
                     else
                     {
                         animator.SetBool("isClimbing", false);
                         animator.SetBool("onLadder", true);
+                        animator.SetBool("isSwinging", false);
                     }
                     break;
                 case playerStance.carrying:
@@ -210,12 +228,14 @@ public class PlayerMovement : MonoBehaviour
                             animator.SetBool("isCrawling", false);
                             animator.SetBool("isWalking", true);
                             animator.SetBool("isCarrying", true);
+                            animator.SetBool("isSwinging", false);
                         }
                         else
                         {
                             animator.SetBool("isCrouched", false);
                             animator.SetBool("isWalking", false);
                             animator.SetBool("isCarrying", true);
+                            animator.SetBool("isSwinging", false);
                         }
                         break;
                     }
@@ -248,6 +268,28 @@ public class PlayerMovement : MonoBehaviour
                     animator.SetBool("isCrawling", false);
                     animator.SetBool("isWalking", false);
                     animator.SetBool("isCarrying", false);
+                    animator.SetBool("isSwinging", false);
+                    break;
+                case playerStance.swinging:
+                    //speed = swingSpeed;
+                    //rb.gravityScale = swingGravityScale;
+                    //rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
+                    //float _ropeAngleAcceleration = -0.2f * Mathf.Cos(ropeAngle);
+                    //ropeAngleVelocity += _ropeAngleAcceleration;
+                    //ropeAngle += ropeAngleVelocity;
+                    //ropeAngleVelocity *= 0.99f;
+                   if (horizontal != 0)
+                    {
+                        rb.AddForce(new Vector2(horizontal * swingForce, 0f));
+                    }
+                    lineRenderer.SetPosition(1, emptyRB.transform.position);
+                    animator.SetBool("onLadder", false);
+                    animator.SetBool("isClimbing", false);
+                    animator.SetBool("isCrouched", false);
+                    animator.SetBool("isCrawling", false);
+                    animator.SetBool("isWalking", false);
+                    animator.SetBool("isCarrying", false);
+                    animator.SetBool("isSwinging", true);
                     break;
             }
 
@@ -374,15 +416,16 @@ public class PlayerMovement : MonoBehaviour
         {
             if (isClimbing == false)
             {
-                
                 horizontal = context.ReadValue<Vector2>().x;
+            }
+            else if(currentStance == playerStance.swinging)
+            {
+                horizontal = context.ReadValue<Vector2>().x;              
             }
             else
             {
                 vertical = context.ReadValue<Vector2>().y;
             }
-                   
-            
         }
     }
 
@@ -429,15 +472,43 @@ public class PlayerMovement : MonoBehaviour
                 if (currentRope != null)
                 {
                     currentRope.Grabbed = false;
-                    distanceJoint2D.connectedBody = emptyRB;
-                    speed = 4f;
-                    GetComponent<Rigidbody2D>().gravityScale = defaultGravityScale;
-                    currentRope = null;
-                    transform.parent = null;
-                    animator.SetBool("isSwinging", false);
-                    currentStance = playerStance.standing;
                 }
+                distanceJoint2D.connectedBody = emptyRB;
+                speed = 5f;
+                GetComponent<Rigidbody2D>().gravityScale = defaultGravityScale;
+                currentRope = null;
+                transform.parent = null;
+                currentStance = playerStance.standing;
             }
+        }
+    }
+
+    public void RopeSwing(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            Debug.Log("Thwip");
+        }
+        if (context.performed && !IsGrounded())
+        {
+            Vector2 mousePos = (Vector2)mainCamera.ScreenToWorldPoint(Input.mousePosition);
+            Debug.Log(mousePos);
+            lineRenderer.SetPosition(0, mousePos);
+            lineRenderer.SetPosition(1, emptyRB.transform.position);
+            distanceJoint2D.connectedBody = null;   
+            distanceJoint2D.connectedAnchor = lineRenderer.GetPosition(0);
+            lineRenderer.enabled = true;
+            currentStance = playerStance.swinging;
+            rb.drag = 0.1f;
+            rb.angularDrag = 0.05f;
+        }
+        if (context.canceled)
+        {
+            distanceJoint2D.connectedBody = emptyRB; 
+            lineRenderer.enabled = false;
+            currentStance = playerStance.standing;
+            rb.drag = 0f;
+            rb.angularDrag = 0f;
         }
     }
 
@@ -463,19 +534,6 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-
-    //public void Unpause(InputAction.CallbackContext context)
-    //{
-    //    if (isPaused && Input.GetKeyDown(KeyCode.Escape))
-    //    {
-    //        if (context.performed)
-    //        {
-    //            PauseManager.instance.UnpauseGame();
-    //            isPaused = false;
-    //        }
-    //    }
-    //}
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Interactable"))
@@ -491,15 +549,13 @@ public class PlayerMovement : MonoBehaviour
                 }
             }
         }
-        if (collision.CompareTag("Rope") && isGrabbing)
-        {
-            if (collision.GetComponentInParent<RopeHandler>() != null)
-            {
-                currentRope = collision.GetComponentInParent<RopeHandler>();
-                animator.SetBool("isSwinging", true);
-                
-            }
-        }
+        //if (collision.CompareTag("Rope") && isGrabbing)
+        //{
+        //    if (collision.GetComponentInParent<RopeHandler>() != null && currentRope == null)
+        //    {
+        //        currentRope = collision.GetComponentInParent<RopeHandler>();
+        //    }
+        //}
         if (collision.CompareTag("Ladder"))
         {
             currentLadder = collision.GetComponent<LadderScript>();                    //When player enters ladders collision, find the ladders player placement            
@@ -549,4 +605,5 @@ public class PlayerMovement : MonoBehaviour
     {
         isDead = true;
     }
+
 }

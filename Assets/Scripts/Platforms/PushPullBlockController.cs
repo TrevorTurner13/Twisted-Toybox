@@ -46,6 +46,7 @@ public class PushPullBlockController : MonoBehaviour
                 player.CurrentStance = PlayerMovement.playerStance.carrying;
                 transform.SetParent(player.carryPos);
                 transform.position = player.carryPos.position;
+                selfRB.velocity = new Vector2(0, 0);
                 if (player.IsGrabbing == false || player.IsGrounded()==false)
                 {
                     currentState = BlockState.notInteracted;
@@ -108,6 +109,7 @@ public class PushPullBlockController : MonoBehaviour
     public void Throw(float xDir)
     {
         selfRB.velocity = throwForce * new Vector2(transform.localScale.x * xDir, 1);
+        Debug.Log(xDir);
         currentState = BlockState.notInInteractRange;
         player.CurrentStance = PlayerMovement.playerStance.standing;
     }
