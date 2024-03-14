@@ -35,7 +35,8 @@ public class PlayerMovement : MonoBehaviour
         carrying,
         chased,
         cutscene,
-        swinging
+        swinging,
+        falling
     }
 
     private playerStance currentStance = playerStance.standing;
@@ -136,6 +137,10 @@ public class PlayerMovement : MonoBehaviour
                     animator.SetBool("isGrounded", false);
                 }               
             }
+            if(currentStance == playerStance.falling && IsGrounded())
+            {
+                currentStance = playerStance.standing;
+            }
             
             //if(isPushing)
             //{
@@ -168,7 +173,7 @@ public class PlayerMovement : MonoBehaviour
 
                 case playerStance.standing:
                     speed = defaultSpeed;
-                    animator.speed = 1.2f;
+                    animator.speed = 1.0f;
                     rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
                     if (rb.velocity.x != 0)
                     {
@@ -265,18 +270,12 @@ public class PlayerMovement : MonoBehaviour
                     animator.SetBool("isSwinging", false);
                     break;
                 case playerStance.swinging:
-                    //speed = swingSpeed;
-                    //rb.gravityScale = swingGravityScale;
-                    //rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
-                    //float _ropeAngleAcceleration = -0.2f * Mathf.Cos(ropeAngle);
-                    //ropeAngleVelocity += _ropeAngleAcceleration;
-                    //ropeAngle += ropeAngleVelocity;
-                    //ropeAngleVelocity *= 0.99f;
+                    
                    if (horizontal != 0)
                     {
                         rb.AddForce(new Vector2(horizontal * swingForce, 0f));
                     }
-                    lineRenderer.SetPosition(1, emptyRB.transform.position);
+                    //lineRenderer.SetPosition(1, emptyRB.transform.position);
                     animator.SetBool("onLadder", false);
                     animator.SetBool("isClimbing", false);
                     animator.SetBool("isCrouched", false);
@@ -284,6 +283,19 @@ public class PlayerMovement : MonoBehaviour
                     animator.SetBool("isWalking", false);
                     animator.SetBool("isCarrying", false);
                     animator.SetBool("isSwinging", true);
+                    break;
+                case playerStance.falling:
+                    if (horizontal != 0)
+                    {
+                        rb.AddForce(new Vector2(horizontal * swingForce, 0f));
+                    }
+                    animator.SetBool("onLadder", false);
+                    animator.SetBool("isClimbing", false);
+                    animator.SetBool("isCrouched", false);
+                    animator.SetBool("isCrawling", false);
+                    animator.SetBool("isWalking", false);
+                    animator.SetBool("isCarrying", false);
+                    animator.SetBool("isSwinging", false);
                     break;
             }
 
@@ -462,13 +474,18 @@ public class PlayerMovement : MonoBehaviour
                 if (currentRope != null)
                 {
                     currentRope.Grabbed = false;
+                    foreach (RopeScript rope in currentRope.ropes)
+                    {
+                        rope.GetComponent<Rigidbody2D>().drag = 0.5f;
+                        rope.GetComponent<Rigidbody2D>().angularDrag = 0.5f;
+                    }
                 }
                 distanceJoint2D.connectedBody = emptyRB;
-                speed = 5f;
-                GetComponent<Rigidbody2D>().gravityScale = defaultGravityScale;
                 currentRope = null;
                 transform.parent = null;
-                currentStance = playerStance.standing;
+                currentStance = playerStance.falling;
+                
+                
             }
         }
     }
@@ -495,6 +512,7 @@ public class PlayerMovement : MonoBehaviour
         if (context.canceled)
         {
             distanceJoint2D.connectedBody = emptyRB; 
+            distanceJoint2D.connectedAnchor = emptyRB.transform.position;
             lineRenderer.enabled = false;
             currentStance = playerStance.standing;
             rb.drag = 0f;

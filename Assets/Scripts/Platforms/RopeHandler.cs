@@ -5,7 +5,7 @@ using UnityEngine;
 public class RopeHandler : MonoBehaviour
 {
     [SerializeField]
-    List<RopeScript> ropes = new List<RopeScript>();
+    public List<RopeScript> ropes = new List<RopeScript>();
 
     private bool grabbed = false;
 
