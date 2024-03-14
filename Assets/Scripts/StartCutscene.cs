@@ -19,10 +19,13 @@ public class StartCutscene : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             player.CurrentStance = PlayerMovement.playerStance.cutscene;
-            SetCutsceneAudio(cutsceneClip);
-            cutsceneAudio.loop = false;
-            levelAudio.Pause();
-            cutsceneAudio.Play();
+            if (cutsceneAudio != null)
+            {
+                SetCutsceneAudio(cutsceneClip);
+                cutsceneAudio.loop = false;
+                levelAudio.Pause();
+                cutsceneAudio.Play();
+            }
             
             if (CompareTag("Scene1Collider"))
             {

@@ -133,19 +133,19 @@ public class ElevatorController : MonoBehaviour
         if (collision.CompareTag("Player") && currentState == ElevatorState.AtStart)
         {
             collision.transform.SetParent(transform);
-            currentState = ElevatorState.MovingToDestination1;
+            currentState = ElevatorState.MovingToDestination2;
             delayTimer = 0f; // Reset delay timer for the next state
         }
         if (collision.CompareTag("Player") && currentState == ElevatorState.AtDestination1)
         {
             collision.transform.SetParent(transform);
-            currentState = ElevatorState.MovingToDestination2;
+            currentState = ElevatorState.MovingToStart;
             delayTimer = 0f; // Reset delay timer for the next state
         }
         if (collision.CompareTag("Player") && currentState == ElevatorState.AtDestination2)
         {
             collision.transform.SetParent(transform);
-            currentState = ElevatorState.MovingToStart;
+            currentState = ElevatorState.MovingToDestination1;
             delayTimer = 0f; // Reset delay timer for the next state
         }
     }

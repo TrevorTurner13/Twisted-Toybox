@@ -5,7 +5,7 @@ using UnityEngine;
 public class JointBreak : MonoBehaviour
 {
     public HingeJoint2D joint;
-
+    [SerializeField] private AudioSource soundFX;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -13,7 +13,11 @@ public class JointBreak : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             joint.enabled = false;
-
+            if(soundFX != null)
+            {
+                soundFX.Play();
+            }
+            GetComponent<BoxCollider2D>().enabled = false;
         }
     }
 }

@@ -51,4 +51,19 @@ public class RigidbodyBreakScript : MonoBehaviour
         }
         
     }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            StartCoroutine(DestroyBrokenRBs());
+        }
+        
+    }
+
+    IEnumerator DestroyBrokenRBs()
+    {
+        yield return new WaitForSeconds(5f);
+        Destroy(gameObject);
+    }
 }
