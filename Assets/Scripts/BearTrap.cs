@@ -31,6 +31,7 @@ public class BearTrap : MonoBehaviour
             {
                 player.MakeRagdoll();
                 player.BreakBody();
+                player.KillPlayer();
             }
 
           DroppedBody body = collision.GetComponent<DroppedBody>();
