@@ -93,6 +93,9 @@ public class PlayerMovement : MonoBehaviour
 
     public LadderScript currentLadder;
 
+    Dictionary<GameObject, SaveableState> savedStates;
+    CheckpointController checkpointController;
+
     private void Start()
     {
         fearCanvas.SetActive(true);
@@ -100,9 +103,14 @@ public class PlayerMovement : MonoBehaviour
         animator = GetComponent<Animator>();
         distanceJoint2D = GetComponent<DistanceJoint2D>();
         defaultTransformPosition = carryPos.position;
+
+        CheckpointController checkpointController = FindObjectOfType<CheckpointController>();
+        Dictionary<GameObject, SaveableState> savedStates = checkpointController.GetSavedStates();
+
         if (CheckpointManager.instance.LastCheckpointPosition != null)
         {
             transform.position = CheckpointManager.instance.LastCheckpointPosition;
+            RestoreStates();
         }
         climbSpeed = new Vector2(rb.velocity.x * 0, vertical * speed);
     }
@@ -614,4 +622,15 @@ public class PlayerMovement : MonoBehaviour
         isDead = true;
     }
 
+    public void RestoreStates()
+    {
+        foreach (var entry in savedStates)
+        {
+            GameObject obj = entry.Key;
+            SaveableState state = entry.Value;
+
+            obj.transform.position = state.position;
+            obj.SetActive(state.isActive);
+        }
+    }
 }
