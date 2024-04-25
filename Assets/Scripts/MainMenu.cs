@@ -24,7 +24,7 @@ public class MainMenu : MonoBehaviour
     IEnumerator LoadSceneCoroutine()
     {
         yield return new WaitForSeconds(3.25f);
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene("IntroductionScene");
     }
 
     //public void PlayGame()
