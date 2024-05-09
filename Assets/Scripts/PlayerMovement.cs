@@ -1,13 +1,9 @@
-using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.U2D.IK;
 using TMPro;
-using UnityEngine.UI;
-using Cinemachine;
-using UnityEditor.Experimental.GraphView;
+
 
 public class PlayerMovement : MonoBehaviour
 {
